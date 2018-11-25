@@ -1,0 +1,109 @@
+%==========================
+%Farbdefinitionen
+%==========================
+%\colorlet{abschnitttext}{black!65!blue}
+%\definecolor{abschnitttext}{RGB}{1,37,121} %Hays Blau
+%\colorlet{abschnittlinie}{black!80!white}
+
+%\colorlet{abschnitttext}{white}
+\colorlet{abschnitttext}{black}
+\colorlet{abschnittlinie}{black}
+%\colorlet{abschnittlinie}{black!60!blue}
+%\colorlet{abschnittlinie}{white!30!blue}
+
+\definecolor{abschnittlinie}{RGB}{124,169,249} %weiches helles Blau
+%\definecolor{abschnittlinie}{RGB}{0,104,211} %klareres Blau
+%\definecolor{abschnittlinie}{RGB}{0,24,107} %tiefes Blau
+%\definecolor{abschnittlinie}{rgb}{0.0, 0.19, 0.33} %Prussian Blue
+
+%firmenspezifische Farben, mit Hilfe von Gimp herausgefunden
+%\definecolor{abschnittlinie}{RGB}{0,82,169} %REM CAPITAL Blau, nur heller
+%\definecolor{abschnittlinie}{RGB}{74,165,203} %Strategen & Stürmer hellblau
+%\definecolor{abschnitttext}{RGB}{53,63,72} %Brunel Tiefblau
+%\definecolor{abschnittlinie}{RGB}{241,228,0} %Brunel Gelb
+%\definecolor{abschnittlinie}{RGB}{255,0,0} %Deutsche Bahn Rot
+%\definecolor{abschnittlinie}{RGB}{237,28,36} %ABB tiefes Rot
+%\definecolor{abschnittlinie}{RGB}{20,138,255} %ABB Blau
+%\definecolor{abschnitttext}{RGB}{128,130,133} %ABB Grau
+%\definecolor{abschnittlinie}{RGB}{1,0,154} %MHP tiefes Blau
+%\definecolor{abschnitttext}{RGB}{86,86,86} %MHP tiefes Grau
+%\definecolor{abschnittlinie}{RGB}{230,27,52} %Ferchau Rot
+%\definecolor{abschnitttext}{RGB}{0,47,91} %P3 dunkles Blau
+%\definecolor{abschnittlinie}{RGB}{177,178,180} %P3 helles Grau
+%\definecolor{abschnitttext}{RGB}{0,0,0} %schwarz
+%\definecolor{abschnitttext}{RGB}{0,53,97} %AMG -> Daimler - Blau
+%\definecolor{abschnitttext}{RGB}{0,0,0} %ZF Friedrichshafen - schwarz
+%\definecolor{abschnittlinie}{RGB}{67,103,197} %ZF Friedrichshafen - blau
+%\definecolor{abschnittlinie}{RGB}{1,153,150} %IPN Brainpower Türkis Grün
+%\definecolor{abschnitttext}{RGB}{29,59,121} %Aldi - Blau
+%\definecolor{abschnittlinie}{RGB}{247,198,33} %Aldi - gelbliches Orange
+%\definecolor{abschnitttext}{RGB}{0,0,0} %Daimler - Schwarz
+%\definecolor{abschnittlinie}{RGB}{0,53,97} %Daimler - Gelb
+%\definecolor{abschnitttext}{RGB}{0,0,0} %Continental - Schwarz
+%\definecolor{abschnittlinie}{RGB}{254,165,0} %Continental - Gelb
+%\definecolor{abschnitttext}{RGB}{255,255,255} %weißer Text
+%\definecolor{abschnitttext}{RGB}{0,50,120} %Lidl blau
+%\definecolor{abschnittlinie}{RGB}{255,227,0} %Lidl gelb
+%\definecolor{abschnittlinie}{RGB}{0,151,223} %Salt and Pepper blau
+%\definecolor{abschnittlinie}{RGB}{1,37,121} %Hays Blau
+%\definecolor{abschnitttext}{RGB}{0,45,83} %Invensity - Blau
+%\definecolor{abschnittlinie}{RGB}{132,184,26} %Invensity - Grün
+
+\colorlet{kurzprofiltext}{black}
+%\colorlet{kurzprofiltext}{abschnittlinie}
+%\colorlet{kurzprofiltext}{abschnitttext}
+
+%==========================
+%Spezialformatierungen für Tätigkeiten, z. B. \tfirma, \tart
+%==========================
+%\newcommand{\tart}[1]{\color{abschnittlinie}\textbf{#1}\xspace}
+%\newcommand{\tart}[1]{\color{abschnitttext}\textbf{#1}\xspace}
+\newcommand{\tart}[1]{\emph{#1}\xspace}
+%\newcommand{\tart}[1]{{#1}\xspace}
+
+%\newcommand{\tfirma}[1]{\emph{#1}\xspace}
+%\newcommand{\tfirma}[1]{\textsf{\emph{#1}}\xspace}
+\newcommand{\tfirma}[1]{\textbf{#1}\xspace}
+%\newcommand{\tfirma}[1]{\color{abschnitttext}\textbf{#1}\xspace}
+%\newcommand{\tfirma}[1]{\color{abschnittlinie}\textbf{#1}\xspace}
+%\newcommand{\tfirma}[1]{#1\xspace}
+
+
+%\newcommand{\datum}[1]{\texttt{#1}}
+%\newcommand{\datum}[1]{\small\textsf{#1}}
+%\newcommand{\datum}[1]{#1}
+\newcommand{\datum}[4]{{#1}/{#2}--{#3}/{#4}}
+
+%==========================
+%Abstände, Distanzen
+%==========================
+%\newcommand{\abstand}{\hspace{1cm}\xspace}
+\newcommand{\vabstand}{\addlinespace[13pt]}
+\newcommand{\vabstandTaet}{\vabstand}
+%\newcommand{\abstand}{}
+\newlength{\minipagetaetbreite}
+\setlength{\minipagetaetbreite}{12.5cm}
+
+%==========================
+%Überschriften wie \titel, \abschnitt usw. - klassische Variante
+%==========================
+%\newcommand{\titel}[1]{\textsf{\Huge{\textls[100]{#1}}}}
+\newcommand{\titel}[1]{{\huge\textsf{#1}}}
+\newcommand{\abschnitt}[1]{\color{abschnitttext}\sffamily\Large{\textbf{#1}}}
+\newcommand{\unterab}[1]{\textbf{#1}}
+
+%==========================
+%Überschriften wie \titel, \abschnitt usw. - etwas edlere Variante
+%==========================
+%\newcommand{\titel}[1]{{\rmfamily\huge #1}}
+%\newcommand{\abschnitt}[1]{\rmfamily\Large{#1}}
+
+%======================================
+%Sonstiges
+%======================================
+\newcommand{\zielberufseinstieg}{PLATZHALTER\xspace}
+%\newcommand{\tbox}[1]{\raisebox{-0.2\height}{\tikz \node[draw, solid, inner sep=2pt, outer sep=3pt] {#1};}\xspace}
+
+
+\newcommand{\sch}[1]{\begin{center}\fbox{\textsc{{\Large #1}}}\end{center}}
+\newcommand{\unt}[1]{\begin{center}\underline{\large #1}\end{center}}
