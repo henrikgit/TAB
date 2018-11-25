@@ -1,0 +1,62 @@
+\usepackage[ngerman]{babel}
+
+\usepackage[
+x11names
+]{xcolor}
+
+\usepackage[
+%draft
+]{graphicx}
+\usepackage{
+%textcomp, % auskommentieren falls newtxtext geladen
+eso-pic,
+multicol,
+longtable,
+booktabs,
+setspace,
+xcolor,
+lastpage,
+hhline,
+xspace,
+enumitem,
+colortbl,
+%wasysym, %für \phone Symbol
+%marvosym, %für \mobilefone Symbol
+comment,
+pdflscape,
+}
+
+%============================
+%SI Einheiten Paket siunitx
+%============================
+\usepackage[
+%per-mode=fraction,
+locale=DE,
+%math-sf,
+text-sf,
+%detect-all, %For convenience, all of the preceding options can be turned on or off in one go using the detect-all and detect-none. As the names indicate, detect-all sets all of detect-weight, detect-family, detect-shape and detect-mode to true.
+detect-mode=true, %the current mode (text or math) is detected using the detect-mode switch
+separate-uncertainty=true,
+retain-explicit-plus,
+%binary-units,
+%range-phrase = {\text{--}},
+%range-phrase = {~\text{bis}~},
+%Tabellenformatierung für S-Spalten
+%immer lokal machen!!!!
+]{siunitx}
+
+%\setlist[itemize]{noitemsep, nosep, leftmargin=1em}
+
+% Listen kompakter via enumitem-Paket
+%\setlist{noitemsep}
+%\setlist[1]{\labelindent=\parindent} % < Usually a good idea
+\setitemize{noitemsep,nosep}%,labelindent=1em,leftmargin=1em}
+\setenumerate{noitemsep,nosep,labelindent=\parindent}
+%\setlist[itemize,enumerate,2]{labelindent=\parindent}
+%\setlist[itemize,enumerate,3]{labelindent=\parindent}
+%\setlist[itemize,1]{label=\textbullet,leftmargin=1.2em}
+%\setlist[itemize,2]{label=\textopenbullet,leftmargin=1.2em}
+%\setlist[itemize,1]{label=$ \bullet $,leftmargin=1.2em}
+%\setlist[itemize,2]{label=$ \circ $,leftmargin=1.2em}
+\setlist[itemize,1]{label=$ \bullet $}
+\setlist[itemize,2]{label=$ \circ $}

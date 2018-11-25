@@ -1,0 +1,58 @@
+\usepackage[
+left=2cm,
+%right=2cm,
+top=2cm,
+bottom=2cm,
+%showframe,
+]{geometry}
+
+%\pagestyle{empty}
+%\onehalfspacing
+
+%### alle Überschriften in normaler (nicht-fetter) Schrift setzen
+%\addtokomafont{disposition}{\mdseries}
+%### nur Part-Überschriften
+%\addtokomafont{part}{\mdseries}
+%\addtokomafont{partnumber}{\mdseries}
+
+%Variante 1 - einseitig%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[
+automark,
+%headsepline
+]{scrlayer-scrpage}
+%\setlength{\footheight}{2cm}
+\pagestyle{scrheadings}
+%\automark[section]{subsection}
+\setkomafont{pagefoot}{\normalfont\small}
+\setkomafont{pagenumber}{\normalfont}
+\clearscrheadfoot
+%\chead{~}
+\cfoot{\textcolor{mygray}{---\,\pagemark\,/\,\pageref{LastPage}\,---}}
+%\cfoot{\textcolor{mygray}{---\,\pagemark\,---}}
+
+%\usepackage[
+%left=2.25cm,
+%right=3.75cm,
+%top=2cm,
+%bottom=1cm
+%]{geometry}
+
+%%Variante 2 - doppelseitig (=Duplexdruck)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[
+%automark,
+%headsepline
+%]{scrpage2}
+%\pagestyle{scrheadings}
+%\clearscrheadfoot
+%\lohead{\leftmark}
+%\rohead{\pagemark}
+%\rehead{\leftmark}
+%\lehead{\pagemark}
+
+
+%\AddToShipoutPicture{%
+%    \AtTextCenter{%
+%    \makebox(0,0)[c]{\resizebox{150mm}{!}{
+%    \rotatebox{60}{\textcolor{gray}{Draft}}}}}}

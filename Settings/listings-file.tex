@@ -1,0 +1,46 @@
+%============================
+%Programmecode bzw. Excel-Formeln mit Paket listing
+%============================
+%allgemeine Definition
+\lstset{%
+basicstyle=\small\ttfamily,
+breaklines=true,
+numbers=left,
+%numberstyle=\small,
+%stepnumber=2,
+numbersep=5pt,
+%print whole listing small
+%keywordstyle=\color{black}\bfseries\underbar,
+%underlined bold black keywords
+commentstyle=\color{darkgrey}, % white comments
+%stringstyle=\ttfamily,
+% typewriter type for strings
+showstringspaces=false,
+float,
+%frame=true,
+frame=single,
+linewidth=0.9\linewidth,
+xleftmargin=25pt,
+}
+\lstdefinelanguage{libreofficefunctionEN}{
+morekeywords={
+IF,
+AND,
+OR,
+SUM,
+}
+}
+\lstset{
+language=libreofficefunctionEN,
+}
+
+\begin{comment}
+%Itemize 1. level with bracket
+%\renewcommand{\theenumi}{\arabic{enumi}}
+%\renewcommand{\labelenumi}{\theenumi{)}}
+
+%\AddToShipoutPicture{%
+%    \AtTextCenter{%
+%    \makebox(0,0)[c]{\resizebox{150mm}{!}{
+%    \rotatebox{60}{\textcolor{gray}{Draft}}}}}}
+\end{comment}

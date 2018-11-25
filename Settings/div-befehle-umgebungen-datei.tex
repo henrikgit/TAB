@@ -1,0 +1,169 @@
+%========================
+%um das Leben im Umgang mit LaTeX einfacher zu machen
+%========================
+
+%allgemeine Befehle zum Schreiben
+\newcommand{\blattname}[1]{\emph{#1}}
+\newcommand{\system}[1]{\emph{#1}}
+\newcommand{\begriff}[1]{\emph{#1}} %nur für 1. Erwähnung eines Begriffs, Stichworts, Fremdworts usw.
+\newcommand{\betont}[1]{\emph{#1}}
+\newcommand{\programmcode}[1]{\texttt{#1}}
+\newcommand{\myfont}[1]{\fontfamily{#1}\selectfont}
+%\newcommand{\fullref}[1]{\autoref{#1} \nameref{#1}}
+\newcommand{\fullref}[1]{\autoref{#1}}
+\newcommand{\loc}{LibreOffice~Calc\xspace}
+\newcommand{\tfn}{Finances.ods\xspace}
+
+%Fix für subscripts zu tief wenn superscript dabei ist Quelle: http://tex.stackexchange.com/a/5192/25683
+%wird in den nachfolgenden Makros verwendet, muss daher hierhin/an den Anfang
+\makeatletter
+\newcommand{\raisemath}[1]{\mathpalette{\raisem@th{#1}}}
+\newcommand{\raisem@th}[3]{\raisebox{#1}{$#2#3$}}
+\makeatother
+
+%Fix für Differential
+%http://tex.stackexchange.com/a/60546/25683
+\newcommand*\diff{\mathop{}\!\mathrm{d}}
+\newcommand*\Diff[1]{\mathop{}\!\mathrm{d^#1}}
+
+%Abkürzungen
+\newcommand{\ie}{i.\,e.\xspace}
+\newcommand{\Ie}{I.\,e.\xspace}
+\newcommand{\eg}{e.\,g.\xspace}
+\newcommand{\Eg}{E.\,g.\xspace}
+\newcommand{\zB}{z.\,B.\xspace}
+\newcommand{\uA}{u.\,A.\xspace}
+\newcommand{\idR}{i.\,d.\,R.\xspace}
+\newcommand{\etal}{et al.\xspace}
+\newcommand{\twod}{2\textsc{d}\xspace}
+\newcommand{\threed}{3\textsc{d}\xspace}
+
+%Bildereinbindung
+\newcommand{\bildzeile}[1]{\raisebox{-.1\height}{\includegraphics[height=0.9\baselineskip]{#1}}}
+\newcommand{\begriffbildzeile}[2]{\emph{#1}~\raisebox{-.1\height}{\includegraphics[height=0.9\baselineskip]{#2}}}
+
+\newlength{\abcd}
+
+%eigene Umgebung auf Basis des comment-Pakets
+%noch nichts
+
+%========================
+%TikZ
+%========================
+%Text durchstreichen
+\newcommand{\tcancel}[2][black]{%
+	\begin{tikzpicture}[baseline={(a.base)}]
+	\node[draw=#1, thick, cross out, inner sep=0pt, outer sep=0pt] (a){#2};
+	\end{tikzpicture}%
+}
+%Text in Box
+\newcommand{\tbox}[1]{\raisebox{-0.225\height}{\tikz \node[draw, solid, inner sep=2pt, outer sep=3pt, font=\ttfamily\small] {#1};}\xspace}
+%Keyboard Stroke Tastatur Tastendruck-Kasten mit TikZ
+\newcommand{\keystroke}[1]{%
+	\tikz[baseline=(key.base)]
+	\node[%
+	draw,
+	fill=white!10,
+	drop shadow={shadow xshift=0.25ex,shadow yshift=-0.25ex,fill=black,opacity=0.75},
+	rectangle,
+	%rounded corners=0.5pt,
+	text height=1.5ex,
+	text depth=0.5ex,
+	inner sep=1pt,
+	line width=0.5pt,
+	font=\small\sffamily
+	](key) {#1\strut}
+	;
+}
+
+%================================
+%Mathe
+%================================
+\newcommand{\suli}[2]{\sum\limits_{#1}^{#2}}
+\newcommand{\ri}{\longrightarrow}
+\newcommand{\intli}[2]{\int\limits_{#1}^{#2}}
+\newcommand{\proli}[2]{\prod\limits_{#1}^{#2}}
+\newcommand{\dunderline}[1]{\underline{\underline{#1}}}
+\newcommand{\uunder}[1]{\underline{\underline{#1}}}
+\newcommand{\entspricht}{\mathrel{\hat{=}}} 
+\newcommand{\defals}{\mathrel{\mathop:}=}
+\newcommand{\grad}{\ensuremath{^\circ}}
+\newcommand{\und}{\wedge}
+\newcommand{\abs}[1]{\lvert{#1}\rvert}
+\newcommand{\norm}[1]{\lVert{#1}\rVert}
+
+%================================
+%pgfplots
+%================================
+\newcommand{\getpgfkey}[1]{\pgfkeysvalueof{/pgfplots/#1}}
+\newcommand{\xmin}[0]{\getpgfkey{xmin}}
+\newcommand{\xmax}[0]{\getpgfkey{xmax}}
+\newcommand{\ymin}[0]{\getpgfkey{ymin}}
+\newcommand{\ymax}[0]{\getpgfkey{ymax}}
+
+%========================
+%für Paket todonotes
+%========================
+\newcommand{\ausarbeiten}[1]{\todo[color=green!50]{{#1} ausarbeiten}}
+\newcommand{\refrein}[1]{\todo[color=red]{#1}}
+
+%========================
+%eigene Farben
+%========================
+\colorlet{mygray}{black!65}
+
+%Weg
+\newcommand{\Wegmin}{s^{\text{min}}}
+
+%Kraft Kräfte
+\newcommand{\Fx}{F_{x}}
+\newcommand{\Fy}{F_{y}}
+\newcommand{\Fz}{F_{z}}
+\newcommand{\Fxmin}{F_{\raisemath{2pt}{x}}^{\text{min}}}
+\newcommand{\Fymin}{F_{\raisemath{2pt}{y}}^{\text{min}}}
+\newcommand{\Fzmin}{F_{\raisemath{2pt}{z}}^{\text{min}}}
+\newcommand{\Fxmax}{F_{\raisemath{2pt}{x}}^{\text{max}}}
+\newcommand{\Fymax}{F_{\raisemath{2pt}{y}}^{\text{max}}}
+\newcommand{\Fzmax}{F_{\raisemath{2pt}{z}}^{\text{max}}}
+
+%Zugversuch
+\newcommand{\dL}{\diff L}
+
+%Winkel
+\newcommand{\WinkelFuenfundvierzig}{\SI{45}{\degree}\xspace}
+\newcommand{\rechterWinkel}{\SI{90}{\degree}\xspace}
+
+%Einheiten
+\newcommand{\Mikrometer}{\si{\micro\metre}\xspace}
+\newcommand{\Millimeter}{\si{\milli\metre}\xspace}
+
+\newcommand{\MATRIXAngeben}[2]{Matrix \( {#1} \times {#2} \)}
+%
+%Weg
+\newcommand{\WegZehnMM}{\SI{10}{\milli\metre}\xspace}
+
+%========================
+%eigene Zähler
+%========================
+\newcounter{asdfu}
+\setcounter{asdfu}{1}
+\newcommand{\mycount}{\arabic{asdfu}\addtocounter{asdfu}{1}.} %erst die Ausgabe des Zählerstands, dann Erhöhung um 1
+
+\newcounter{Marke}
+\setcounter{Marke}{1}
+\newcommand{\BeschrCount}{\arabic{Marke}\addtocounter{Marke}{1}} %erst die Ausgabe des Zählerstands, dann Erhöhung um 1
+
+\newcounter{TextteilCount}
+\setcounter{TextteilCount}{0}
+\newcommand{\textteilzaehler}{\addtocounter{TextteilCount}{1}\arabic{TextteilCount}}
+%Zähler TextteilCount sollen pro \subsubsection zurückgesetzt werden!
+\makeatletter
+\@addtoreset{TextteilCount}{subsubsection}
+\makeatother
+
+%========================
+%checkmark definieren wg. komischen symbol-font-problemen
+%========================
+\usepackage{pifont}
+\newcommand{\ja}{\ding{51}\xspace}%
+\newcommand{\nein}{\ding{53}\xspace}

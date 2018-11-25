@@ -1,0 +1,33 @@
+\usepackage{tikz}
+\usepackage{tikzpagenodes}
+
+\usetikzlibrary{
+calc,
+backgrounds,
+arrows,
+patterns,
+shadows,
+}
+
+\tikzset{
+>=latex,
+every node/.append style={
+inner sep=1.5pt,
+},
+bemoben/.style={
+<->, >=latex, thin, every rectangle node/.style={fill=white, midway}
+},
+bemunten/.style={
+<->, >=latex, thin, every rectangle node/.style={fill=white, midway, below=2pt}
+},
+bemrechts/.style={
+<->, >=latex, thin, every rectangle node/.style={fill=white, midway, right=2pt}
+},
+bemlinks/.style={
+<->, >=latex, thin, every rectangle node/.style={fill=white, midway, left=2pt}
+},
+punktlinien/.style={
+very thin,
+%gray
+},
+}
