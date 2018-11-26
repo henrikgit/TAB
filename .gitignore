@@ -84,3 +84,6 @@
 
 # xindy
 *.xdy
+
+# Directories
+Build/
