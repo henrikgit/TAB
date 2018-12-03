@@ -1,31 +1,39 @@
 \section{Introduction}
 \label{sec:introduction}
 
-\subsection{First Things First}
+\subsection{First Things First - What Does This Do?}
 \label{subsec:first-things-first}
 
 First and foremost, the spreadsheet file named \begriff{Finances-2019.ods} is free.
 The file is intended to help you to track and budget your finances, or rather, cash.
-It is to be understood as a tool for managing your household's books and savings.\footnote{From here on forth, whenever \begriff{file} or \begriff{\tfn} is mentioned or referenced, it shall be interpreted synonymous with \begriff{Finances-2019.ods} or whichever year is written down.}
+It is to be understood as a tool that you can use for managing your household's books and savings.\footnote{From here on forth, whenever \begriff{file} or \begriff{\tfn} is mentioned or referenced, it shall be interpreted synonymous with \begriff{Finances-2019.ods} or whichever year is written down.}
 It is, in a sense, all about book-keeping.
 How much money is coming in, how much is going out and knowing where it is going.
 
 %On top of that, you will be able to budget for expenses and income, 
-Should you choose to use the sheets for budgeting your expenses and income, you will be able to budget your cash, \eg for allocating a certain amount for spending on groceries each month, or on a single item (or 3) you intend to purchase in a few months (or more).
+Should you choose to use the designated sheets for budgeting your expenses and income, you will be able to budget your cash, \eg for allocating a certain amount for spending on groceries each month, or on a single item (or 3) you intend to purchase in a few months or years.
 
-It does neither get automatically updated, nor does it receive or send data from any banking service, website or other kind of service.
-It relies on you to enter data.
+Neither does it get automatically updated, nor does it receive or send data from/to any banking service, website or other kind of server.
+It relies on you to update it which is essentially data entry.
 
-\tfn was created in LibreOffice's spreadsheet program named \begriff{Calc}, hence I strongly suggest you use it when working with this file.
+\tfn was created in LibreOffice's spreadsheet program named \begriff{Calc}, hence I suggest you use it when working with this file.
+However you may use whatever software you want.\footnote{About Excel: I do not own Excel and therefor am not going to port it to Excel at the moment. You can find more on that topic in \autoref{subsec:excel}, p.~\pageref{subsec:excel}.}
 
-I have used this file and its countless previous iterations for roughly 4--5 years now and would like to share it.
-I am not saying it is perfect and/or free of bugs, but I think I have maintained, updated and improved it quite a lot over the last few years so I am putting it online.
+I have used this file and its countless previous versions for roughly 4--5 years now and would like to share it.
+I am not saying it is perfect and/or free of bugs, but I think I have maintained, updated and improved it quite a lot over the last few years, so with the best judgment I possible, I think it is ready to be put it online.
 Nevertheless, it is provided to you as-is.
 
-\subsection{What Does It Not Do?}
+\subsection{What Does This Not Do?}
 \label{subsec:not-included}
 
-\tfn was \emph{not} engineered to analyze different offers for portfolio calculations from different broker firms, modeling possible pension plans with regards to tax optimization or buying and selling stocks by implementing some financial key performance indicators.
+\tfn does \emph{not} do any of these things:
+\begin{itemize}
+	\item Analysis of different offers for portfolio calculations from different broker firms.
+	\item Modeling possible developments of pension plans with regards to tax optimization.
+	\item Using and implementing some financial key performance indicators to model stock prices for buy-or-sell decision support.
+\end{itemize}
+I am not saying that any of these things are too specific or high-level and thus might be out of the question, but the file grew to be a tool for tracking and budgeting.
+As my time is limited, I have no plans to integrate features for the items mentioned above in the immediate future.
 
 \subsection{Basic Understandings}
 \label{subsec:basic-understandings}
@@ -40,14 +48,12 @@ The ``core concepts'', or rather, ``principles'' are as follows:
 	Or rather: for this file to have a purpose, you need to enter data into the \begriff{tracking sheets}, which are sheets that exist just to document you the amounts you spend and earn/receive.
 	Please do so diligently and thoroughly.\footnote{And this is basically all there is to it.
 	Using \tfn for managing your finances does not include rocket science.}
-	\item Frequency:\\
+	\item Workload:\\
 	My advice is to update the file at least every 2 weeks.
 	It might take an hour or two then.
-	At the end of each month, please go through your monthly bank statement line-by-line and check if all lines were documented correctly.
 	\item Human Error:\\
 	You are human.
-	It is inherently impossible to not make an error.
-	(Unless you don't, which would be weird because you probably are not human.)
+	It is inherently impossible to not make an error (unless you don't, which would be weird because you probably are not human).
 	Do not get upset if you lost a receipt or forgot to write down a note with the exact price/amount of a purchase, activity or whatever.\footnote{This type of error is irreversible, unlike typos or logical errors within the file, \eg a wrong cell reference, incomplete sum and so forth.}
 	The best course of action then is to enter a rough estimation.
 	That is good enough and considerably better than to enter nothing.
@@ -64,28 +70,27 @@ With the best intention at heart, I can only ask you to accept and follow these 
 \label{subsubsec:implications}
 
 With \fullref{subsubsec:core-concepts} in mind, let us talk about what it actually means to work with \tfn.
-For that, please read this list of important statements:
 %You should not use the file if one or multiple of the following points rings true.
 \begin{itemize}
-	\item You need to work with LibreOffice Calc.\footnote{Unless you use the file with Excel, that is.
-	However I do not own Excel and really like Calc's capabilities as free software.
-	More on that topic in \fullref{subsec:excel}, p.~\pageref{subsec:excel}.}
+	\item You need to work with LibreOffice Calc.\footnote{Unless you use other software, that is.
+	As mentioned before, more on that topic in \fullref{subsec:excel}, p.~\pageref{subsec:excel}.}
 	\item You need to enter data into spreadsheet files.
 	\item For that you need to collect receipts.
 	In case you did not receive a receipt, you might need to write down (whether digitally or on paper) what you spent.
 	This might be mitigated with the next point.
-	\item You need to remember what you spent in case you neither received a receipt, nor made a note of it or were unable to.
-	\item You do not expect the file to somehow conjure up awesome graphs and diagrams with great insights on its own.
-	Well, through its formulas it does in fact possess some slim amount of intelligence, but it is based on data \emph{you} entered.
+	\item You need to remember what you spent in case you neither received a receipt, nor made a note about the amount.
+	\item You do not expect the file to somehow conjure up graphs and diagrams with insights on its own.
+	Well, through its formulas it does in fact possess some slim amount of intelligence, but that is based on data \emph{you} entered.
 	\item In case you would like to \emph{edit} some formulas in the file, you would obviously need to learn about editing spreadsheet files with Calc and understand how exactly the calculations work.
+	\item Given that \tfn is an actual file, this implies that one does work with on while sitting in front of a computer/laptop.
+	So this would not happen while being out and about.
 	\item You are ok with facing numbers about your spending head-on.
 	\item You have the discipline that is required to manage \tfn.
+	\item In case you intend to use \tfn for managing finances of more than one person, I all persons involved have to understand the points outlined above.
 \end{itemize}
 All the aforementioned bullet points entail important aspects which describe the use of the file.
 If multiple points in the list represent something negative for you, I strongly suggest that you might find it more pleasant to use another program or app for managing your cash/finances overall.\footnote{You could then perhaps take a look at the tools page of the Personal Finance-subreddit:\\
 \href{https://www.reddit.com/r/personalfinance/wiki/tools}{https://www.reddit.com/r/personalfinance/wiki/tools}.}
-
-In case you intend to use \tfn for managing finances of more than one person, I suppose all persons involved have to understand the points outlined above.
 
 \subsection{Motivation and A Little Bit of History}
 \label{subsec:motivation-history}
@@ -103,13 +108,13 @@ Well, you will find that there are lot of like-minded people sharing their knowl
 The second reason was concern for privacy.
 Not only is it my motivation to create something, but also because I want to understand what I am putting my personal finances into.
 And on top of that I always want to know that I can limit the scope of risk and exposure.
-More on that topic is mentioned in \fullref{subsubsec:security}, p.~\pageref{subsubsec:security}.
+More on that topic is mentioned in \fullref{subsec:security}, p.~\pageref{subsec:security}.
 
 I think \tfn benefits from putting it online and reaching more people.
 Ultimately, I share the file because I hope for a win-win outcome.
 First of, this file might help others.
 Secondly, I would like to receive feedback and suggestions.
-If you  are interested in that, you can jump to \fullref{sec:feedback} on p.~\pageref{sec:feedback}.
+If you are interested in that, you can jump to \fullref{sec:feedback} on p.~\pageref{sec:feedback}.
 
 \begin{comment}
 \subsection{About This Guide}

@@ -1,24 +1,48 @@
 %========================
 %Variante Helvetica + Bitstream Charter
 %========================
-\usepackage[scale=0.95]{tgheros}
-\usepackage[
-scaled=1.05
-]{beramono}
-\usepackage[bitstream-charter,expert]{mathdesign}
-\usepackage[sups]{XCharter}
-\usepackage{microtype}
-%%\setstretch{1.075}!!
+%\usepackage[scale=0.95]{tgheros}
+%\usepackage[bitstream-charter,expert]{mathdesign}
+%\usepackage[sups]{XCharter}
+%\usepackage[scaled=1]{beramono}
+%\usepackage{microtype}
+%%%\setstretch{1.075}!!
 
 %========================
 %Variante Helvetica + Palatino
 %========================
-%\usepackage{newpxtext,newpxmath}
-%%\usepackage[sfdefault,light,scale=0.98]{roboto}
+\usepackage{newpxtext,newpxmath}
+%\usepackage[sfdefault,light,scale=0.98]{roboto}
+\usepackage[scaled=0.9]{beramono}
+%%%\usepackage{sansmath}
+\usepackage{microtype}
+\setstretch{1.05}
+
+%========================
+%Variante Helvetica + Linux Libertine
+%========================
+%\usepackage{amsmath}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
 %\usepackage[scaled=0.9]{beramono}
-%%%%\usepackage{sansmath}
+%\usepackage[scale=0.95]{tgheros}
 %\usepackage{microtype}
-%%\setstretch{1.1}!!
+
+%========================
+%Variante Roboto + Linux Libertine
+%========================
+%\usepackage{amsmath}
+%\usepackage{libertine}
+%\usepackage{libertinust1math}
+%\usepackage[
+%%sfdefault,
+%%light,
+%scale=0.92
+%]{roboto}
+%\usepackage{inconsolata}
+%\usepackage{microtype}
+%%### alle Überschriften in normaler (nicht-fetter) Schrift setzen
+%\addtokomafont{disposition}{\mdseries}
 
 %========================
 %Variante Minion Pro + Myriad Pro
@@ -62,14 +86,6 @@ scaled=1.05
 %\renewcommand{\familydefault}{\sfdefault}
 
 %========================
-%Variante Roboto + Linux Libertine
-%========================
-%\usepackage{libertine}
-%\usepackage[sfdefault,light,scale=0.925]{roboto}
-%\usepackage{microtype}
-%\renewcommand{\familydefault}{\sfdefault}
-
-%========================
 %Variante Carlito
 %========================
 %\usepackage[sfdefault,lf]{carlito}
@@ -97,14 +113,6 @@ scaled=1.05
 %\usepackage[defaultsans,scale=0.95]{opensans}
 %\usepackage{microtype}
 %\renewcommand{\familydefault}{\sfdefault}
-
-%========================
-%Variante Helvetica + Linux Libertine
-%========================
-%\usepackage{libertine}
-%\usepackage{libertinust1math}
-%\usepackage[scaled=0.9]{beramono}
-%\usepackage[scale=0.95]{tgheros}
 
 %========================
 %Variante Baskerville + Kepler Math
@@ -228,11 +236,8 @@ scaled=1.05
 %\addtokomafont{part}{\mdseries}
 %\addtokomafont{partnumber}{\mdseries}
 
-
-
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
-%\KOMAoptions{fontsize=10pt}
 
-%\input{Einstellungen/glyphtounicode}
-%\pdfgentounicode=1
+\input glyphtounicode
+\pdfgentounicode=1

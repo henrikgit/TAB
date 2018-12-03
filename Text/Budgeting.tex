@@ -16,75 +16,218 @@ As mentioned in \autoref{subsec:first-things-first} , if you like to budget your
 It is possible to create lots of different budget items which essentially represent either incoming or outgoing cash flows.
 In other words, you can budget practically any kind of cash flow, regardless if you expect it to receive or spend any cash amount in the future.
 
-\subsection{Budgeting for Expenses and Incoms}
+\subsection{Budgeting Basics}
+\label{subsec:budgeting-basics}
+
+The budgeting principle that is used in \tfn is the envelope method.
+If you would like to know more about this way of budgeting, please visit your favorite search machine, but a short introduction can be found on \href{https://en.wikipedia.org/wiki/Envelope_system}{wikipedia}\footnote{URL: \href{https://en.wikipedia.org/wiki/Envelope_system}{https://en.wikipedia.org/wiki/Envelope{\_}system}.}.
+Obviously we use it in its digital or virtual form, as there is, of course, no literal envelope being used within the file but the principle is adhered to nevertheless.
+
+The key to translating the envelope method to a virtual perspective is that the envelope could be interpreted as an extra budgeting account you could put your money into.
+You have two choices:
+\begin{enumerate}
+	\item The money may remain in whatever account you have included in the tracking.
+	\item You could transfer some amount \( X \) for a month with budgeted items (which would be practically every month) to that virtual envelope, \ie some kind of special account for budgeting needs.
+\end{enumerate}
+
+About the second choice: I can say that I thought about some kind of surrogate envelope but ultimately decided against it.
+Because I do not have some spare account.
+Because I would neither like to perform the necessary calculations to get the right amount for the month, nor do I want to process all these arguably money transfers for the amounts for budgeted items which would be due that month.\footnote{And transferring them in bulk would definitely lead to the system being to inflexible, since you would have to answer the questions of timing and the composition (which items would have to be included) of a transfer.}
+
+\subsection{Budgeting for Expenses}
 \label{subsec:budgeting-expenses}
-
-First and foremost, please do not touch the columns to the right of column \begriff{I}.
-Considering their are more cells in the same block to the right of column \begriff{I}, I formatted their interior color gray which stands for \emph{DO NOT EDIT}!
-And same goes for all the other columns continuing to the right of the gray area.
-
-This subsection is for budgeting for both expenses and income, but for the sake of ``brevity'' we are going to focus on the expense budgeting.
-Once you understood how to budget for an expense, you have the knowledge to budget for an income item as well. There is nothing new to explain here.
-You would simply have go to the sheet named \sheetname{BudgetINCitems} and do it in an analogical way.
-
-\subsubsection{Budgeting Basics}
-\label{subsubsec:budgeting-basics}
 
 You can create a budget for expenses by going to the sheet \sheetname{BudgetEXPItems}.
 
-Here are the steps you need to take to budget for an expense item.
-Note: their order does not matter, just that you do \emph{all} of them!\
-todo{evtl alle Schritte in eigene Sektionen?}
-Except the first one, actually.
-\begin{enumerate}
-	\item This is the optional step: enumerate the item you are about to add.
-	I suggest that you do because it is necessary for rearranging the items and who does not like a well-sorted list?
-	\item Fill in its description or just name it.
-	\item Enter the amount you plan to allocate to the item.
-	Note: 
-	\todo{Zeug wegen Gesamtbeträgen über mehrere Monate hinweg, \dh nicht nur Betrag für einen Monat - WERT für Beispiel angegeben}
-	\item Enter the start date (\ie month) you want to begin budgeting for that item.
-	The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-02} which stands for February 2019.
-	\item Enter end date (\ie month) in which you plan to purchase the item or the monthly expense stops.
-	The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-09} which stands for September 2019.
-	\item About the column \begriff{monthly expense}:
-	\begin{itemize}
-		\item If the item is a single item (\eg a pair of shoes), you need to set the value to \programmcode{No}.
-		\item If the item is an expense that you actually spend in \emph{each} month (\eg utilities, such as water, electricity etc.) on, you need to set the value to \programmcode{Yes}.
-	\end{itemize}
-	\item The column titled \begriff{sum prohibition} represents a switch for, like the name says, prohibiting summing up the budgeted amount or not.
-	\begin{itemize}
-		\item Put \programmcode{No} if the values are to ``stay'' in the months, \ie every month from February to September in 2019.
-		budgeted amount is to be summed up in the end month or not.
-		It says whether the amount in column C will be divided over the given time period or not.
-		\item asdf\todo{explain what YES stands for}
-		\item \emph{Warning:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-	\end{itemize}
-	\item The column titled \begriff{Budgeted}
-	\item Column \begriff{Category}  poijsad
-\end{enumerate}
-%TODO{Hier weitermachen}
-\todo{hier weitermachen}
+Something technical first:
+you must not touch the columns to the right of column \begriff{I}.
+Considering their are more cells in the same block to the right of column \begriff{I}, I formatted their interior color gray which stands for \emph{DO NOT EDIT}!
+And the same goes for all the other columns continuing to the right of the gray area.
 
-\subsubsection{Examples for Budgeting Expenses}
-\label{subsubsec:examples-budgeting-expenses}
+\autoref{subsubsec:budgeting-item-column-numbert} to \autoref{subsubsec:budgeting-item-category} lay out the steps you need to work on in order to budget for an expense item.
+Their order does not matter, just that you do \emph{all} of them!
+Well, except the first one, actually.
+In fact, the steps can be viewed as a placeholder which stand for all the special columns, named \ac{bic}, one needs to fill out.
+
+
+
+\subsubsection{BIC: Number}
+\label{subsubsec:budgeting-item-column-number}
+
+This the optional step: enumerate the item you are about to add.
+I suggest that you do because it is necessary for rearranging the items.
+Also, who does not like a well-sorted list?? :)
+
+\subsubsection{BIC: Description}
+\label{subsubsec:budgeting-item-column-description}
+
+Just name the item and/or fill in a few details.
+
+\subsubsection{BIC: Amount}
+\label{subsubsec:budgeting-item-column-amount}
+
+In short: enter the amount you plan to allocate to the item.
+You have 2 possibilities in regards to an item with multiple payments:
+\begin{enumerate}
+	\item You enter the total amount for the year and have it spread out evenly from start to end.
+	\item You enter the \todo{hier weitermachen}
+\end{enumerate}
+
+\subsubsection{BIC: Start Date}
+\label{subsubsec:budgeting-item-column-start-date}
+
+Enter the start date you want to begin budgeting for that item.
+The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-02} which stands for February 2019.
+
+\subsubsection{BIC: End Date}
+\label{subsubsec:budgeting-item-column-end-date}
+
+Enter the end date in which you plan to purchase the item or the monthly expense stops.
+The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-09} which stands for September 2019.
+
+\subsubsection{BIC: Monthly Expense}
+\label{subsubsec:budgeting-item-column-monthly-expense}
+
+About the column \begriff{monthly expense}:
+\begin{itemize}
+	\item If the item is a single item (\eg a pair of shoes), you need to set the value to \programmcode{No}.
+	\item If the item is an expense that you actually spend money on in multiple months throughout the the year (\eg utilities, such as water, electricity etc.), you need to set the value to \programmcode{Yes}.
+\end{itemize}
+
+There is also a clarification to be made about reoccurring expenses which are at intervals that do not equal a month's length.
+This will be elaborated on in \autoref{subsubsec:thoughts-non-monthly-expenses}.
+
+\subsubsection{BIC: Sum Prohibition}
+\label{subsubsec:budgeting-item-column-sum-prohibition}
+
+The column titled \begriff{sum prohibition} represents a switch for, like the name says, prohibiting summing up the written amount or not.
+As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months.
+The switch says whether the amount in column C will be divided over the given time period or not.
+\begin{itemize}
+	\item \programmcode{Yes} would activate the prohibition of summing up the budgeted amount.
+	The values, 
+	\emph{Lesson:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+		budgeted amount is to be summed up in the end month or not.
+	\item Put \programmcode{No} if the values are to ``stay'' in the months, \ie every month from February to September in 2019.
+
+	Reoccurring items, such as a monthly expenses regardless if true or fake--need a 
+	\item asdf\todo{explain what YES stands for}
+	\item 
+\end{itemize}
+
+\subsubsection{BIC: Budgeted}
+\label{subsubsec:budgeting-item-column-budgeted}
+
+\subsubsection{BIC: Category}
+\label{subsubsec:budgeting-item-column-category}
+
+Column \begriff{Category} poijsad
+
+\subsection{Examples for Budgeting Expenses}
+\label{subsec:examples-budgeting-expenses}
+
+\subsubsection{Winter Coat}
+\label{subsubsec:example-budgeting-expense-winter-coat}
+
+For the example of budgeting a winter coard, let us take these facts \& figures into accounts:
+\begin{itemize}
+	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
+	\item It is March and it possible to buy the coat in October.
+	Then the stores definitely have the new merchandise on the shelves.
+\end{itemize}
+
+\begin{center}
+\captionof{table}{Example for Budgeting a Winter Coat}
+\label{tab:example-budgeting-expense-winter-coat-dataentry}
+\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+	\hline
+	Nr. & \rotatebox{60}{Descr.} & \rotatebox{60}{Amount} & \rotatebox{60}{Start Date} & \rotatebox{60}{End Date} & \rotatebox{60}{Monthly Exp.} & \rotatebox{60}{Sum Prohib.} & \rotatebox{60}{Budgeted} & \rotatebox{60}{Category}\\ 
+	\hline
+	\hline
+	1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing \& Acc.\\
+	\hline
+\end{tabular}
+\end{center}
+
+This would yield the following content in the gray columns, as shown in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.
+
+\begin{center}
+\captionof{table}{}
+\label{tab:example-budgeting-expense-winter-coat-}
+Kat.-Nr.	Monate insg.	EUR/Monat	Monate in 2018	EUR in 2018	budgetiert
+
+\end{center}
+
+\subsection{Budgeting for Income}
+\label{subsec:budgeting-income}
+
+This subsection of the guide simply exists if the reader decided to readup on budgeting for income.
+Because once you understood how to budget for an expense, you have the knowledge to budget for an income item as well.
+There is nothing new to explain in regards to income budgeting.
+You would simply have go to the sheet named \sheetname{BudgetINCitems} and do it in an analogical way.
 
 \subsection{Thoughts on Budgeting}
 \label{subsubsec:thoughts-on-budgeting}
 
-\subsection{Advice for Using Budgeting Sheets}
-\label{subsec:advice-budgeting-sheets}
+\subsubsection{Thoughts on Non-Monthly Expenses}
+\label{subsubsec:thoughts-non-monthly-expenses}
 
-\subsection{Different Dates in Real Life}
-\label{subsec:Different-Dates}
-
+This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses which are paid at non-monthly interval (\eg quarterly) were mentioned.
+These are my thoughts on budgeting them:
 \begin{itemize}
-	\item If you bought an item \emph{earlier} than you planned, backdate said item! Otherwise the budget will penalize you in the month it was dated for purchase and you will have made a huge minus in the month you actually purchases it.
-	\item If you forgot to purchase 
+	\item Over the whole year: the expense item would be the total of all single payments.
+	There would be a deviation in all months, but the yearly total deviation equals 0.
+	The \begriff{sum prohibition} switch would have to be set to \programmcode{Yes}.
+	\item For each payment, \ie the expense is regarded as a single purchase and needs the \begriff{sum prohibition} switch set to \programmcode{No}.
+	Hence one would have to create multiple entries for the whole group of quarterly payments.
+	\begin{itemize}
+		\item One could set the start date for all payments to the month of today or whenever one would want to start budget for it.
+		Note: this would lead to an increased budgeting load in the ensuing months right after the start date.
+		\item One could set the start date to the month after a payment.
+		Explanation: let us assume the first payment would be due in march, thus the time period would be \programmcode{2018-01} to \programmcode{2018-03}.
+		Accordingly, the next budget item could start in \programmcode{2018-04}.
+	\end{itemize}
 \end{itemize}
 
-\subsection{Total Deviation of Budget Categories}
-\label{subsec:Total-Deviation}
+\subsubsection{Thoughts on Different Dates in Real Life}
+\label{subsubsec:thoughts-different-dates}
+
+There are a few cases in regards to this topic:
+\begin{enumerate}
+	\item If you purchased an item \emph{earlier} than the (planned) end date, I suggest that you backdate its end date.
+	Otherwise the budget will penalize you in the month it was dated for purchase.
+	Seeing how this action, \ie purchasing item(s), is a not a monthly expense, the monthly deviation is the one that matters, not the yearly one.
+	Therefor, if you do not backdate the you will have made an unnecessary deviation in the month you actually purchases it.
+	Dev in the new month and the higher 
+	\item If you end up not purchasing something in the right month, that is on you.
+	But that is ok and you could be happy about the positive effect on the deviation.
+	\item The debit is withdrawn too late or too early from your account and by being the thorough tracker you certainly strive to be, you treat the dates as they occur in real life and ultimately have a unnecessary deviation, but well, that is life.
+	Regardless, you update your list to reflect your view 	(because who does not like a well-maintained list, right??).
+\end{enumerate}
+
+As mentioned \autoref{subsec:tracking-column-date}, there are 2 ways (at least the ones I listed) that dates can be used:
+\begin{enumerate}
+	\item A date for the day something was bought/ordered.
+	Regardless of any kind of money transfer, this is the date the purchase was planned for.
+	\item With regards to any kind of money transfer, there is also date--in case one uses some form of electronic payment (\eg a card)--on which the amount is actually transferred from your account.
+\end{enumerate}
+
+\subsubsection{Thoughts on Delayed Budgeting}
+\label{subsubsec:thoughts-delayed-budgeting}
+
+Say one the following situation occurs:
+\begin{itemize}
+	\item It is the last day of the month.
+	\item One would go on a spontaneous shopping trip.
+	\item You know you have some certain, yet unspecified, amount to spend.
+	\item One would spend that amount.
+\end{itemize}
+
+The nice way of going on with this is what I would call \begriff{delayed budgeting}.
+But this is not a 
+
+\subsubsection{Thoughts on Deviations}
+\label{subsubsec:thoughts-deviations}
 
 \begin{itemize}
 	\item In general, the budget categories get summed and lumped together each month.
@@ -94,7 +237,7 @@ Except the first one, actually.
 		\item On one hand, it feels kind of ``good'' to have a surplus for a budget item.\\
 		\ldots in case this happens often, this item is clearly budgeted
 		\item On the other hand, 
-		\item \ldots  wrong.
+		\item \ldots wrong.
 	\end{itemize}
 \end{itemize}
 

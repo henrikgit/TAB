@@ -2,18 +2,51 @@
 \label{sec:Tracking}
 
 Clearly the most riveting part of the guide.
+It is probably the most mundane part of book-keeping, but definitely even more important.
 This insanely complex topic can be summed up with: \emph{do the damn tracking}.
+This it is.
+You are done with the broadest understanding about tracking and can go on with it in \tfn. :)
+But perhaps you feel like continue reading\ldots
+
+\subsection{How To Enter Tracking Data}
+\label{subsec:enter-tracking-data}
 
 There are \begriff{tracking sheets} for entering data on your expenses and income.
-These sheets simply contain data which is to be put into 3 columns:
-\begin{itemize}
-	\item Date: You may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard ISO 8601.
-	It will help with the visual effect on quickly gr
-	\item Description: Put anything in here, \eg Name-of-Supermarkt, Something Street
-	\item Amount: The amount
-\end{itemize}
+These sheets simply contain data which is to be put into 3 columns: date, description and amount.
 
-The following subsection contain some tips/advice guidance on how to approach the tracking. 
+\subsubsection{Tracking Column: Date}
+\label{subsec:tracking-column-date}
+
+Date: Enter the day the expense occurred.
+You can do this in two ways:
+\begin{enumerate}
+	\item Put the date for the day you bought it or ordered it online.
+	\item Or--in case you use electronic cash (a card)--the date its value is actually transferred from your account.
+	This might happen in the case of weekends, bank holidays or other kinds of service delays for money transfers.
+\end{enumerate}
+I strongly suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on later.}
+Regardless, you should stay consistent in the method you choose.
+And:
+
+\begin{center}
+	Do not lie about the date.
+\end{center}
+
+You may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
+It will help with the visual effect on quickly grasping which month and/or month you are looking at.
+Also, who does not like a well-sorted list which looks equally properly formatted?? :)
+
+\subsubsection{Tracking Column: Description}
+\label{subsec:tracking-column-description}
+
+Put anything sensible that is coherent enough to make you remember, \eg ``John's Supermarket, Smith Street'', ``Coupon for Something, John's 45th birthday, Macy's, Smith Street'' and alike.
+
+\subsubsection{Tracking Column: Amount}
+\label{subsec:tracking-column-amount}
+
+Put the amount that is to be attributed to this tracking sheet (and subsequently its category).
+In relation to the bits mentioned in \autoref{subsec:tracking-column-description}, these could go into \sheetname{DailyGroceries} and \sheetname{DailyGifts}.
+How and why these sheets have these names, all that will be elaborated on in\todo{Ref einfügen}
 
 \subsection{Receipts and Documentation}
 \label{subsec:receipts}
@@ -22,48 +55,54 @@ Collect your receipts, bills, notes and whatever you have that documents the amo
 As soon as you worked through a receipt and split up its content into your spending categories, mark it or throw it away instantly.
 If you think that you might need the receipt in the future, say for tax purposes or for possibly returning the item, maybe put them in another kind of documentation envelope/folder.
 
+Also, go through your monthly bank statements line by line and check them off.
+This most likely leads to delayed entries in the tracking sheets but it ensures factually correct tracking data.
+
 \subsection{Workload}
 \label{subsec:workload}
 
 In a way, entering all the data could be interpreted as work.
 In my experience, I am content with updating \tfn once a week.
-Of course it would still work fine to update it every 2, 3 or 4 weeks as well.
+Of course it would still work fine to update it every second, third or fourth week as well.
 
 \subsection{Categories}
 \label{subsec:tracking-categories}
 
 A good structure of categories for tracking is the key to a good overlook and analysis of your finances.
 I suggest to split up your spending into as many categories as possible.
-You will find a \todo{hier weitermachen}
-But again, do what works \emph{for you}!
+But again, do what works best \emph{for you}!\todo{Mini-Grafik mit mind. 2 Tracking Sheet Bsp.}
 
 \subsection{Splitting Receipts}
+\label{subsec:splitting-receipts}
 
 When I shopped at a store where I bought multiple kinds of various items, I split the bill, proverbially speaking.
 I divide the amounts spent in different categories among the respective tracking sheets for these categories and name the entries accordingly.
 
-An example: I spent a total amount of 30.65 EUR at Aldi.
+\subsection{Tracking: An Example}
+\label{subsec:tracking-example}
+
+I spent a total amount of 30.65 EUR at Aldi.
 I bought groceries and supplies for the household.
-Then this could be an entry in the sheet for groceries.
+This could be an entry in the sheet for groceries.
 \begin{center}\sffamily
 	\begin{tabular}{|l|l|r|}
 		\multicolumn{3}{l}{Groceries}\\
 		\hline
 		\textbf{Date} & \textbf{Description} & \textbf{Amount}\rmfamily\\
 		\hline
-		2018-06-01 & Aldi tot. 30.65 & 19.13\\
+		2018-06-01 & Aldi ABC Street tot. 30.65 & 19.13\\
 		\hline
 	\end{tabular}
 \end{center}
 The remainder of \( 30.65 - 19.13 = 11.52 \) euros is to be billed to another category, in this case Household \& Bath Supplies.
-So again you go the relevant sheet and enter the data accordingly:
+So again I go the relevant sheet and enter the data accordingly:
 \begin{center}\sffamily
 	\begin{tabular}{|l|l|r|}
 		\multicolumn{3}{l}{Household \& Bath Supplies}\\			
 		\hline
 		\textbf{Date} & \textbf{Description} & \textbf{Amount}\\
 		\hline
-		2018-06-01 & Aldi tot. 30.65 & 11.52\\
+		2018-06-01 & Aldi ABC Street tot. 30.65 & 11.52\\
 		\hline
 	\end{tabular}
 \end{center}

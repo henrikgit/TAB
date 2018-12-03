@@ -6,8 +6,9 @@ DIV=15,
 %headings=small,
 parskip=false, %is actually default: no vspace between paragraphs, but identation after 1st
 english,
-twocolumn,
-fontsize=9pt,
+%twocolumn,
+fontsize=11pt,
+twoside,
 ]
 %{scrbook}
 {scrartcl}
@@ -17,11 +18,12 @@ fontsize=9pt,
 \listfiles
 %\singlespacing
 %\onehalfspacing
-\setstretch{1.1}
-%\setstretch{1.07}
 
 \begin{document}
-%\input{Text/Titlepage}
+\pagestyle{plain}
+\input{Text/Titlepage}
+\clearpage
+\pagestyle{scrheadings}
 \input{Text/00-text-file}
 %\input{Text/LastPage}
 \end{document}

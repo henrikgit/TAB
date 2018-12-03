@@ -50,6 +50,13 @@
 %noch nichts
 
 %========================
+%SI units stuff
+%========================
+%\DeclareSIUnit[options]{unit}{symbol}
+\newcommand{\money}[2]{\SI{#1}{#2}}
+
+
+%========================
 %TikZ
 %========================
 %Text durchstreichen
@@ -71,7 +78,8 @@
 	%rounded corners=0.5pt,
 	text height=1.5ex,
 	text depth=0.5ex,
-	inner sep=1pt,
+	inner ysep=1pt,
+	inner xsep=2pt,
 	line width=0.5pt,
 	font=\small\sffamily
 	](key) {#1\strut}
