@@ -1,5 +1,6 @@
 \section{Tracking}
 \label{sec:Tracking}
+% !TeX spellcheck = en_US
 
 Clearly the most riveting part of the guide.
 It is probably the most mundane part of book-keeping, but definitely even more important.
@@ -34,6 +35,7 @@ And:
 
 You may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
 It will help with the visual effect on quickly grasping which month and/or month you are looking at.
+It is also incredibly easy to write if you have a numpad on your keyboard.
 Also, who does not like a well-sorted list which looks equally properly formatted?? :)
 
 \subsubsection{Tracking Column: Description}
@@ -46,7 +48,7 @@ Put anything sensible that is coherent enough to make you remember, \eg ``John's
 
 Put the amount that is to be attributed to this tracking sheet (and subsequently its category).
 In relation to the bits mentioned in \autoref{subsec:tracking-column-description}, these could go into \sheetname{DailyGroceries} and \sheetname{DailyGifts}.
-How and why these sheets have these names, all that will be elaborated on in\todo{Ref einfügen}
+How and why these sheets have these names, all that will be elaborated on in \fullref{subsec:tracking-categories}.
 
 \subsection{Receipts and Documentation}
 \label{subsec:receipts}
@@ -70,13 +72,16 @@ Of course it would still work fine to update it every second, third or fourth we
 
 A good structure of categories for tracking is the key to a good overlook and analysis of your finances.
 I suggest to split up your spending into as many categories as possible.
-But again, do what works best \emph{for you}!\todo{Mini-Grafik mit mind. 2 Tracking Sheet Bsp.}
+But again, do what works best \emph{for you}!
+
+For the day-to-day stuff I created the overarching class named \begriff{Daily}.
+The Daily class contains multiple categories, such as expenses in regards to bath \& household purchases, food, clothing and miscellaneous items.
+Hence I have the tracking sheets \sheetname{DailyBathHousehold} and \sheetname{DailyGroceries} attributed to it.
 
 \subsection{Splitting Receipts}
 \label{subsec:splitting-receipts}
 
-When I shopped at a store where I bought multiple kinds of various items, I split the bill, proverbially speaking.
-I divide the amounts spent in different categories among the respective tracking sheets for these categories and name the entries accordingly.
+When I shopped at a store where I bought multiple kinds of various items, I pick the amounts spent in different categories and write them into the respective tracking sheets for these categories and name the entries accordingly.
 
 \subsection{Tracking: An Example}
 \label{subsec:tracking-example}
@@ -107,4 +112,13 @@ So again I go the relevant sheet and enter the data accordingly:
 	\end{tabular}
 \end{center}
 
-% !TeX spellcheck = en_US
+\subsection{Income and Spending over a Certain Time Period}
+\label{subsec:income-and-spending-certain-time-period}
+
+The sheet \sheetname{TimePeriod} is for showing you the sums of daily cash outflows and inflows for the given time period.
+
+For that, you need to type out all the names of your tracking sheets in the table below.
+Then you can enter the start date and end date for an arbitrary time period and it will show produce the values.
+
+The only requirement is that you did do well on your tracking duties, other than there isn't really a whole lot of magic involved.
+To ease the burden on your file and CPU, consider putting \programmcode{No} back in there.
