@@ -2,7 +2,7 @@
 \label{sec:First-Steps}
 
 \subsection{Introducing LibreOffice Calc}
-\label{subsec:libreoffice-calc}
+\label{subsec:introducing-libreoffice-calc}
 
 LibreOffice is a free office suite and great software.\footnote{See \href{https://www.libreoffice.org/discover/libreoffice/}{https://www.libreoffice.org/discover/libreoffice/}.}
 You can download it on the  \href{https://www.libreoffice.org/download/download/}{official download page} of course.
@@ -12,30 +12,43 @@ Per \href{https://www.libreoffice.org/discover/calc/}{its official website}:
 	Calc is the free spreadsheet program you've always needed. Newcomers find it intuitive and easy to learn, while professional data miners and number crunchers appreciate the comprehensive range of advanced functions. Built-in wizards guide you through choosing and using a comprehensive range of advanced features. Or you can download templates from the LibreOffice template repository, for ready-made spreadsheet solutions.
 \end{quote}
 
-Now before I elaborate on some key aspects I regard as crucial, here are the most important links for finding proper help on \loc:
+\subsubsection{Help and Tips for LibreOffice Calc}
+\label{subsubsec:help-tips-for-libreoffice-calc}
+
+Providing help for working with \loc and writing a full introduction about it is clearly beyond the scope of this document.
+I will, though, give thoughts on some key aspects I regard as crucial, but before that there are these important links and documents for proper help on \loc:
 \begin{itemize}
-	\item \href{https://documentation.libreoffice.org/en/english-documentation/}{The Official Documentation} is really great.
-	\item But even better is the \begriff{Getting Started} guide, which was released for LibreOffice 6.
+	\item The Official Documentation is really great.\footnote{URL: \href{https://documentation.libreoffice.org/en/english-documentation/}{https://documentation.libreoffice.org/en/english-documentation/}.}
+	But even better is the \begriff{Getting Started} guide, which was released for LibreOffice 6.
 	Please start with pages 1--14, which are important overall, but especially for Mac users.
 	The actual good stuff is the section for Calc, which starts on page 118.
-	By the way, if you are using Windows and Adobe Reader for reading PDF-files, you can quickly jump to any page with the keyboard shortcut \keystroke{Ctrl}+\keystroke{N}.
+	\item By the way, if you are using Windows and Adobe Reader for reading PDF-files, you can quickly jump to any page with the keyboard shortcut \keystroke{Ctrl}+\keystroke{N}.
 	In Evince on Linux, use \keystroke{Ctrl}+\keystroke{L}.
-	\item For the sake of thoroughness, please do not ever be shy to use  \href{http://www.google.com}{Google} and the awesome \href{https://www.duckduckgo.com}{DuckDuckGo}.
+	\item For the sake of thoroughness, it is worth mentioned that you please not ever hesitate to use \href{http://www.duckduckgo.com}{http://www.duckduckgo.com} and  \href{https://www.google.com}{Google}.
 \end{itemize}
 
+\subsubsection{First Steps with LibreOffice Calc}
+\label{subsubsec:first-steps-with-libreoffice-calc}
+
 Here are some suggestions for first steps if you intend to follow through with learning how to work with \loc.
-The most important bit beforehand: you can relax a bit. \loc is not so different from Excel.
-To properly work with \tfn, you should learn about \begriff{cell templates} and the \begriff{navigator}.
+The most important bit beforehand: \loc is not so different from Excel.
+Many things you might have picked up while working with Excel, are probably going to work in a similar fashion in Calc.
+
+To work with \tfn in a proper and productive way, you should definitely learn about \begriff{cell style templates} and the \begriff{navigator}:
 \begin{itemize}
 	\item Cell style templates are the core properties of formatting the whole thing.
-	Without them, one would have go crazy when editing \tfn.
+	Without them, one would go crazy when editing \tfn (ok, you got me, I am talking about \emph{me}).
 	The templates can be found in the stylist (press \keystroke{F11} for that), which enable you to make fast changes to the look (format-wise) of the file.
-	\item The navigator (reachable via \keystroke{F11}) enables you to navigate arguably fast between the sheets if you do not use keyboard shortcuts.
+	Note: if you change one of them, you are changing the formatting of all cells in the entire document that have been formatted with this style template.
+	And this effect is the intended behavior.
+	\item The navigator (reachable via \keystroke{F5}) enables you to navigate arguably fast between the sheets if you do not use keyboard shortcuts.
 	It not only lists all visible sheets in the file, but also all other kinds of elements that can be found in it.
-	\item For the case of editing formulas and/or copying/replacing cells in bulk, look at keyboard shortcuts on page 129 in \begriff{Getting Started}.
-	They are somewhat identical to the ones you might be familiar with in Excel.
-	For example, if you are in a block of values with no gaps and you would like to select the current cell all the cells to the right in this block of the current cell, use the shortcut \keystroke{Shift} + \keystroke{Ctrl} + \keystroke{\( \rightarrow \)}.
 \end{itemize}
+
+There multiple keyboard shortcuts you can learn, starting with this one:
+for the case of copying/replacing cells in bulk, look at keyboard shortcuts on page 129 in \begriff{Getting Started}.
+They are somewhat identical to the ones you might be familiar with in Excel.
+For example, if a cell in a bigger group/block of cells is selected and you would like to additionally select all the cells to the right of the current cell in this block, use the shortcut \keystroke{Shift} + \keystroke{Ctrl} + \keystroke{\( \rightarrow \)}.
 
 \subsection{Synchronization}
 \label{subsec:synchronization}
@@ -47,7 +60,8 @@ Simply save the file in a folder that belongs to the folder which get synchroniz
 
 For securing the file, use the password-protection when you save it.
 For more guidance on that, please consult the \begriff{Getting Started} guide, page 30.
-Do not lose the password!
+
+The most important piece of information is: do not lose the password!
 
 \subsection{The Start}
 \label{subsec:opening-the-file}

@@ -6,27 +6,39 @@ DIV=15,
 %headings=small,
 parskip=false, %is actually default: no vspace between paragraphs, but identation after 1st
 english,
-%twocolumn,
-fontsize=11pt,
-twoside,
+fontsize=10pt,
+%twoside,
+footlines=8,
+%footheight=10pt,
 ]
 %{scrbook}
 {scrartcl}
 
-\input{Settings/settings-total}
+\input{Settings/packages-file}
+%\input{Settings/listings-file}
+\input{Settings/tikz-file}
+\input{Settings/verweise-sprach-file}
+\input{Settings/misc-commands-environments-file}
+%\input{Settings/special-file-names}
+%\input{Settings/pagelayout-PRINT-file}
+\input{Settings/pagelayout-file}
+\input{Settings/font-file}
+\input{Settings/hyphenation-file}
+\input{Settings/acronyms-file}
+\input{Settings/hyperref-file}
 
 \listfiles
 %\singlespacing
 %\onehalfspacing
 
 \begin{document}
-\begin{comment}
-\pagestyle{plain}
-\input{Text/Titlepage}
-\clearpage
+%\begin{comment}
+%\pagestyle{plain}
+%\input{Text/Titlepage}
+%\clearpage
 \tableofcontents
 \clearpage
-\end{comment}
+%\end{comment}
 \pagestyle{scrheadings}
 \input{Text/00-text-file}
 %\input{Text/LastPage}

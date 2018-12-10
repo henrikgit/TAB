@@ -8,20 +8,37 @@ Here is a short primer on budgeting:
 \end{quote}
 
 Why should you budget? A budget will help you plan for short-term expenses such as your monthly bills; mid-term expenses such as vacations; and long-term expenses such as buying a house, paying for a child’s college education or putting away money for retirement.
-When you have an app, spreadsheet or notebook in front of you showing how much money you expect to make over the one month, six months, one year or five years — and how much of that money will be flowing out and how much you will have left to save each month — you’ll always know when you need to cut back on spending, when you can afford to loosen the reins and how long it will take to save for major goals or pay off debts.
+When you have an app, spreadsheet or notebook in front of you showing how much money you expect to make over the one month, six months, one year or five years --- and how much of that money will be flowing out and how much you will have left to save each month --- you’ll always know when you need to cut back on spending, when you can afford to loosen the reins and how long it will take to save for major goals or pay off debts.
 If you’re not happy with the numbers, knowing what they are will help you take steps to improve your situation.
-These steps might include paying off credit cards to increase your monthly cash flow; reducing your food expenses; or getting a promotion, switching companies, starting a side hustle or founding your own full-time business to make more money.\footnote{Cp. \url{https://www.investopedia.com/university/budgeting/basics1.asp}.}
+These steps might include paying off credit cards to increase your monthly cash flow; reducing your food expenses; or getting a promotion, switching companies, starting a side hustle or founding your own full-time business to make more money.\footnote{Taken verbatim from \url{https://www.investopedia.com/university/budgeting/basics1.asp}.}
 
-As mentioned in \autoref{subsec:first-things-first} , if you like to budget your income and expenses, you need to use the budgeting sheets for this.
+\subsection{Budgeting in Finances.ods}
+\label{subsec:budgeting-in-finances.ods}
+
+\subsubsection{Budgeting Basics}
+\label{subsubsec:budgeting-basics}
+
+As mentioned in \autoref{subsec:first-things-first}, if you like to budget your income and expenses, you need to use the budgeting sheets for this.
 It is possible to create lots of different budget items which essentially represent either incoming or outgoing cash flows.
 In other words, you can budget practically any kind of cash flow, regardless if you expect it to receive or spend any cash amount in the future.
 
-\subsection{Budgeting Basics}
-\label{subsec:budgeting-basics}
+As outlined in a few paragraphs above, the file utilizes the approach that the user plans his budget tailored to his needs.
+To do so, one starts by writing down a list that consists of all the (possible) expense items.
+So this is a process which implies that the user plans his expenses beforehand, not entirely but to the best of his abilities at that point in time.
+And the budget as a whole gets more and more optimized to achieve the desired goals, work with the prioritized expense categories at the right time, account for relatively high one-time/emergency expenses and so forth.
+
+\subsubsection{Budgeting for One Year}
+\label{subsubsec:budgeting-for-one-year}
+
+As mentioned in \autoref{subsec:first-things-first} and \autoref{subsec:tracking-column-date}, \tfn is created to be used for one calendar year.
+There is nothing speaking against using the file for multiple (consecutive) years, except that the formulas that are built into it only check for the right month and day.
+
+\subsubsection{The Envelope Method}
+\label{subsubsec:budgeting-the-envelope-method}
 
 The budgeting principle that is used in \tfn is the envelope method.
 If you would like to know more about this way of budgeting, please visit your favorite search machine, but a short introduction can be found on \href{https://en.wikipedia.org/wiki/Envelope_system}{wikipedia}\footnote{URL: \href{https://en.wikipedia.org/wiki/Envelope_system}{https://en.wikipedia.org/wiki/Envelope{\_}system}.}.
-Obviously we use it in its digital or virtual form, as there is, of course, no literal envelope being used within the file but the principle is adhered to nevertheless.
+Obviously we use it in its digital or virtual form, as there is no envelope being used within the file but the principle is adhered to nonetheless.
 
 The key to translating the envelope method to a virtual perspective is that the envelope could be interpreted as an extra budgeting account you could put your money into.
 You have two choices:
@@ -30,32 +47,30 @@ You have two choices:
 	\item You could transfer some amount \( X \) for a month with budgeted items (which would be practically every month) to that virtual envelope, \ie some kind of special account for budgeting needs.
 \end{enumerate}
 
-About the second choice: I can say that I thought about some kind of surrogate envelope but ultimately decided against it.
-Because I do not have some spare account.
-Because I would neither like to perform the necessary calculations to get the right amount for the month, nor do I want to process all these arguably money transfers for the amounts for budgeted items which would be due that month.\footnote{And transferring them in bulk would definitely lead to the system being to inflexible, since you would have to answer the questions of timing and the composition (which items would have to be included) of a transfer.}
+To clarify the second choice and its implications:
+\begin{itemize}
+	\item One would need to have a spare account.
+	\item One would need to perform the necessary calculations to get the right amount for the month.
+	\item Ultimately, one would need to process all these arguably small money transfers for the amounts for budgeted items which would be due that month.\footnote{And transferring them in bulk would definitely lead to the system being to inflexible, since you would have to answer the questions of timing and the composition (which items would have to be included) for a transfer.
+	All in all, it is probably best to let that topic rest.}
+\end{itemize}
 
 \subsection{Budgeting for Expenses}
 \label{subsec:budgeting-expenses}
 
 You can create a budget for expenses by going to the sheet \sheetname{BudgetEXPItems}.
+Please 
 
-Something technical first:
-you must not touch the columns to the right of column \begriff{I}.
-Considering their are more cells in the same block to the right of column \begriff{I}, I formatted their interior color gray which stands for \emph{DO NOT EDIT}!
-And the same goes for all the other columns continuing to the right of the gray area.
-
-\autoref{subsubsec:budgeting-item-column-numbert} to \autoref{subsubsec:budgeting-item-category} lay out the steps you need to work on in order to budget for an expense item.
+\autoref{subsubsec:budgeting-item-column-number} to \autoref{subsubsec:budgeting-item-column-category} lay out the steps you need to work on in order to budget for an expense item.\todo{Komischer Satz}
 Their order does not matter, just that you do \emph{all} of them!
 Well, except the first one, actually.
 In fact, the steps can be viewed as a placeholder which stand for all the special columns, named \ac{bic}, one needs to fill out.
-
-
 
 \subsubsection{BIC: Number}
 \label{subsubsec:budgeting-item-column-number}
 
 This the optional step: enumerate the item you are about to add.
-I suggest that you do because it is necessary for rearranging the items.
+I suggest that you do because as it may become necessary to rearrange the items.
 Also, who does not like a well-sorted list?? :)
 
 \subsubsection{BIC: Description}
@@ -129,39 +144,53 @@ Column \begriff{Category} poijsad
 \subsubsection{Winter Coat}
 \label{subsubsec:example-budgeting-expense-winter-coat}
 
-For the example of budgeting a winter coard, let us take these facts \& figures into accounts:
+For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
 \begin{itemize}
 	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
 	\item It is March and it possible to buy the coat in October.
 	Then the stores definitely have the new merchandise on the shelves.
 \end{itemize}
+The first columns in the row for that budget item could look like shown in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
 
-\begin{center}
-\captionof{table}{Example for Budgeting a Winter Coat}
+\begin{table}[htbp]
+\centering
+\addtolength{\leftskip} {-1cm}
+\sffamily
+\caption[Example for Budgeting a Winter Coat]{Example for Budgeting a Winter Coat.
+The values from above are displayed in the corresponding columns.}
 \label{tab:example-budgeting-expense-winter-coat-dataentry}
 \begin{tabular}{|l|l|l|l|l|l|l|l|l|}
 	\hline
-	Nr. & \rotatebox{60}{Descr.} & \rotatebox{60}{Amount} & \rotatebox{60}{Start Date} & \rotatebox{60}{End Date} & \rotatebox{60}{Monthly Exp.} & \rotatebox{60}{Sum Prohib.} & \rotatebox{60}{Budgeted} & \rotatebox{60}{Category}\\ 
+	\footnotesize\textbf{No.} & \rotatebox{0}{\footnotesize\textbf{Descr.}} & \rotatebox{0}{\footnotesize\textbf{Amount}} & \rotatebox{0}{\footnotesize\textbf{Start Date}} & \rotatebox{0}{\footnotesize\textbf{End Date}} & \rotatebox{0}{\footnotesize\textbf{Monthly Exp.}} & \rotatebox{0}{\footnotesize\textbf{Sum Prohib.}} & \rotatebox{0}{\footnotesize\textbf{Budgeted}} & \rotatebox{0}{\footnotesize\textbf{Category}}\\ 
 	\hline
 	\hline
-	1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing \& Acc.\\
+	1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing/Acc.\\
 	\hline
 \end{tabular}
-\end{center}
+\end{table}
 
-This would yield the following content in the gray columns, as shown in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.
+The data in \autoref{tab:example-budgeting-expense-winter-coat-dataentry} yields the following results in the gray columns, as shown in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.
 
-\begin{center}
-\captionof{table}{}
-\label{tab:example-budgeting-expense-winter-coat-}
-Kat.-Nr.	Monate insg.	EUR/Monat	Monate in 2018	EUR in 2018	budgetiert
-
-\end{center}
+\begin{table}[htbp]
+\centering
+\sffamily
+\caption[1234234]{20983rh9u}
+\label{tab:example-budgeting-expense-winter-coat-graycolumns}
+\begin{tabular}{|l|l|l|l|l|l|}
+	\hline
+	\footnotesize\textbf{Cat.-No.} & \footnotesize\textbf{Months tot.} & \footnotesize\textbf{€/Month} & \footnotesize\textbf{Months in 2019} & \footnotesize\textbf{€ in 2019} & \footnotesize\textbf{Budgeted}\\
+	\hline
+	\hline
+	\rowcolor{lightgray}
+	001 & 8 & 100 & 8 & 800 & No\\
+	\hline
+\end{tabular}
+\end{table}
 
 \subsection{Budgeting for Income}
 \label{subsec:budgeting-income}
 
-This subsection of the guide simply exists if the reader decided to readup on budgeting for income.
+This subsection of the guide simply exists if you, the reader, decided to readup on budgeting for income.
 Because once you understood how to budget for an expense, you have the knowledge to budget for an income item as well.
 There is nothing new to explain in regards to income budgeting.
 You would simply have go to the sheet named \sheetname{BudgetINCitems} and do it in an analogical way.

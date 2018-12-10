@@ -1,8 +1,8 @@
 \usepackage[
-%left=2.5cm,
-right=4cm,
-top=2cm,
-%bottom=2cm,
+left=3.75cm,
+right=3.75cm,
+top=2.5cm,
+bottom=1.5cm,
 %showframe,
 ]{geometry}
 
@@ -17,32 +17,34 @@ top=2cm,
 
 %Variante 1 - einseitig%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\usepackage[
-%automark,
-%%headsepline
-%]{scrlayer-scrpage}
-%%\setlength{\footheight}{2cm}
-%\pagestyle{scrheadings}
-%%\automark[section]{subsection}
-%\setkomafont{pagefoot}{\normalfont\small}
-%\setkomafont{pagenumber}{\normalfont}
-%\clearscrheadfoot
-%%\chead{~}
-%\cfoot{\textcolor{mygray}{---\,\pagemark\,/\,\pageref{LastPage}\,---}}
-%%\cfoot{\textcolor{mygray}{---\,\pagemark\,---}}
-
-%%Variante 2 - doppelseitig (=Duplexdruck)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \usepackage[
 automark,
 headsepline
-]{scrpage2}
-%\pagestyle{scrheadings}
+]{scrlayer-scrpage}
+%\setlength{\footheight}{2cm}
+\pagestyle{scrheadings}
+%\automark[section]{subsection}
+\setkomafont{pagefoot}{\normalfont\small}
+\setkomafont{pagenumber}{\normalfont}
+\setkomafont{pagehead}{\normalfont}
 \clearscrheadfoot
-\lohead{\leftmark}
-\rohead{\pagemark}
-\rehead{\leftmark}
-\lehead{\pagemark}
+\ihead{\leftmark}
+\ohead{\pagemark}
+%\cfoot{\textcolor{mygray}{---\,\pagemark\,/\,\pageref{LastPage}\,---}}
+%\cfoot{\textcolor{mygray}{---\,\pagemark\,---}}
+
+%%Variante 2 - doppelseitig (=Duplexdruck)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\usepackage[
+%automark,
+%headsepline
+%]{scrlayer-scrpage}
+%%\pagestyle{scrheadings}
+%\clearscrheadfoot
+%\lohead{\leftmark}
+%\rohead{\pagemark}
+%\rehead{\leftmark}
+%\lehead{\pagemark}
 
 
 %\AddToShipoutPicture{%

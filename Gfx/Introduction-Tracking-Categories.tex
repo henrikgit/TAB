@@ -1,0 +1,98 @@
+\documentclass[
+english,
+class=scrartcl,
+]
+{standalone}
+
+\input{../Settings/packages-file}
+%\input{../Settings/listings-file}
+\input{../Settings/tikz-file}
+\input{../Settings/verweise-sprach-file}
+\input{../Settings/misc-commands-environments-file}
+%\input{../Settings/special-file-names}
+%\input{../Settings/pagelayout-PRINT-file}
+\input{../Settings/font-file}
+\input{../Settings/hyphenation-file}
+\input{../Settings/acronyms-file}
+\input{../Settings/hyperref-file}
+
+\hypersetup{pdftitle={\jobname},}
+\KOMAoptions{fontsize=10pt}
+\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\lineconnection}[2]{\draw[thick] ([xshift=0.0cm]{#1}.south) --  ($({#1}|-{#2}.west)$) -- ({#2}.west);}
+
+\listfiles
+
+\begin{document}
+\begin{tikzpicture}[
+%font=\sffamily,
+%every node/.style={
+%font=\sffamily,
+%},
+node distance=1.0cm and 0.8cm, %vert dist: 1.0cm hor dist: 0.8cm
+expcat/.style={
+	font=\bfseries,
+	rectangle,
+	minimum width=2cm,
+	minimum height=0.8cm,
+	draw=black,
+	very thick,
+	fill=black!40,
+},
+sheet/.style={
+	draw,
+	font=\small,
+	rectangle,
+%	minimum width=1cm,
+	minimum height=0.7cm,
+	align=left,
+	draw=black,
+	very thick,
+%	fill=black!40,
+},
+] 
+%% % % % %
+%% % nodes
+%% % % % %
+\node [expcat, anchor=west] (Daily) at (0,0) {Daily};
+\node [sheet, below=of Daily.west, anchor=west, xshift=1.2cm] (Groceries) {Groceries};
+\node [sheet, below=of Groceries.west, anchor=west] (Bath) {Bath/Household/Kitchen};
+\node [sheet, below=of Bath.west, anchor=west] (DailyClothing) {Clothing/Accessoires};
+\node [sheet, below=of DailyClothing.west, anchor=west] (Gifts) {Gifts};
+\node [sheet, below=of Gifts.west, anchor=west] (DailyMisc) {Misc. (Daily)};
+%
+\node [expcat, anchor=west] (Work) at ($(Daily-|Bath.east)$) {Work};
+\node [sheet, below=of Work.west, anchor=west, xshift=1.2cm] (Food) {Food/Drinks};
+\node [sheet, below=of Food.west, anchor=west] (WorkClothing) {Clothing/Tools/Acc.};
+\node [sheet, below=of WorkClothing.west, anchor=west] (Mobility) {Mobility};
+\node [sheet, below=of Mobility.west, anchor=west] (WorkMisc) {Misc. (Work)};
+%
+\node [expcat, anchor=west] (Entertainment) at ($(Daily-|WorkClothing.east)$) {Entertainment};
+\node [sheet, below=of Entertainment.west, anchor=west, xshift=1.5cm] (CableTV) {CableTV};
+\node [sheet, below=of CableTV.west, anchor=west] (EntertainmentPlaceholder) {\ldots};
+%
+\node [expcat, anchor=west, yshift=-1.0cm] (Hobbies) at ($(Entertainment.west|-EntertainmentPlaceholder.west)$) {Hobbies};
+\node [sheet, below=of Hobbies.west, anchor=west, xshift=1.5cm] (Sports) {Sports~\&~Acc.};
+\node [sheet, below=of Sports.west, anchor=west] (HobbiesPlaceholder) {\ldots};
+%% % % % %
+%% % lines
+%% % % % %
+\lineconnection{Daily}{Groceries}
+\lineconnection{Daily}{Bath}
+\lineconnection{Daily}{DailyClothing}
+\lineconnection{Daily}{Gifts}
+\lineconnection{Daily}{DailyMisc}
+%
+\lineconnection{Work}{Food}
+\lineconnection{Work}{WorkClothing}
+\lineconnection{Work}{Mobility}
+\lineconnection{Work}{WorkMisc}
+%
+\lineconnection{Entertainment}{CableTV}
+\lineconnection{Entertainment}{EntertainmentPlaceholder}
+%
+\lineconnection{Hobbies}{Sports}
+\lineconnection{Hobbies}{HobbiesPlaceholder}
+\end{tikzpicture}
+\end{document}

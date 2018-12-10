@@ -3,10 +3,12 @@
 % !TeX spellcheck = en_US
 
 Clearly the most riveting part of the guide.
-It is probably the most mundane part of book-keeping, but definitely even more important.
+It is probably the most mundane part of this whole thing, but twice as important.
 This insanely complex topic can be summed up with: \emph{do the damn tracking}.
+
 This it is.
-You are done with the broadest understanding about tracking and can go on with it in \tfn. :)
+You are done with the broadest understanding about tracking and can get on with it in \tfn.
+
 But perhaps you feel like continue reading\ldots
 
 \subsection{How To Enter Tracking Data}
@@ -18,42 +20,51 @@ These sheets simply contain data which is to be put into 3 columns: date, descri
 \subsubsection{Tracking Column: Date}
 \label{subsec:tracking-column-date}
 
-Date: Enter the day the expense occurred.
+Date: Enter the date for the day the expense occurred.
 You can do this in two ways:
 \begin{enumerate}
 	\item Put the date for the day you bought it or ordered it online.
-	\item Or--in case you use electronic cash (a card)--the date its value is actually transferred from your account.
-	This might happen in the case of weekends, bank holidays or other kinds of service delays for money transfers.
+	\item Or--in case you pay with electronic cash, \eg via card--you might put the date the expense's value is actually transferred from your account.
+	This might happen in the case of weekends, bank holidays or due to other kinds of service delays for money transfers.
 \end{enumerate}
-I strongly suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on later.}
+I \emph{strongly} suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on in \autoref{subsubsec:thoughts-different-dates}, \autopageref{subsubsec:thoughts-different-dates}.}
 Regardless, you should stay consistent in the method you choose.
 And:
 
 \begin{center}
-	Do not lie about the date.
+	Do not ever lie about the date.
 \end{center}
 
-You may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
+For writing the date into a cell, you may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
+An example for July 4th, 2019: \programmcode{2019-07-04}.
+
 It will help with the visual effect on quickly grasping which month and/or month you are looking at.
 It is also incredibly easy to write if you have a numpad on your keyboard.
 Also, who does not like a well-sorted list which looks equally properly formatted?? :)
 
+But if you want to change the date format, simply edit the corresponding cell style template to produce the output you wish.
+Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style template.
+
 \subsubsection{Tracking Column: Description}
 \label{subsec:tracking-column-description}
 
-Put anything sensible that is coherent enough to make you remember, \eg ``John's Supermarket, Smith Street'', ``Coupon for Something, John's 45th birthday, Macy's, Smith Street'' and alike.
+Put down anything sensible that is coherent enough to make you remember, \eg ``John's Supermarket, Smith Street'', ``Coupon for Something, John's 45th birthday, Macy's, Smith Street'' and so forth.
 
 \subsubsection{Tracking Column: Amount}
 \label{subsec:tracking-column-amount}
 
 Put the amount that is to be attributed to this tracking sheet (and subsequently its category).
 In relation to the bits mentioned in \autoref{subsec:tracking-column-description}, these could go into \sheetname{DailyGroceries} and \sheetname{DailyGifts}.
-How and why these sheets have these names, all that will be elaborated on in \fullref{subsec:tracking-categories}.
+How and why these sheets have these names, all that will be elaborated on in \autoref{subsec:tracking-categories} on \autopageref{subsec:tracking-categories}.
+
+If you want to change the format of the figures and have the symbol for your currency displayed, simply edit the corresponding cell style template to produce the output you wish.
+Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style template.
 
 \subsection{Receipts and Documentation}
-\label{subsec:receipts}
+\label{subsec:tracking-receipts}
 
-Collect your receipts, bills, notes and whatever you have that documents the amounts you paid (not: liabilities you will have to pay \emph{in the future}).\footnote{Maybe collect them in a shoebox, an envelope or in a plastic pocket.}
+Collect your receipts, bills, notes and whatever you have that documents the amounts you paid.\footnote{Maybe collect them in a shoebox, an envelope or in a plastic pocket.}
+By this, I do not mean a document such as a contract, that may include clauses for future payments.
 As soon as you worked through a receipt and split up its content into your spending categories, mark it or throw it away instantly.
 If you think that you might need the receipt in the future, say for tax purposes or for possibly returning the item, maybe put them in another kind of documentation envelope/folder.
 
@@ -61,7 +72,7 @@ Also, go through your monthly bank statements line by line and check them off.
 This most likely leads to delayed entries in the tracking sheets but it ensures factually correct tracking data.
 
 \subsection{Workload}
-\label{subsec:workload}
+\label{subsec:tracking-workload}
 
 In a way, entering all the data could be interpreted as work.
 In my experience, I am content with updating \tfn once a week.
@@ -74,21 +85,43 @@ A good structure of categories for tracking is the key to a good overlook and an
 I suggest to split up your spending into as many categories as possible.
 But again, do what works best \emph{for you}!
 
-For the day-to-day stuff I created the overarching class named \begriff{Daily}.
-The Daily class contains multiple categories, such as expenses in regards to bath \& household purchases, food, clothing and miscellaneous items.
-Hence I have the tracking sheets \sheetname{DailyBathHousehold} and \sheetname{DailyGroceries} attributed to it.
+For the day-to-day stuff I created the overarching class/field\footnote{To this day, I am not 100\,\% sure if either \emph{class} or \emph{field} is the better term for this item in the hierarchy.} named \begriff{Daily}.
+The Daily class contains multiple categories, such as expenses in regards to groceries, bath \& household, food, clothing and miscellaneous items.
+Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{DailyBathHousehold} attributed to it, as shown in \autoref{fig:tracking-categories}.
+
+\begin{figure}[htp]
+\centering
+\caption[Tracking Categories]{Tracking Categories.
+There are multiple categories shown which are typical in certain fields of life, ordered by priority and frequency.
+}
+\label{fig:tracking-categories}
+\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
+\end{figure}
+
+There are further elaborations to be given:
+the classes and their categories are just an excerpt from my own version of \tfn, which is also somewhat incorporated into the file you downloaded.
+These categories are plentiful and thus arguably quite granular-
+and Meine Kategorien... starke Verfeinerung bei der Aufteilung, quasi iterativ immer weiter verbessert
+Ist nach Kontext im Leben und typischen situationen
+If you wish to do so, you can\todo{weitermachen}
+
+As stated a few times already, this content, the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
+Aber man könnte auch die Herangehensweise nach Prioritäten vornehmen, keine UNterscheidung zwischen Verpflegung während der Arbeit und Einkäufen.
+Man muss sich so oder so ernähren, unabhängig davon ob man sich im Büro/school befindet oder in der eigenen Küche.
+Shopping für Kleidung, auch notwendig.
+Freizeit: Essen gehen, feiern, 
 
 \subsection{Splitting Receipts}
 \label{subsec:splitting-receipts}
 
-When I shopped at a store where I bought multiple kinds of various items, I pick the amounts spent in different categories and write them into the respective tracking sheets for these categories and name the entries accordingly.
+After I shopped at a store where I bought multiple kinds of various items, I pick the amounts spent in different categories and write them into the respective tracking sheets for these categories and name the entries accordingly.
 
 \subsection{Tracking: An Example}
 \label{subsec:tracking-example}
 
-I spent a total amount of 30.65 EUR at Aldi.
-I bought groceries and supplies for the household.
-This could be an entry in the sheet for groceries.
+Say you went to Aldi and you spent a total amount of 30.65\,€.
+You bought groceries and supplies for the household.
+This could be an entry in the sheet for groceries then:
 \begin{center}\sffamily
 	\begin{tabular}{|l|l|r|}
 		\multicolumn{3}{l}{Groceries}\\
@@ -99,8 +132,9 @@ This could be an entry in the sheet for groceries.
 		\hline
 	\end{tabular}
 \end{center}
-The remainder of \( 30.65 - 19.13 = 11.52 \) euros is to be billed to another category, in this case Household \& Bath Supplies.
-So again I go the relevant sheet and enter the data accordingly:
+
+The remainder of \( 30.65 - 19.13 = 11.52\) is to be billed to another category, in this case Household \& Bath Supplies.
+So again you go the relevant sheet and enter the data accordingly:
 \begin{center}\sffamily
 	\begin{tabular}{|l|l|r|}
 		\multicolumn{3}{l}{Household \& Bath Supplies}\\			
