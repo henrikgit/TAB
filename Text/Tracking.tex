@@ -2,13 +2,14 @@
 \label{sec:Tracking}
 % !TeX spellcheck = en_US
 
-Clearly the most riveting part of the guide.
+Tracking is the most riveting part of the guide.
+Not really.
+Clearly not.
 It is probably the most mundane part of this whole thing, but twice as important.
 This insanely complex topic can be summed up with: \emph{do the damn tracking}.
 
 This it is.
 You are done with the broadest understanding about tracking and can get on with it in \tfn.
-
 But perhaps you feel like continue reading\ldots
 
 \subsection{How To Enter Tracking Data}
@@ -31,8 +32,8 @@ I \emph{strongly} suggest you use the first kind of date, as the date represents
 Regardless, you should stay consistent in the method you choose.
 And:
 
-\begin{center}
-	Do not ever lie about the date.
+\begin{center}\sffamily\bfseries
+	Do not lie about the date.
 \end{center}
 
 For writing the date into a cell, you may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
@@ -91,25 +92,37 @@ Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{Daily
 
 \begin{figure}[htp]
 \centering
-\caption[Tracking Categories]{Tracking Categories.
-There are multiple categories shown which are typical in certain fields of life, ordered by priority and frequency.
+\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
+\caption[Tracking Categories]{These are some of the classes and their categories in Finances.ods.
+They are typical in certain fields of life, ordered by priority and frequency.
+You may create and name your own collection of classes and categories in any way you wish.
 }
 \label{fig:tracking-categories}
-\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
 \end{figure}
 
 There are further elaborations to be given:
 the classes and their categories are just an excerpt from my own version of \tfn, which is also somewhat incorporated into the file you downloaded.
-These categories are plentiful and thus arguably quite granular-
-and Meine Kategorien... starke Verfeinerung bei der Aufteilung, quasi iterativ immer weiter verbessert
-Ist nach Kontext im Leben und typischen situationen
-If you wish to do so, you can\todo{weitermachen}
+I have a day-to-day life that the class \begriff{Daily} is for and I am sure its categories are self-explanatory.
+Although I should clarify that the sheet \sheetname{MiscDaily} is in fact the sheet that contains all miscellaneous things that 
+At work, I need to buy food and drinks
 
-As stated a few times already, this content, the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
-Aber man könnte auch die Herangehensweise nach Prioritäten vornehmen, keine UNterscheidung zwischen Verpflegung während der Arbeit und Einkäufen.
-Man muss sich so oder so ernähren, unabhängig davon ob man sich im Büro/school befindet oder in der eigenen Küche.
-Shopping für Kleidung, auch notwendig.
-Freizeit: Essen gehen, feiern, 
+These categories are plentiful and thus arguably quite granular, which is how the structure developed over time, iterated with each edit.
+I suppose one can say that I chose a strategy to mirror life in typical areas and split them up.\footnote{The \emph{very first} division of expense categories was inspired by the categories of a spreadsheet by \href{https://www.vertex42.com/}{Vertex42.com}, namely an old version of the Personal Budget Template.}
+
+As stated a few times already, the content in the file are editable.
+Hence the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
+If you wish to do so, you can change it up to make it fit your needs.
+
+Or one could 
+Maybe you could start by putting all monthly bills into the same field \begriff{Bills}, \ie you would end up with sheets like \sheetname{CableTV}, \sheetname{Internet} and \sheetname{InsuranceCar}, etc., regardless of the area in life this particular bill stems from.
+And expenses for different kinds of clothing could be grouped up into a class \emph{Clothing}, and thus have sheet names like \sheetname{WorkClothes}, \sheetname{ChildrenClothes} and so forth.
+And the same could be done for different kinds of food, as you obviously need to eat, whether you are at home, work or at school.
+
+Or create a structure based on your priorities, ordered by frequency only if you leave out the grouping of ``typicals area in life''.
+
+Granted, some of these are quite silly and not really practical and I am quite sure you already have a good idea of what you want.
+It ultimately is up to you.
+For the technicalities of adding, removing or editing categories, go to \autoref{subsec:editing-tracking-categories}
 
 \subsection{Splitting Receipts}
 \label{subsec:splitting-receipts}
@@ -146,13 +159,4 @@ So again you go the relevant sheet and enter the data accordingly:
 	\end{tabular}
 \end{center}
 
-\subsection{Income and Spending over a Certain Time Period}
-\label{subsec:income-and-spending-certain-time-period}
 
-The sheet \sheetname{TimePeriod} is for showing you the sums of daily cash outflows and inflows for the given time period.
-
-For that, you need to type out all the names of your tracking sheets in the table below.
-Then you can enter the start date and end date for an arbitrary time period and it will show produce the values.
-
-The only requirement is that you did do well on your tracking duties, other than there isn't really a whole lot of magic involved.
-To ease the burden on your file and CPU, consider putting \programmcode{No} back in there.

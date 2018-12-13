@@ -72,7 +72,7 @@ sheet/.style={
 \node [sheet, below=of Entertainment.west, anchor=west, xshift=1.5cm] (CableTV) {CableTV};
 \node [sheet, below=of CableTV.west, anchor=west] (EntertainmentPlaceholder) {\ldots};
 %
-\node [expcat, anchor=west, yshift=-1.0cm] (Hobbies) at ($(Entertainment.west|-EntertainmentPlaceholder.west)$) {Hobbies};
+\node [expcat, anchor=north] (Hobbies) at ($(Entertainment.south|-Mobility.north west)$) {Hobbies};
 \node [sheet, below=of Hobbies.west, anchor=west, xshift=1.5cm] (Sports) {Sports~\&~Acc.};
 \node [sheet, below=of Sports.west, anchor=west] (HobbiesPlaceholder) {\ldots};
 %% % % % %

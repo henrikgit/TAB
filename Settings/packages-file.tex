@@ -1,7 +1,8 @@
 \usepackage[english]{babel}
 
 \usepackage[
-x11names
+%x11names,
+svgnames,
 ]{xcolor}
 
 \usepackage[
@@ -46,7 +47,7 @@ hypcap=false,
 format=hang,
 %margin={2cm,2cm},
 %width=0.8\columnwidth,
-width=0.6\textwidth,
+width=0.75\textwidth,
 ]{caption}
 
 %============================
@@ -92,3 +93,17 @@ retain-explicit-plus,
 %Aufzählen 1. Ebene mit Klammer - AUSGESCHALTET
 %\renewcommand{\theenumi}{\arabic{enumi}}
 %\renewcommand{\labelenumi}{\theenumi{)}}
+
+\begin{comment}
+\usepackage[
+nochapters,
+]{classicthesis}
+
+\PassOptionsToPackage{
+	dottectoc=true,
+	subfig=true, % setup for preloaded subfig package
+	beramono=true, % toggle a nice monospaced font (w/ bold)
+%	minionpro=true,
+}
+{classicthesis}
+\end{comment}
