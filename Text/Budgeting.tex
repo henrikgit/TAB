@@ -1,11 +1,15 @@
 \section{Budgeting}
 \label{section:Budgeting}
+% !TeX spellcheck = en_US
 
 Here is a short primer on budgeting:
 \begin{quote}\small
 	The process or definition of budgeting is the act of creating a plan to spend your money.
 	Creating this spending plan allows you to determine in advance whether you will have enough money to do the things you need to do or would like to do. .\footnote{Cp. \url{https://www.mymoneycoach.ca/budgeting/}.}
 \end{quote}
+
+\subsection{Motivation for Creating a Budget}
+\label{subsec:motivation-creating-budget}
 
 Why should you budget? A budget will help you plan for short-term expenses such as your monthly bills; mid-term expenses such as vacations; and long-term expenses such as buying a house, paying for a child’s college education or putting away money for retirement.
 When you have an app, spreadsheet or notebook in front of you showing how much money you expect to make over the one month, six months, one year or five years --- and how much of that money will be flowing out and how much you will have left to save each month --- you’ll always know when you need to cut back on spending, when you can afford to loosen the reins and how long it will take to save for major goals or pay off debts.
@@ -31,7 +35,7 @@ And the budget as a whole gets more and more optimized to achieve the desired go
 \label{subsubsec:budgeting-for-one-year}
 
 As mentioned in \autoref{subsec:first-things-first} and \autoref{subsec:tracking-column-date}, \tfn is created to be used for one calendar year.
-There is nothing speaking against using the file for multiple (consecutive) years, except that the formulas that are built into it only check for the right month and day.
+There is nothing speaking against using the file for multiple (consecutive) years, except that the formulas that are built into it only check for the right month and day, thus rendering the calculated sums per month meaningless.
 
 \subsubsection{The Envelope Method}
 \label{subsubsec:budgeting-the-envelope-method}
@@ -109,97 +113,85 @@ The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcod
 \subsubsection{BIC: Monthly Expense}
 \label{subsubsec:budgeting-item-column-monthly-expense}
 
-About the column \begriff{monthly expense}:
+The \ac{bic} titled \begriff{monthly expense} is for the following distinction:
 \begin{itemize}
-	\item If the item is a single item (\eg a pair of shoes), you need to set the value to \programmcode{No}.
-	\item If the item is an expense that you actually spend money on in multiple months throughout the the year (\eg utilities, such as water, electricity etc.), you need to set the value to \programmcode{Yes}.
+	\item If the expense item consist of a single purchase/item/money transfer, you need to set the value to \programmcode{No}
+	An example would be the purchase of a pair of shoes.
+	\item If the item is an expense that you actually spend money on in multiple months throughout the year, you need to set the value to \programmcode{Yes}.
+	An example would be paying for \eg utilities, such as water, electricity etc., on multiple occasions throughout the year.
 \end{itemize}
 
 There is also a clarification to be made about reoccurring expenses which are at intervals that do not equal a month's length.
-This will be elaborated on in \autoref{subsubsec:thoughts-non-monthly-expenses}.
+This will be elaborated on in \autoref{subsubsec:thoughts-non-monthly-expenses}, \autopageref{subsubsec:thoughts-non-monthly-expenses}.
 
 \subsubsection{BIC: Sum Prohibition}
 \label{subsubsec:budgeting-item-column-sum-prohibition}
 
-The column titled \begriff{sum prohibition} represents a switch for, like the name says, prohibiting summing up the written amount or not.
-As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months.
-The switch says whether the amount in column C will be divided over the given time period or not.
-\begin{itemize}
-	\item \programmcode{Yes} would activate the prohibition of summing up the budgeted amount.
-	The values, 
-	\emph{Lesson:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-		budgeted amount is to be summed up in the end month or not.
-	\item Put \programmcode{No} if the values are to ``stay'' in the months, \ie every month from February to September in 2019.
+This \ac{bic} is for prohibiting if the amount for an expense item is summed up or not.
+So why is there a column which aims to prohibit summing
+This column mostly exists because of the limitations that I ran into with using spreadsheet software and, frankly speaking, the way I conceptualized budgeting over multiple months.
+This 
 
-	Reoccurring items, such as a monthly expenses regardless if true or fake--need a 
-	\item asdf\todo{explain what YES stands for}
-	\item 
+
+
+Note: this column/switch only has an effect if the time period is longer than 1 month.
+
+First of, a little detour to provide the right theoretical background: as you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
+So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?
+\begin{itemize}
+	\item \programmcode{Yes} obviously activates the prohibition of summing up the budgeted amount.
+	Put \programmcode{Yes} if the values are to ``stay'' in the months, \ie every month from March to October in 2019.
+	\item \programmcode{No}
+	So if the time period of the budgeted expense is longer than 1 month, the monthly values of the budgeted expense ``stay'' in their months.
 \end{itemize}
+Again, please do read \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses} for more clarification.
+
+
+
+At the end, one would take all the money for that out of that envelope because if you add up all the monthly values, you end up with 800\,€.
+At this point in time, the expense item is \begriff{budgeted} and can be purchased/billed.
+But: what if you have 
+
+spend it on the budgeted expense, which has now been fully budgeted.
+
+The way \tfn works is that with each month, it stays true to the envelope method and 
+
+The column titled \begriff{sum prohibition} represents a switch for, like the name says, prohibiting summing up the value in the \ac{bic} amount or not.
+
+
+The switch says whether all these divided values get summed up in the last month, which ultimately makes up the original amount.
+
+
+
+\emph{Lesson:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+
+Reoccurring items, such as a monthly expenses regardless if true or fake--need a 
+
+		budgeted amount is to be summed up in the end month or not.
 
 \subsubsection{BIC: Budgeted}
 \label{subsubsec:budgeting-item-column-budgeted}
+
+This column serves to enter if the budget item has been fully budgeted or not.
+\begin{itemize}
+	\item Put \programmcode{Yes} if the end date is reached or has been in the past (and you forgot to update this budget item).
+	\item Put \programmcode{No} if the 
+\end{itemize}
+
+Once you 
 
 \subsubsection{BIC: Category}
 \label{subsubsec:budgeting-item-column-category}
 
 Column \begriff{Category} poijsad
 
-\subsection{Examples for Budgeting Expenses}
-\label{subsec:examples-budgeting-expenses}
-
-\subsubsection{Winter Coat}
-\label{subsubsec:example-budgeting-expense-winter-coat}
-
-For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
-\begin{itemize}
-	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
-	\item It is March and it possible to buy the coat in October.
-	Then the stores definitely have the new merchandise on the shelves.
-\end{itemize}
-The first columns in the row for that budget item could look like shown in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
-
-\begin{table}[htbp]
-\centering
-\addtolength{\leftskip} {-1cm}
-\sffamily
-\caption[Example for Budgeting a Winter Coat]{Example for Budgeting a Winter Coat.
-The values from above are displayed in the corresponding columns.}
-\label{tab:example-budgeting-expense-winter-coat-dataentry}
-\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
-	\hline
-	\footnotesize\textbf{No.} & \rotatebox{0}{\footnotesize\textbf{Descr.}} & \rotatebox{0}{\footnotesize\textbf{Amount}} & \rotatebox{0}{\footnotesize\textbf{Start Date}} & \rotatebox{0}{\footnotesize\textbf{End Date}} & \rotatebox{0}{\footnotesize\textbf{Monthly Exp.}} & \rotatebox{0}{\footnotesize\textbf{Sum Prohib.}} & \rotatebox{0}{\footnotesize\textbf{Budgeted}} & \rotatebox{0}{\footnotesize\textbf{Category}}\\ 
-	\hline
-	\hline
-	1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing/Acc.\\
-	\hline
-\end{tabular}
-\end{table}
-
-The data in \autoref{tab:example-budgeting-expense-winter-coat-dataentry} yields the following results in the gray columns, as shown in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.
-
-\begin{table}[htbp]
-\centering
-\sffamily
-\caption[1234234]{20983rh9u}
-\label{tab:example-budgeting-expense-winter-coat-graycolumns}
-\begin{tabular}{|l|l|l|l|l|l|}
-	\hline
-	\footnotesize\textbf{Cat.-No.} & \footnotesize\textbf{Months tot.} & \footnotesize\textbf{€/Month} & \footnotesize\textbf{Months in 2019} & \footnotesize\textbf{€ in 2019} & \footnotesize\textbf{Budgeted}\\
-	\hline
-	\hline
-	\rowcolor{lightgray}
-	001 & 8 & 100 & 8 & 800 & No\\
-	\hline
-\end{tabular}
-\end{table}
-
 \subsection{Budgeting for Income}
 \label{subsec:budgeting-income}
 
-This subsection of the guide simply exists if you, the reader, decided to readup on budgeting for income.
+This subsection of the guide simply exists if you, the reader, decided to read up on budgeting for income.
 Because once you understood how to budget for an expense, you have the knowledge to budget for an income item as well.
-There is nothing new to explain in regards to income budgeting.
-You would simply have go to the sheet named \sheetname{BudgetINCitems} and do it in an analogical way.
+At this point, I do not think there is anything new to explain in regards to budgeting income items.
+You would simply have go to the sheet \sheetname{BudgetINCitems} and do it in an analogical way.
 
 \subsection{Thoughts on Budgeting}
 \label{subsubsec:thoughts-on-budgeting}
@@ -207,10 +199,10 @@ You would simply have go to the sheet named \sheetname{BudgetINCitems} and do it
 \subsubsection{Thoughts on Non-Monthly Expenses}
 \label{subsubsec:thoughts-non-monthly-expenses}
 
-This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses which are paid at non-monthly interval (\eg quarterly) were mentioned.
-These are my thoughts on budgeting them:
+This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses which are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
+There are further elaborations to be made on the possibilities of non-monthly expenses.
 \begin{itemize}
-	\item Over the whole year: the expense item would be the total of all single payments.
+	\item You can set their start and end date to span over the whole year (or 12 months): the expense item would occur after 12 months and it would be the total of all single payments.
 	There would be a deviation in all months, but the yearly total deviation equals 0.
 	The \begriff{sum prohibition} switch would have to be set to \programmcode{Yes}.
 	\item For each payment, \ie the expense is regarded as a single purchase and needs the \begriff{sum prohibition} switch set to \programmcode{No}.
@@ -227,7 +219,7 @@ These are my thoughts on budgeting them:
 \subsubsection{Thoughts on Different Dates in Real Life}
 \label{subsubsec:thoughts-different-dates}
 
-There are a few cases in regards to this topic:
+There are a few possibilities which could make this topic bear relevance:
 \begin{enumerate}
 	\item If you purchased an item \emph{earlier} than the (planned) end date, I suggest that you backdate its end date.
 	Otherwise the budget will penalize you in the month it was dated for purchase.
@@ -276,5 +268,101 @@ But this is not a
 	\end{itemize}
 \end{itemize}
 
+\subsection{Examples for Budgeting Expenses}
+\label{subsec:examples-budgeting-expenses}
 
-% !TeX spellcheck = en_US
+\subsubsection{Winter Coat}
+\label{subsubsec:example-budgeting-expense-winter-coat}
+
+For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
+\begin{itemize}
+	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
+	\item It is March and it possible to buy the coat in October.
+	Then the stores definitely have the new merchandise on the shelves.
+\end{itemize}
+The first columns in the row for that budget item could look like shown in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
+These entries yield the values shown in the gray columns in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.
+
+\begin{table}[htbp]
+	\centering
+	\addtolength{\leftskip} {-1cm}
+	\sffamily
+	\caption[Example for Budgeting a Winter Coat: Data Entry]{Example for Budgeting a Winter Coat.
+	The values from the bullet list above are displayed in the corresponding columns.}
+	\label{tab:example-budgeting-expense-winter-coat-dataentry}
+	\begin{tabular}{|l|l|l|l|l|l|l|l|l|}
+		\hline
+		\footnotesize\textbf{No.} & \rotatebox{0}{\footnotesize\textbf{Descr.}} & \rotatebox{0}{\footnotesize\textbf{Amount}} & \rotatebox{0}{\footnotesize\textbf{Start Date}} & \rotatebox{0}{\footnotesize\textbf{End Date}} & \rotatebox{0}{\footnotesize\textbf{Monthly Exp.}} & \rotatebox{0}{\footnotesize\textbf{Sum Prohib.}} & \rotatebox{0}{\footnotesize\textbf{Budgeted}} & \rotatebox{0}{\footnotesize\textbf{Category}}\\ 
+		\hline
+		\hline
+		1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing/Acc.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\sffamily
+	\caption[Example for Budgeting a Winter Coat: Data Entry]{Example for Budgeting a Winter Coat.
+	The values from the bullet list above are displayed in the corresponding columns.}
+	\label{tab:example-budgeting-expense-winter-coat-graycolumns}
+	\begin{tabular}{|l|l|l|l|l|l|}
+		\hline
+		\footnotesize\textbf{Cat.-No.} & \footnotesize\textbf{Months tot.} & \footnotesize\textbf{€/Month} & \footnotesize\textbf{Months in 2019} & \footnotesize\textbf{€ in 2019} & \footnotesize\textbf{Budgeted}\\
+		\hline
+		\hline
+		\rowcolor{lightgray}
+		001 & 8 & 100 & 8 & 800 & No\\
+		\hline
+	\end{tabular}
+\end{table}
+
+Now with \autoref{tab:example-budgeting-expense-winter-coat-graycolumns} in mind, let us circle back to \autoref{subsubsec:budgeting-item-column-sum-prohibition} and talk about its consequences for budgeting the winter coat.
+As we have just read, we put 100\,€ into the virtual envelope\footnote{See \autoref{subsubsec:budgeting-the-envelope-method}.} per month.
+This whole concept is displayed in \autoref{tab:bic-sum-prohibition-clarification}.
+
+\begin{table}[htp]
+	\centering
+	\caption[Example for Sum Prohibition]{An Example for Sum Prohibition.
+		The respective values }
+	\label{tab:bic-sum-prohibition-clarification}
+	\begin{tabular}{ccrr}
+		\toprule
+		\begin{minipage}[b]{1.0cm}
+		Nr. of\\
+		Month	
+		\end{minipage}
+		& \begin{minipage}[b]{1.4cm}
+			Calendar\\
+		 	Month	
+		 \end{minipage}
+		&
+		\begin{minipage}[b]{2.25cm}
+			Amount going\\
+			to envelope	
+		\end{minipage}
+		 & 
+		\begin{minipage}[b]{2.0cm}
+			Total worth\\
+			in envelope	
+		\end{minipage}\\
+%		\cmidrule(l{5.5pt}r{5pt}){2-2}
+		\cmidrule(r){1-1}
+		\cmidrule(lr){2-2}
+		\cmidrule(lr){3-3}		
+		\cmidrule(lr){4-4}
+		1 & 2019-03 & 100 & 100\\
+		2 & 2019-04 & 100 & 200\\
+		3 & 2019-05 & 100 & 300\\
+		4 & 2019-06 & 100 & 400\\
+		5 & 2019-07 & 100 & 500\\
+		6 & 2019-08 & 100 & 600\\
+		7 & 2019-09 & 100 & 700\\
+		8 & 2019-10 & 100 & 800\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Utility: Water}
+\label{subsubsec:example-budgeting-utility-water}
+
