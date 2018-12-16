@@ -12,6 +12,52 @@ This it is.
 You are done with the broadest understanding about tracking and can get on with it in \tfn.
 But perhaps you feel like continue reading\ldots
 
+
+\subsection{Categories}
+\label{subsec:tracking-categories}
+
+A good structure of categories for tracking is the key to a good overlook and analysis of your finances.
+As stated before, do what works best \emph{for you}!
+
+I suggest to split up your spending into as many categories as possible.
+For the day-to-day stuff I created the overarching class/field\footnote{To this day, I am not 100\,\% sure if either \emph{class} or \emph{field} is the better term for this structure item in the hierarchy.} named \begriff{Daily}.
+This class contains multiple categories, such as expenses in regards to groceries, bath \& household, food, clothing and miscellaneous items.
+Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{DailyBathHousehold} attributed to it, as shown in \autoref{fig:tracking-categories}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
+	\caption[Tracking Categories]{These are some of the classes and their categories in Finances.ods.
+		They are typical in certain fields of life, ordered by priority and frequency.
+		You may create and name your own collection of classes and categories in any way you wish.
+	}
+	\label{fig:tracking-categories}
+\end{figure}
+
+There are further elaborations to be given:
+the classes and their categories are just an excerpt from my own version of \tfn, which is also somewhat incorporated into the file you downloaded.
+I have a day-to-day life that the class \begriff{Daily} is for and I am sure its categories are self-explanatory.
+The sheet \sheetname{MiscDaily} is a sheet that welcomes all stranger expenses that somehow do not fit elsewhere.
+And it is in fact the sheet that contains all \begriff{miscellaneous} things that do not fit in other classes/categories.
+And at work, I need to buy food and drinks as well, so you will find that and other relevant categories in the \begriff{Work} class.
+
+These categories are plentiful and thus arguably quite granular, which is how the structure developed over time, iterated with each edit.
+I suppose one can say that I chose a strategy to mirror life in typical areas and split them up.\footnote{The \emph{very first} division of expense categories was inspired by the categories of a spreadsheet by \href{https://www.vertex42.com/}{Vertex42.com}, namely an old version of the Personal Budget Template.}
+
+As stated a few times already, the content in the file is editable.
+Hence the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
+If you wish to do so, you can change it up to make it fit your needs.
+
+For alternative structures of these categories in ``classes'', one could maybe start by putting all monthly bills into the same field \begriff{Bills}, \ie you would end up with sheets like \sheetname{CableTV}, \sheetname{Internet} and \sheetname{InsuranceCar}, etc., regardless of the area in life this particular bill stems from.
+And expenses for different kinds of clothing could be grouped up into a class \emph{Clothing}, and thus have sheet names like \sheetname{WorkClothes}, \sheetname{ChildrenClothes} and so forth.
+And the same could be done for different kinds of food, as you obviously need to eat, whether you are at home, work or at school.
+
+Or create a structure based on your priorities, ordered by frequency only if you leave out the grouping of ``typicals area in life''.
+
+Granted, some of these are quite silly and not really practical and I am quite sure you already have a good idea of what you want.
+It ultimately is up to you.
+For the technicalities of adding, removing or editing categories, go to \autoref{subsec:editing-tracking-categories}.
+
 \subsection{How To Enter Tracking Data}
 \label{subsec:enter-tracking-data}
 
@@ -30,11 +76,13 @@ You can do this in two ways:
 \end{enumerate}
 I \emph{strongly} suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on in \autoref{subsubsec:thoughts-different-dates}, \autopageref{subsubsec:thoughts-different-dates}.}
 Regardless, you should stay consistent in the method you choose.
+The date does get checked for month and day, but not for the year, as I thought to use \tfn for 1 calendar year and have done so ever since.
+So be careful that you enter the correct date as that timestamp is used to assign the amount to the right month.
 And:
 
-\begin{center}\sffamily\bfseries
+\begin{specialnote}\bfseries
 	Do not lie about the date.
-\end{center}
+\end{specialnote}
 
 For writing the date into a cell, you may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
 An example for July 4th, 2019: \programmcode{2019-07-04}.
@@ -56,7 +104,8 @@ Put down anything sensible that is coherent enough to make you remember, \eg ``J
 
 Put the amount that is to be attributed to this tracking sheet (and subsequently its category).
 In relation to the bits mentioned in \autoref{subsec:tracking-column-description}, these could go into \sheetname{DailyGroceries} and \sheetname{DailyGifts}.
-How and why these sheets have these names, all that will be elaborated on in \autoref{subsec:tracking-categories} on \autopageref{subsec:tracking-categories}.
+How and why these sheets have these names, all that was explained in \autoref{subsec:tracking-categories}, \autopageref{subsec:tracking-categories}.
+If you want to, you can totally change up the pattern after which you name the tracking sheets!
 
 If you want to change the format of the figures and have the symbol for your currency displayed, simply edit the corresponding cell style template to produce the output you wish.
 Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style template.
@@ -64,10 +113,9 @@ Note: as intended by the mechanism for style templates, this change would affect
 \subsection{Receipts and Documentation}
 \label{subsec:tracking-receipts}
 
-Collect your receipts, bills, notes and whatever you have that documents the amounts you paid.\footnote{Maybe collect them in a shoebox, an envelope or in a plastic pocket.}
-By this, I do not mean a document such as a contract, that may include clauses for future payments.
-As soon as you worked through a receipt and split up its content into your spending categories, mark it or throw it away instantly.
-If you think that you might need the receipt in the future, say for tax purposes or for possibly returning the item, maybe put them in another kind of documentation envelope/folder.
+Collect your receipts, bills, notes and whatever you have that documents the amounts you paid.\footnote{Maybe put them on/in some kind of holder/retainer thing.}
+As soon as you worked through a receipt and split up its content into your spending categories, mark it or throw it away instantly, unless you might need it again.
+If you think that you might need the receipt in the future, \eg for tax purposes or for perhaps returning the item, put them in another kind of documentation envelope/folder.\footnote{Maybe collect them in a shoebox, an envelope or in a plastic pocket.}
 
 Also, go through your monthly bank statements line by line and check them off.
 This most likely leads to delayed entries in the tracking sheets but it ensures factually correct tracking data.
@@ -79,50 +127,6 @@ In a way, entering all the data could be interpreted as work.
 In my experience, I am content with updating \tfn once a week.
 Of course it would still work fine to update it every second, third or fourth week as well.
 
-\subsection{Categories}
-\label{subsec:tracking-categories}
-
-A good structure of categories for tracking is the key to a good overlook and analysis of your finances.
-I suggest to split up your spending into as many categories as possible.
-But again, do what works best \emph{for you}!
-
-For the day-to-day stuff I created the overarching class/field\footnote{To this day, I am not 100\,\% sure if either \emph{class} or \emph{field} is the better term for this item in the hierarchy.} named \begriff{Daily}.
-The Daily class contains multiple categories, such as expenses in regards to groceries, bath \& household, food, clothing and miscellaneous items.
-Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{DailyBathHousehold} attributed to it, as shown in \autoref{fig:tracking-categories}.
-
-\begin{figure}[htp]
-\centering
-\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
-\caption[Tracking Categories]{These are some of the classes and their categories in Finances.ods.
-They are typical in certain fields of life, ordered by priority and frequency.
-You may create and name your own collection of classes and categories in any way you wish.
-}
-\label{fig:tracking-categories}
-\end{figure}
-
-There are further elaborations to be given:
-the classes and their categories are just an excerpt from my own version of \tfn, which is also somewhat incorporated into the file you downloaded.
-I have a day-to-day life that the class \begriff{Daily} is for and I am sure its categories are self-explanatory.
-Although I should clarify that the sheet \sheetname{MiscDaily} is in fact the sheet that contains all miscellaneous things that 
-At work, I need to buy food and drinks
-
-These categories are plentiful and thus arguably quite granular, which is how the structure developed over time, iterated with each edit.
-I suppose one can say that I chose a strategy to mirror life in typical areas and split them up.\footnote{The \emph{very first} division of expense categories was inspired by the categories of a spreadsheet by \href{https://www.vertex42.com/}{Vertex42.com}, namely an old version of the Personal Budget Template.}
-
-As stated a few times already, the content in the file are editable.
-Hence the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
-If you wish to do so, you can change it up to make it fit your needs.
-
-Or one could 
-Maybe you could start by putting all monthly bills into the same field \begriff{Bills}, \ie you would end up with sheets like \sheetname{CableTV}, \sheetname{Internet} and \sheetname{InsuranceCar}, etc., regardless of the area in life this particular bill stems from.
-And expenses for different kinds of clothing could be grouped up into a class \emph{Clothing}, and thus have sheet names like \sheetname{WorkClothes}, \sheetname{ChildrenClothes} and so forth.
-And the same could be done for different kinds of food, as you obviously need to eat, whether you are at home, work or at school.
-
-Or create a structure based on your priorities, ordered by frequency only if you leave out the grouping of ``typicals area in life''.
-
-Granted, some of these are quite silly and not really practical and I am quite sure you already have a good idea of what you want.
-It ultimately is up to you.
-For the technicalities of adding, removing or editing categories, go to \autoref{subsec:editing-tracking-categories}
 
 \subsection{Splitting Receipts}
 \label{subsec:splitting-receipts}
