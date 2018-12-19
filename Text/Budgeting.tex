@@ -50,7 +50,15 @@ There is nothing speaking against using the file for multiple (consecutive) year
 
 The budgeting principle that is used in \tfn is the envelope method.
 If you would like to know more about this way of budgeting, please visit your favorite search machine, but a short introduction can be found on \href{https://en.wikipedia.org/wiki/Envelope_system}{wikipedia}\footnote{URL: \href{https://en.wikipedia.org/wiki/Envelope_system}{https://en.wikipedia.org/wiki/Envelope{\_}system}.}.
-Obviously we use it in its digital or virtual form, as there is no envelope being used within the file but the principle is adhered to nonetheless.
+The envelope method works like this:
+\begin{enumerate}
+	\item You write the name and total cost of an expense onto an envelope.
+	\item Ideally, You put a fixed amount into the envelope each month.
+	If you are not able to, you put any amount you wish anytime into the envelope.
+	\item When the worth in the envelope reaches the values written on it, you can take it out.
+\end{enumerate}
+First of, it is obviously used in its digital or virtual form, as there is no envelope being used within the file but the principle is adhered to nonetheless.
+Secondly, it was ``enhanced'' with dates being used.
 
 The key to translating the envelope method to a virtual perspective is that the envelope could be interpreted as an extra budgeting account you could put your money into.
 You have two choices:
@@ -98,7 +106,8 @@ When you have finished writing down the details for your expense item, you will 
 It automatically shows you the \emph{planned} difference between the expenses and income of the months to come.
 \begin{specialnote}
 	This is extremely important for giving you real-time feedback.
-	If you 
+	If you work on your budget items, you will notice that the cells up top change.
+	If you budget too strongly against your available funds, change your plan accordingly.
 \end{specialnote}
 
 \subsection{Budgeting for Expenses}
@@ -184,27 +193,25 @@ First of, please take note of this:
 	The column/switch \begriff{sum prohibition} only has an effect if the time period is longer than 1 month.
 \end{specialnote}
 
+The way \tfn works is that with each month, it stays true to the envelope method.
+At the end, one would take all the money for that out of that envelope because if you add up all the monthly values, you end up with 800\,€.
+At this point in time, the expense item is \begriff{budgeted} and can be purchased/billed.
 As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
 If you budget 500\,€ for 5 months, it automatically puts 100\,€ into each month which is to be put into the virtual envelope.
 
-So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?
+So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?\todo{Antwort}
 \begin{itemize}
-	\item Put \programmcode{Yes} if the time period of the budgeted expense is \emph{longer} than 1 month.
+	\item Put \programmcode{Yes}\ldots
+	\begin{itemize}
+		\item if the budget item is a monthly expense and its time period is \emph{longer} than 1 month.
+		\emph{Lesson:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+		\item if the budget item is a 
+	\end{itemize}
+
 	\item Fill in \programmcode{No} if the time period of the budgeted expense equals 1 month or it is a single purchase/money transfer.
 \end{itemize}
-Again, please do read \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses} for more clarification.\todo{ausarbeiten}
 
-
-The way \tfn works is that with each month, it stays true to the envelope method and 
-At the end, one would take all the money for that out of that envelope because if you add up all the monthly values, you end up with 800\,€.
-At this point in time, the expense item is \begriff{budgeted} and can be purchased/billed.
-But: what if you have 
-spend it on the budgeted expense, which has now been fully budgeted.\todo{ausarbeiten}
-
-\emph{Lesson:} You must put \programmcode{Yes} here if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-
-Reoccurring items, such as a monthly expenses regardless if true or fake--need a 
-budgeted amount is to be summed up in the end month or not.\todo{ausarbeiten}
+Please do read \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses} for more clarification.
 
 \subsubsection{BIC: Done}
 \label{subsubsec:budgeting-item-column-budgeted}
@@ -215,7 +222,6 @@ Maybe regard this as some kind of to-do list.
 	\item Put \programmcode{Yes} if the purchase/expense has been made.
 	\item Put \programmcode{No} if not.
 \end{itemize}
-
 
 \subsubsection{BIC: Category}
 \label{subsubsec:budgeting-item-column-category}
