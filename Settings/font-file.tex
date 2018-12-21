@@ -12,10 +12,10 @@
 %========================
 %Variante Helvetica + Palatino
 %========================
-\usepackage{newpxtext,newpxmath}
-\usepackage[scaled=0.885]{beramono}
-\usepackage{microtype}
-\setstretch{1.05}
+%\usepackage{newpxtext,newpxmath}
+%\usepackage[scaled=0.885]{beramono}
+%\usepackage{microtype}
+%\setstretch{1.05}
 
 %========================
 %Variante Helvetica + Linux Libertine
@@ -128,12 +128,14 @@
 %========================
 %Variante Garamond
 %========================
-%\usepackage{amsmath}
-%\usepackage[urw-garamond]{mathdesign}
-%\usepackage[scale=0.95]{tgheros}
-%%%\usepackage[default]{gfsneohellenic}
-%%%\usepackage[LGR,T1]{fontenc}
-%\usepackage{sansmath}
+\usepackage{amsmath}
+\usepackage[urw-garamond]{mathdesign}
+\expandafter\let\csname T1+fvm\endcsname\relax
+\renewcommand\bfdefault{bx}
+\usepackage[scaled=1.0]{zlmtt}
+\usepackage[scale=1.025]{gillius}
+\usepackage{sansmath}
+\usepackage{microtype}
 %\renewcommand{\familydefault}{\sfdefault}
 
 %========================
@@ -240,3 +242,10 @@
 
 \input glyphtounicode
 \pdfgentounicode=1
+
+%%%Passende Fontgrößen herausfinden:
+%\begin{itemize}
+%	\item A in \sbox0{A}Serif: \the\ht0
+%	\item A in \sbox0{\sffamily A}Sans: \the\ht0
+%	\item A in \sbox0{\ttfamily A}Mono: \the\ht0
+%\end{itemize}

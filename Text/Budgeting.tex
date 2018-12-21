@@ -64,7 +64,7 @@ The key to translating the envelope method to a virtual perspective is that the 
 You have two choices:
 \begin{enumerate}
 	\item The money may remain in whatever account you have included in the tracking.
-	\item You could transfer some amount \( X \) for a month with budgeted items (which would be practically every month) to that virtual envelope, \ie some kind of special account for budgeting needs.
+	\item You could transfer some amount \( M \) for a month with budgeted items (which would be practically every month) to that virtual envelope, \ie some kind of special account for budgeting needs.
 \end{enumerate}
 
 To clarify the second choice and its implications:
@@ -82,14 +82,16 @@ First of, \begriff{Deviation} in the context of budgeting and \tfn is to be unde
 
 Secondly, the formulas in the budgeting sheets work this way:
 \begin{enumerate}
-	\item They look for the budgeted total in a category, \eg clothing \& accessoires, in month \( X \):
+	\item They look for the budgeted total in a category, \eg clothing \& accessoires, in month \( M \).
 	\begin{itemize}
 		\item The budgeted amount for a new pair of shoes is 70\,€.
 		\item The budgeted amount for a new jacket is 100\,€.
 	\end{itemize}
-	This makes a budgeted total of 170\,€ for that month \( X \).
-	\item Once month \( X \) is over (we are now in month \( X+1 \)), the amount actually spent in that category is totaled.
-	\item This value is then compared to the total from before, \ie 170\,€.
+	This makes a budgeted total of 170\,€ for that month \( M \).
+	\item Once month \( M \) is over, you are in month \( M+1 \).
+	Because you do the tracking, \tfn also is aware of what you actually spent on that new pair of shoes and your new jacket in \( M \).
+	The amount for both items is totaled.
+	\item This value is then compared to the budgeted total from before, \ie 170\,€.
 \end{enumerate}
 
 A look at the possible outcomes:
@@ -100,14 +102,15 @@ A look at the possible outcomes:
 	\item Vice versa, if you spent 150\,€, you made a surplus of \( 170-150 = 20 \)\,€, which goes into the budget of month \( X+1 \).
 	This is a \begriff{reward}. :)
 \end{itemize}
-
-In short, \tfn automatically computes the surplus or deficit each month, which is crucial for creating the budget.
+In short, \tfn automatically computes the surplus or deficit each month.
+But it does so also for future months, which is crucial for creating the budget.
 When you have finished writing down the details for your expense item, you will notice that the header up top will change.
 It automatically shows you the \emph{planned} difference between the expenses and income of the months to come.
 \begin{specialnote}
-	This is extremely important for giving you real-time feedback.
-	If you work on your budget items, you will notice that the cells up top change.
-	If you budget too strongly against your available funds, change your plan accordingly.
+	While you work on your budget items, you will notice that the cells up top change.
+	This is extremely important to understand: this is real-time feedback in regards to your budgeting.
+	If you budget too strongly against your available funds, which means you plan to overspend, you will accrue debt.
+	In this case, you should change your plan accordingly.
 \end{specialnote}
 
 \subsection{Budgeting for Expenses}
@@ -336,7 +339,7 @@ I split them up to avoid for the sake of readability.}
 
 \begin{table}[htbp]
 	\centering
-	\addtolength{\leftskip} {-1cm}
+	\addtolength{\leftskip} {-2cm}
 	\sffamily
 	\caption[Example for Budgeting a Winter Coat: Data Entry]{Example for Budgeting a Winter Coat.
 	The values from the bullet list above are displayed in the corresponding columns.}
