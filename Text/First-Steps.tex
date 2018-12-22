@@ -5,7 +5,7 @@
 \label{subsec:introducing-libreoffice-calc}
 
 LibreOffice is a free office suite and great software.\footnote{See \href{https://www.libreoffice.org/discover/libreoffice/}{https://www.libreoffice.org/discover/libreoffice/}.}
-You can download it on the  \href{https://www.libreoffice.org/download/download/}{official download page} of course.
+You can download it on its   \href{https://www.libreoffice.org/download/download/}{official download page} of course.
 
 Per \href{https://www.libreoffice.org/discover/calc/}{its official website}:
 \begin{quote}\small
@@ -18,8 +18,10 @@ Per \href{https://www.libreoffice.org/discover/calc/}{its official website}:
 Providing help for working with \loc and writing a full introduction about it is clearly beyond the scope of this document.
 I will, though, give thoughts on some key aspects I regard as crucial, but before that there are these important links and documents for proper help on \loc:
 \begin{itemize}
+	\item The most important bit beforehand: \loc is not so different from Excel.
+	Many things you might have picked up while working with Excel are probably going to work in a similar--if not identical--fashion in Calc.
 	\item The Official Documentation is really great.\footnote{URL: \href{https://documentation.libreoffice.org/en/english-documentation/}{https://documentation.libreoffice.org/en/english-documentation/}.}
-	But even better is the \begriff{Getting Started} guide, which was released for LibreOffice 6.
+	But even better is the \begriff{Getting Started} guide, which was released for LibreOffice 6.\footnote{URL: \href{https://documentation.libreoffice.org/en/english-documentation/getting-started-guide/}{https://documentation.libreoffice.org/en/english-documentation/getting-started-guide/}.}
 	Please start with pages 1--14, which are important overall, but especially for Mac users.
 	The actual good stuff is the section for Calc, which starts on page 118.
 	\item By the way, if you are using Windows and Adobe Reader for reading PDF-files, you can quickly jump to any page with the keyboard shortcut \keystroke{Ctrl}+\keystroke{N}.
@@ -31,26 +33,27 @@ I will, though, give thoughts on some key aspects I regard as crucial, but befor
 \label{subsubsec:first-steps-with-libreoffice-calc}
 
 Here are some suggestions for first steps if you intend to follow through with learning how to work with \loc.
-The most important bit beforehand: \loc is not so different from Excel.
-Many things you might have picked up while working with Excel, are probably going to work in a similar--if not identical--fashion in Calc.
+Again, you might be able to utilize knowledge you gained while working with Excel or Google Sheets.
 
 To work with \tfn in a proper and productive way, you should definitely learn these keyboard shortcuts:
 \begin{itemize}
 	\item Copying content is done, as usual, with \keystroke{Ctrl}+\keystroke{C}.
-	\item However, pasting can be done in multiple ways:
+	\item However, pasting in Calc can be done in multiple ways:
 	\begin{enumerate}
 		\item The well-known way: \keystroke{Ctrl}+\keystroke{V}.
 		This keeps the content in cache and you can paste it again.
-		\item The other way is pressing \keystroke{\( \hookleftarrow \)} (Enter).
+		\item The other way is simply pressing \keystroke{\( \hookleftarrow \)} (Enter).
 		This does not keep the content in cache.
-		\item The best way: \keystroke{Ctrl}+\keystroke{\( \Uparrow \) (Shift)}+\keystroke{V}.
-		This will show a dialog first, in which you can select the intended attributes of the paste action.
-		With Enter or clicking on \keystroke{Ok}, the copied content gets pasted to the currently marked cell.
+		\item The best way: \keystroke{Ctrl}+\keystroke{Shift}+\keystroke{V}.
+		If you copied the content in a spreadsheet file, Calc will show a dialog window named \begriff{Paste Special}.
+		In this you can select the intended attributes of the paste action while simultaneously performing operations.
+		With hitting \keystroke{\( \hookleftarrow \)} or clicking on \keystroke{Ok}, the copied content gets pasted to the currently marked cell.
+		The content gets kept in cache and you can paste it again.
 	\end{enumerate}
 	\item Deleting content, format-wise and content-wise, is done via \keystroke{\( \longleftarrow \)} (Backspace).
 	This will leave a blank cell.
 	\item For the case of copying/replacing cells in bulk, look at keyboard shortcuts on page 129 in \begriff{Getting Started}.
-	For example, if a cell in a bigger group/block of cells is selected and you would like to additionally select all the cells to the right of the current cell in this block, use the shortcut \keystroke{Shift} + \keystroke{Ctrl} + \keystroke{\( \rightarrow \)}.
+	For example, if a cell in a bigger group/block of cells is selected and you would like to additionally select all the cells to the right of the current cell in this block, use the shortcut \keystroke{Ctrl}+\keystroke{Shift}+\keystroke{\( \rightarrow \)}.
 \end{itemize}
 
 But should also definitely learn about \begriff{cell style templates} and the \begriff{navigator}:
@@ -75,7 +78,9 @@ Simply save the file in a folder that belongs to the folder which get synchroniz
 For securing the file, use the password-protection when you save it.
 For more guidance on that, please consult the \begriff{Getting Started} guide, page 30.
 
-The most important piece of information is: do not lose the password!
+\begin{specialnote}
+Do not lose the password!
+\end{specialnote}
 
 \subsection{The Start}
 \label{subsec:opening-the-file}
