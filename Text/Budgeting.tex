@@ -33,10 +33,14 @@ As mentioned in \autoref{subsec:first-things-first}, if you like to budget your 
 It is possible to create lots of different budget items which essentially represent either incoming or outgoing cash flows.
 In other words, you can budget practically any kind of cash flow, regardless if you expect it to receive or spend any cash amount in the future.
 
-As outlined in a few paragraphs above, the file utilizes the approach that the user plans his budget tailored to his needs.
-To do so, one starts by writing down a list that consists of all the (possible) expense items.
-So this is a process which implies that the user plans his expenses beforehand, not entirely, but definitely to the best of his abilities at that point in time.
-And the user definitely ought to rework these plans if complications or uncertainties come to light.
+As outlined in a few paragraphs above, the file work with the approach that you plan your budget tailored to your needs.
+To do so, you could start by writing down a list that consists of all the expenses that occur every month or every few months.
+Then write down one-time expenses like a vacation, or a new winter coat or car.
+Then you should decide on \begriff{when} you plan to buy something.
+
+So this is a process which implies that you plan your expenses beforehand.
+Not perfectly and/or entirely, but definitely to the best of your abilities at that point in time.
+And you definitely ought to rework these plans if complications or uncertainties come to light.
 And the budget as a whole gets more and more optimized to achieve the desired goals, work with the prioritized expense categories at the right time, account for relatively high one-time/emergency expenses and so forth.
 
 \subsubsection{Budgeting for One Year}
@@ -79,10 +83,12 @@ To clarify the second choice and its implications:
 \label{subsubsec:budeting-deviation}
 
 First of, \begriff{Deviation} in the context of budgeting and \tfn is to be understood as the difference between the planned amount of an expense and its real-world amount.
+The file automatically computes the surplus or deficit each month.
 
 Secondly, the formulas in the budgeting sheets work this way:
 \begin{enumerate}
-	\item They look for the budgeted total in a category, \eg clothing \& accessoires, in month \( M \).
+	\item They look for the budgeted total in a category in month \( M \).
+	Let us imagine we are dealing with the category clothing \& accessoires:
 	\begin{itemize}
 		\item The budgeted amount for a new pair of shoes is 70\,€.
 		\item The budgeted amount for a new jacket is 100\,€.
@@ -94,7 +100,7 @@ Secondly, the formulas in the budgeting sheets work this way:
 	\item This value is then compared to the budgeted total from before, \ie 170\,€.
 \end{enumerate}
 
-A look at the possible outcomes:
+A look at the possible outcomes of that comparison:
 \begin{itemize}
 	\item If the budgeted total and the spent total equal each other, the deviation obviously equals 0 as well.
 	\item If the amount spent is larger, \eg 190\,€, than the budgeted 170\,€, the deficit \( 190-170 \) = 20\,€ will be subtracted from the budget of the following month \( X+1 \).
@@ -102,14 +108,14 @@ A look at the possible outcomes:
 	\item Vice versa, if you spent 150\,€, you made a surplus of \( 170-150 = 20 \)\,€, which goes into the budget of month \( X+1 \).
 	This is a \begriff{reward}. :)
 \end{itemize}
-In short, \tfn automatically computes the surplus or deficit each month.
-But it does so also for future months, which is crucial for creating the budget.
-When you have finished writing down the details for your expense item, you will notice that the header up top will change.
+
+Thirdly, this process outlined above happens every month, especially for future months, which is crucial for creating the budget.
+When you have finished writing down the details for your expense item, you will notice that the ``header'' up top will change.
 It automatically shows you the \emph{planned} difference between the expenses and income of the months to come.
 \begin{specialnote}
 	While you work on your budget items, you will notice that the cells up top change.
 	This is extremely important to understand: this is real-time feedback in regards to your budgeting.
-	If you budget too strongly against your available funds, which means you plan to overspend, you will accrue debt.
+	If you budget too strongly against your available funds, which means you plan to overspend, you will accrue debt and the header will show that.
 	In this case, you should change your plan accordingly.
 \end{specialnote}
 
@@ -241,7 +247,7 @@ To see the valid entries, press \keystroke{Alt}+\keystroke{\( \downarrow \)} or 
 \subsection{Budgeting for Income}
 \label{subsec:budgeting-income}
 
-This subsection of the guide simply exists if you, the reader, decided to read up on budgeting for income.
+This very subsection of the guide simply exists if you, the reader, decided to read up on budgeting for income.
 Because once you understood how to budget for an expense, you have the knowledge to budget for an income item as well.
 At this point, I do not think there is anything new to explain in regards to budgeting income items.
 You would simply have go to the sheet \sheetname{BudgetINCitems} and do it in an analogical way.
@@ -255,7 +261,7 @@ Life can be a mess and if you really want to use \tfn for tracking and budgeting
 \subsubsection{Thoughts on Non-Monthly Expenses}
 \label{subsubsec:thoughts-non-monthly-expenses}
 
-This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses which are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
+This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses that are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
 There are further elaborations to be made on the possibilities of non-monthly expenses.
 \begin{itemize}
 	\item You can set their start and end date to span over the whole year (or 12 months): the expense item would occur after 12 months and it would be the total of all single payments.
@@ -277,6 +283,7 @@ There are further elaborations to be made on the possibilities of non-monthly ex
 \subsubsection{Thoughts on Different Dates in Real Life}
 \label{subsubsec:thoughts-different-dates}
 
+Dates in regards to planned expenses can differ from how events unfold in reality.
 \begin{itemize}
 	\item What if\ldots when you just want to buy an item earlier than planned?
 	\item What if\ldots when you somehow end up buying something later than planned?
@@ -287,16 +294,11 @@ Otherwise the budget will penalize you in the month it was dated for purchase.
 Seeing how this action, \ie purchasing item(s), is a not a monthly expense, the deviation for the month is the one that matters, not the one for the whole year.
 Therefor, if you do not backdate the you will have made an unnecessary deviation in the month you actually purchases it.
 But this will increase the monthly values for past months, and if your budget overall is arguably tight, it will possibly add strain to the months that already went by.
-Also, you would be adding an amount of money to the already budgeted amount in the past months, which would be kind of fake as all kinds of expenses have been spent, all kinds of budget items were planned as to not put too much 
-However all that may be, you need to decide which path you take:
-\begin{itemize}
-	\item Shall budgeting in \tfn reflect real life?
-	\item Should you wait with the purchase?
-\end{itemize}
-%Dev in the new month and the higher 
+Also, you would be adding an amount of money to the already budgeted amount in the past months, which would be kind of fake as all kinds of expenses have been spent, all kinds of budget items were planned more or less carefully so that it all made sense from a financial perspective.
+So that the past months might not be diluted by the fake 
+
 If you end up not purchasing something in the right month, that is on you.
 But that is ok and you could be happy about the positive effect on the deviation.
-So that the past months might not be diluted by the fake 
 
 As mentioned \autoref{subsec:tracking-column-date}, there are 2 ways (at least the ones I listed) that dates can be used:
 \begin{enumerate}
@@ -304,9 +306,18 @@ As mentioned \autoref{subsec:tracking-column-date}, there are 2 ways (at least t
 	Regardless of any kind of money transfer, this is the date the purchase was planned for.
 	\item With regards to any kind of money transfer, there is also date--in case one uses some form of electronic payment (\eg a card)--on which the amount is actually transferred from your account.
 \end{enumerate}
-Also, regardless of your actions, there is the factor of money transfer.
-The debit could be withdrawn too late or too early from your account and by being the thorough tracker you certainly strive to be, you treat the dates as they occur in real life and ultimately have a unnecessary deviation, but well, that is life.
+
+Finally, regardless of your actions or lack thereof, there is the time factor in the money transfer.
+The debit could be withdrawn too late or too early from your account and by being the thorough tracker you certainly strive to be, you treat the dates as they occur in real life and ultimately have a unnecessary deviation, but it still happened: you could possibly have overdrawn your checking account or withdrawn an amount too late.
+Well, that is life.
 Regardless, you update your list to reflect your view. (because who does not like a well-maintained list, right??). \todo{punkt checken wegen einmal plan-datum und real datum}
+
+
+However all that may be discussed further, you need to decide which path you take:
+\begin{itemize}
+	\item Shall budgeting in \tfn reflect real life or should \tfn not be changed and remain set to the planned to data?
+	\item Should you wait with the purchase or set a calendar reminder of some sort next time?
+\end{itemize}
 
 \subsubsection{Thoughts on Delayed Budgeting}
 \label{subsubsec:thoughts-delayed-budgeting}
