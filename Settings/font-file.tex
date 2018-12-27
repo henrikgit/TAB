@@ -22,10 +22,19 @@
 %Variante Helvetica + Linux Libertine
 %========================
 \usepackage{amsmath}
-\usepackage[oldstyle]{libertine}
+\usepackage{textcomp}
+\usepackage[oldstyle,proportional]{libertine}
 \usepackage{libertinust1math}
-\usepackage[scaled=0.825]{beramono}
-\usepackage[scale=0.88]{tgheros}
+%\expandafter\let\csname T1+fvm\endcsname\relax
+%\usepackage[scaled=0.8313]{beramono}
+\usepackage[scaled=1.0649]{zlmtt}
+\usepackage[scale=0.8558]{tgheros}
+\usepackage{tgheros}
+\makeatletter
+\AtBeginDocument{\def\libertine@figurealign{}\libertineOsF}
+\newcommand\libertineTabular{\def\libertine@figurealign{T}\libertineLF}
+\makeatother
+
 \usepackage{microtype}
 \setstretch{1.075}
 
@@ -245,8 +254,45 @@
 \pdfgentounicode=1
 
 %%%Passende Fontgrößen herausfinden:
-%\begin{itemize}
-%	\item A in \sbox0{A}Serif: \the\ht0
-%	\item A in \sbox0{\sffamily A}Sans: \the\ht0
-%	\item A in \sbox0{\ttfamily A}Mono: \the\ht0
-%\end{itemize}
+%\begin{center}
+%	Sans GROß\\
+%	\begin{tabular}{lrr}
+%		\toprule
+%		Zeichen & Serif & Sans\\
+%		\midrule
+%		A & \sbox0{A}\the\ht0 & \sbox0{\sffamily A}\the\ht0\\
+%		! & \sbox0{!}\the\ht0 & \sbox0{\sffamily !}\the\ht0\\
+%		O & \sbox0{O}\the\ht0 & \sbox0{\sffamily O}\the\ht0\\
+%		\bottomrule
+%	\end{tabular}\\
+%	Sans klein:\\
+%	\begin{tabular}{lrr}
+%		\toprule
+%		Zeichen & Serif & Sans\\
+%		\midrule
+%		a & \sbox0{a}\the\ht0 & \sbox0{\sffamily a}\the\ht0\\
+%		x & \sbox0{x}\the\ht0 & \sbox0{\sffamily x}\the\ht0\\
+%		m & \sbox0{m}\the\ht0 & \sbox0{\sffamily m}\the\ht0\\
+%		\bottomrule
+%	\end{tabular}\\
+%	Mono groß:\\
+%	\begin{tabular}{lrr}
+%		\toprule
+%		Zeichen & Serif & Sans\\
+%		\midrule
+%		A & \sbox0{A}\the\ht0 & \sbox0{\ttfamily A}\the\ht0\\
+%		! & \sbox0{!}\the\ht0 & \sbox0{\ttfamily !}\the\ht0\\
+%		O & \sbox0{O}\the\ht0 & \sbox0{\ttfamily O}\the\ht0\\
+%		\bottomrule
+%	\end{tabular}\\
+%	Mono klein:\\
+%	\begin{tabular}{lrr}
+%		\toprule
+%		Zeichen & Serif & Sans\\
+%		\midrule
+%		a & \sbox0{a}\the\ht0 & \sbox0{\ttfamily a}\the\ht0\\
+%		x & \sbox0{x}\the\ht0 & \sbox0{\ttfamily x}\the\ht0\\
+%		m & \sbox0{m}\the\ht0 & \sbox0{\ttfamily m}\the\ht0\\
+%		\bottomrule
+%	\end{tabular}
+%\end{center}

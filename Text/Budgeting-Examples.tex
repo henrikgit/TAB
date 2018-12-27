@@ -1,0 +1,104 @@
+\subsection{Examples for Budgeting Expenses}
+\label{subsec:examples-budgeting-expenses}
+% !TeX spellcheck = en_US
+
+This subsection includes examples for showcasing how to use the budgeting sheets for expenses.
+If you read through \autoref{subsec:budgeting-in-finances.ods} to \autoref{subsec:thoughts-on-budgeting}, lots of things and bits should be familiar and hopefully get cleared up if they are still a bit nebulous.
+
+\subsubsection{Winter Coat}
+\label{subsubsec:example-budgeting-expense-winter-coat}
+
+For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
+\begin{itemize}
+	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
+	\item It is March and it possible to buy the coat in October.
+	Then the stores definitely have the new merchandise on the shelves.
+\end{itemize}
+The first columns in the row for that budget item could look like shown in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
+These entries yield the values shown in the gray columns in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.\footnote{Of course the second table is directly to the right of the first one in the spreadsheet file.
+I split them up to avoid for the sake of readability.}
+
+\begin{table}[htbp]
+	\centering
+	\addtolength{\leftskip} {-1.25cm}
+	\sffamily
+	\caption[Example for Budgeting a Winter Coat: Data Entry]{Example for Budgeting a Winter Coat.
+	The values from the bullet list above are displayed in the corresponding columns.}
+	\label{tab:example-budgeting-expense-winter-coat-dataentry}
+	\begin{tabular}{|c|l|c|c|c|c|c|c|l|}
+		\hline
+		\footnotesize\textbf{No.} & \rotatebox{0}{\footnotesize\textbf{Descr.}} & \rotatebox{0}{\footnotesize\textbf{Amount}} & \rotatebox{0}{\footnotesize\textbf{Start Date}} & \rotatebox{0}{\footnotesize\textbf{End Date}} & \rotatebox{0}{\footnotesize\textbf{Monthly Exp.}} & \rotatebox{0}{\footnotesize\textbf{Sum Prohib.}} & \rotatebox{0}{\footnotesize\textbf{Done}} & \rotatebox{0}{\footnotesize\textbf{Category}}\\ 
+		\hline
+		\hline
+		1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing/Acc.\\
+		\hline
+	\end{tabular}
+\end{table}
+
+\begin{table}[htbp]
+	\centering
+	\sffamily
+	\caption[Example for Budgeting a Winter Coat: Gray Columns]{Example for Budgeting a Winter Coat.
+	The values from the bullet list above are displayed in the corresponding columns.}
+	\label{tab:example-budgeting-expense-winter-coat-graycolumns}
+	\begin{tabular}{|c|c|c|c|c|c|}
+		\hline
+		\footnotesize\textbf{Cat.-No.} & \footnotesize\textbf{Months tot.} & \footnotesize\textbf{€/Month} & \footnotesize\textbf{Months in 2019} & \footnotesize\textbf{€ in 2019} & \footnotesize\textbf{Budgeted}\\
+		\hline
+		\hline
+		\rowcolor{lightgray}
+		001 & 8 & 100 & 8 & 800 & No\\
+		\hline
+	\end{tabular}
+\end{table}
+
+Now with \autoref{tab:example-budgeting-expense-winter-coat-graycolumns} in mind, let us circle back to \autoref{subsubsec:budgeting-item-column-sum-prohibition} and talk about its consequences for budgeting the winter coat.
+As we have just read, we put 100\,€ into the virtual envelope\footnote{See \autoref{subsubsec:budgeting-the-envelope-method}.} per month.
+This whole concept is displayed in \autoref{tab:bic-sum-prohibition-clarification}.\todo{ausarbeiten und mal sum prohibition aufzeigen?}
+
+\begin{table}[htp]
+	\centering
+	\libertineTabular
+	\caption[Example for Sum Prohibition]{An Example for Sum Prohibition.
+	With each month, 100\,€ get put into the envelope and its worth finally amounts to 800\,€ in 2019-10.}
+	\label{tab:bic-sum-prohibition-clarification}
+	\begin{tabular}{cccc}
+		\toprule
+		\begin{minipage}{1.0cm}
+		Nr. of\\
+		Month	
+		\end{minipage}
+		& \begin{minipage}{1.4cm}
+			Calendar\\
+		 	Month	
+		 \end{minipage}
+		&
+		\begin{minipage}{2.1cm}
+			Amount going\\
+			to envelope	
+		\end{minipage}
+		 & 
+		\begin{minipage}{1.8cm}
+			Total worth\\
+			in envelope	
+		\end{minipage}\\
+%		\cmidrule(l{5.5pt}r{5pt}){2-2}
+%		\cmidrule(r){1-1}
+%		\cmidrule(lr){2-2}
+%		\cmidrule(lr){3-3}		
+%		\cmidrule(lr){4-4}
+		\midrule
+		1 & 2019-03 & 100 & 100\\
+		2 & 2019-04 & 100 & 200\\
+		3 & 2019-05 & 100 & 300\\
+		4 & 2019-06 & 100 & 400\\
+		5 & 2019-07 & 100 & 500\\
+		6 & 2019-08 & 100 & 600\\
+		7 & 2019-09 & 100 & 700\\
+		8 & 2019-10 & 100 & 800\\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\subsubsection{Utility: Water}
+\label{subsubsec:example-budgeting-utility-water}

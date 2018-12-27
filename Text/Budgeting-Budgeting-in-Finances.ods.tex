@@ -1,0 +1,98 @@
+\subsection{Budgeting in Finances.ods}
+\label{subsec:budgeting-in-finances.ods}
+% !TeX spellcheck = en_US
+
+\subsubsection{Budgeting Basics}
+\label{subsubsec:budgeting-basics}
+
+As mentioned in \autoref{subsec:first-things-first}, if you like to budget your income and expenses, you need to use the budgeting sheets for this.
+It is possible to create lots of different budget items which essentially represent either incoming or outgoing cash flows.
+In other words, you can budget practically any kind of cash flow, regardless if you expect it to receive or spend any cash amount in the future.
+
+As outlined in a few paragraphs above, the file work with the approach that you plan your budget tailored to your needs.
+To do so, you could start by writing down a list that consists of all the expenses that occur every month or every few months.
+Then write down one-time expenses like a vacation, or a new winter coat or car.
+Then you should decide on \begriff{when} you plan to buy something.
+
+So this is a process which implies that you plan your expenses beforehand.
+Not perfectly and/or entirely, but definitely to the best of your abilities at that point in time.
+And you definitely ought to rework these plans if complications or uncertainties come to light.
+And the budget as a whole gets more and more optimized to achieve the desired goals, work with the prioritized expense categories at the right time, account for relatively high one-time/emergency expenses and so forth.
+
+\subsubsection{Budgeting for One Year}
+\label{subsubsec:budgeting-for-one-year}
+
+As mentioned in \autoref{subsec:first-things-first} and \autoref{subsec:tracking-column-date}, \tfn is created to be used for one calendar year.
+There is nothing speaking against using the file for multiple (consecutive) years, except that the formulas that are built into it only check for the right month and day, thus rendering the calculated sums per month meaningless.
+
+\subsubsection{The Envelope Method}
+\label{subsubsec:budgeting-the-envelope-method}
+
+The budgeting principle that is used in \tfn is the envelope method.
+If you would like to know more about this way of budgeting, please visit your favorite search machine, but a short introduction can be found on \href{https://en.wikipedia.org/wiki/Envelope_system}{wikipedia}\footnote{URL: \href{https://en.wikipedia.org/wiki/Envelope_system}{https://en.wikipedia.org/wiki/Envelope{\_}system}.}.
+The system is of relevance if you are either unable or unwilling to buy the item in this very moment, \ie you plan to buy it in a few weeks or months.
+Then the envelope method works like this:
+\begin{enumerate}
+	\item You write the name and total cost of an expense onto an envelope.
+	\item Ideally, you put a fixed amount into the envelope each month.
+	If you are not able to, you put any amount you wish anytime into the envelope.
+	\item When the worth in the envelope reaches the values written on it, you can take it out.
+\end{enumerate}
+First of, the principle is obviously used in its digital or virtual form, as there is no envelope being used within the file but the principle is adhered to nonetheless.
+Secondly, it was ``enhanced'' with dates being used.
+
+The key to translating the envelope method to a virtual perspective is that the envelope could be interpreted as an extra budgeting account you could put your money into.
+You have two choices:
+\begin{enumerate}
+	\item The money may remain in whatever account you have included in the tracking.
+	\item You could transfer some amount \( X \) for a month with budgeted items (which would be practically every month) to that virtual envelope, \ie some kind of special account for budgeting needs.
+\end{enumerate}
+
+To clarify the second choice and its implications:
+\begin{itemize}
+	\item One would need to have a spare account.
+	\item One would need to perform the necessary calculations to get the right amount for the month.
+	\item Ultimately, one would need to process all these arguably small money transfers for the amounts for budgeted items which would be due that month.\footnote{And transferring them in bulk would definitely lead to the system being to inflexible, since you would have to answer the questions of timing and the composition (which items would have to be included) for a transfer.}
+\end{itemize}
+All in all, it is probably best to let that topic rest.
+
+\subsubsection{Deviation}
+\label{subsubsec:budeting-deviation}
+
+First of, the concept of \begriff{deviation} in the context of budgeting and \tfn is to be understood as the difference between the planned amount of an expense and its real-world amount.
+The file automatically computes the surplus or deficit each month.
+
+Secondly, the formulas in the budgeting sheets work this way:
+\begin{enumerate}
+	\item They look for the budgeted total in a category in month \( M \).
+	Let us imagine we are dealing with the category clothing \& accessoires:
+	\begin{itemize}
+		\item The budgeted amount for a new pair of shoes is 70\,€.
+		\item The budgeted amount for a new jacket is 100\,€.
+	\end{itemize}
+	This makes a budgeted total of 170\,€ for that month \( M \).
+	\item Once month \( M \) is over, you are in month \( M+1 \).
+	Because you do the tracking correctly, \tfn also is aware of what you actually spent on that new pair of shoes and your new jacket in \( M \).
+	The amount for both items is totaled.
+	\item This value is then compared to the budgeted total from before, \ie 170\,€.
+\end{enumerate}
+
+A look at the possible outcomes of that comparison:
+\begin{itemize}
+	\item If the budgeted total and the spent total equal each other, the deviation obviously equals 0 as well.
+	\item If the amount spent is larger, \eg 190\,€, than the budgeted 170\,€, the deficit amount to \( 190-170 = 20\)\,€ and will be subtracted from the budget of the following month \( M+1 \).
+	Perhaps view this as a \begriff{penalty}.
+	\item Vice versa, if you spent 150\,€, you made a surplus of \( 170-150 = 20 \)\,€, which goes into the budget of month \( M+1 \).
+	This is a \begriff{reward}. :)
+\end{itemize}
+
+Thirdly, this process outlined above happens every month, especially for future months, which is crucial for creating the budget.
+When you have finished writing down the details for your expense item, you will notice that the ``header'' up top will change.
+It automatically shows you the \emph{planned} difference between the expenses and income of the months to come.
+\begin{specialnote}
+	While you work on your budget items, you will notice that the cells up top change.
+	This is extremely important to understand: this is real-time feedback in regards to your budgeting.
+	If you budget too strongly against your available funds, you essentially make a plan to overspend, hence you will accrue debt and the header will reflect that.
+	In this case, you should change your plan accordingly.
+\end{specialnote}
+

@@ -1,0 +1,122 @@
+\subsection{Budgeting for Expenses}
+\label{subsec:budgeting-expenses}
+% !TeX spellcheck = en_US
+
+This subsection gives a step-by-step guide on what is required to budget for an expense.
+Additional remarks and relatively deeper thoughts can be found in \autoref{subsec:thoughts-on-budgeting}, \autopageref{subsec:thoughts-on-budgeting}.
+
+To budget for an expense, you need to navigate to the sheet \sheetname{BudgetEXPItems}.
+You will observe there are gray cells to be found.
+As mentioned in \autoref{subsec:introduction-something-technical}, they are not to be edited.
+Furthermore, an important note for this sheet:
+\begin{specialnote}
+	Do not edit the cells to the right of the gray cells.
+\end{specialnote}
+
+For creating a new entry for an expense, you need to gather some details which are to be filled into columns.
+These columns have the magical name \ac{bic} and can be interpreted as steps you need to take to create a budget.
+For that, you should read through \autoref{subsubsec:budgeting-item-column-number} to \autoref{subsubsec:budgeting-item-column-category}.
+It is important that you fill out \emph{all} columns!
+Well, except the first one, actually.
+
+\subsubsection{BIC: Number}
+\label{subsubsec:budgeting-item-column-number}
+
+This the optional step: enumerate the item you are about to add.
+I suggest that you do as you may want to rearrange the items later on.
+Also, who doesn't like a well-sorted list?? :)
+
+\subsubsection{BIC: Description}
+\label{subsubsec:budgeting-item-column-description}
+
+Just name the item, perhaps give a few details.
+
+\subsubsection{BIC: Amount}
+\label{subsubsec:budgeting-item-column-amount}
+
+In short: enter the amount you plan to allocate to the item.
+If you are about to enter data for an expense item with multiple payments for a time period longer than 1 month, you have 2 possibilities:
+\begin{enumerate}
+	\item You enter the total amount for the year and let \tfn do the work to have it spread out evenly from start to end.
+	\item Or you enter multiple time periods with different kinds of lengths and amounts to ultimately have the right total for all the payments over the desired time period.
+	There are so many ways you can choose to do this
+\end{enumerate}
+
+\subsubsection{BIC: Start Date}
+\label{subsubsec:budgeting-item-column-start-date}
+
+Enter the start date you want to begin budgeting for that item.
+The date you enter must have the format \programmcode{YYYY-MM}, like the dates in the tracking sheets (see \autoref{subsec:tracking-column-date}, \autopageref{subsec:tracking-column-date}).
+
+\subsubsection{BIC: End Date}
+\label{subsubsec:budgeting-item-column-end-date}
+
+Enter the end date in which you plan to purchase the item or the monthly expense stops.
+The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-09} which stands for September 2019.
+
+\subsubsection{BIC: Monthly Expense}
+\label{subsubsec:budgeting-item-column-monthly-expense}
+
+The \ac{bic} titled \begriff{monthly expense} is for the following distinction:
+\begin{itemize}
+	\item If the expense item consist of a single purchase/item/money transfer, you need to set the value to \programmcode{No}.
+	An example would be the purchase of a winter coat or a car.
+	\item If the item is an expense that you actually spend money on in multiple months throughout the year, you need to set the value to \programmcode{Yes}.
+	An example would be paying for \eg utilities, such as water, electricity etc., on multiple occasions throughout the year.
+\end{itemize}
+
+There is also a clarification to be made about reoccurring expenses which are at intervals that do not equal a month's length.
+This will be elaborated on in \autoref{subsubsec:thoughts-non-monthly-expenses}, \autopageref{subsubsec:thoughts-non-monthly-expenses}.
+
+\subsubsection{BIC: Sum Prohibition}
+\label{subsubsec:budgeting-item-column-sum-prohibition}
+
+This \ac{bic} is for prohibiting if the amount for an expense item is to be summed up or not.
+
+First of, please take note of this:
+\begin{specialnote}
+	The column/switch \begriff{sum prohibition} only has an effect if the time period is longer than 1 month.
+	If the time period does not encompass at least 2 months, there is no division and thus no summation, as already mentioned in \autoref{subsubsec:budgeting-the-envelope-method}.
+\end{specialnote}
+
+So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?
+\begin{itemize}
+	\item Put \programmcode{Yes} if you want to prevent the summation.
+	\item Put \programmcode{No} if you want the amount to summed up in the last month.
+\end{itemize}
+
+Before a deeper explanation is provided, I will answer the question why there is such a column which serves to prohibit summation of the budgeted amount in the first place.
+Well, this column mostly exists because of the limitations that I ran into with using spreadsheet software and, frankly speaking, the way I conceptualized budgeting over multiple months.
+I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with 'taking the money out of the envelope' which is the inherent characteristic to the envelope method.
+
+Because, as described in \autoref{subsubsec:budgeting-item-column-monthly-expense}, there are also monthly expenses, which are not to be budgeted via the typical means of the envelope method.
+In this case, one would \emph{not} take all the money out of that envelope at the end.
+As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
+If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all makes up the 500\,€.
+At this point in time, the expense item is \begriff{budgeted} and can be purchased/billed.
+
+So, putting \programmcode{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+% sense if the item's time period is \emph{longer} than 1 month, which typically happens if it is a monthly expense.
+
+Putting \programmcode{No} makes sense if the expense is a one-time purchase.
+In that case, the envelope method kicks in and the amount is taken out of the virtual envelope at the end of the time period.
+
+There is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify some budgeting ideas and concepts with examples.
+
+\subsubsection{BIC: Done}
+\label{subsubsec:budgeting-item-column-budgeted}
+
+This column serves to enter if the budget item has been bought or not.
+Regard this column as a to-do list.
+\begin{itemize}
+	\item Put \programmcode{Yes} if the purchase/expense has been made.
+	\item Put \programmcode{No} if not.
+\end{itemize}
+
+\subsubsection{BIC: Category}
+\label{subsubsec:budgeting-item-column-category}
+
+The column \begriff{Category} is pretty straight forward.
+You have to fill in the category the expense is to be attributed to.
+You can only select a category that is provided by the drop-down list that is programmed to this cell.
+To see the valid entries, press \keystroke{Alt}+\keystroke{\( \downarrow \)} or right-click on the cell and then click on \programmcode{Selection List}.
