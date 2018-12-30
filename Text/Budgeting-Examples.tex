@@ -10,8 +10,8 @@ If you read through \autoref{subsec:budgeting-in-finances.ods} to \autoref{subse
 
 For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
 \begin{itemize}
-	\item We want to budget for the purchase of a super awesome winter coat which could cost up to with a value of 800\,€.
-	\item It is March and it possible to buy the coat in October.
+	\item We want to budget for the purchase of a super awesome winter coat which could cost (up to) 800\,€.
+	\item It is March and it is out plan to buy the coat in October.
 	Then the stores definitely have the new merchandise on the shelves.
 \end{itemize}
 The first columns in the row for that budget item should look like as they are displayed in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
@@ -22,15 +22,45 @@ I split them up to avoid for the sake of readability.}
 	\centering
 	\addtolength{\leftskip} {-1.25cm}
 	\sffamily
-	\caption[Example for Budgeting a Winter Coat: Data Entry]{Example for Budgeting a Winter Coat.
+	\caption[An Example for Budgeting a Winter Coat: Data Entry]{An Example for Budgeting a Winter Coat.
 	The values from the bullet list above are displayed in the corresponding columns.}
 	\label{tab:example-budgeting-expense-winter-coat-dataentry}
-	\begin{tabular}{|c|l|c|c|c|c|c|c|l|}
+	\begin{tabular}{|c|l|r|r|r|r|c|c|l|}
 		\hline
-		\footnotesize\textbf{No.} & \rotatebox{0}{\footnotesize\textbf{Descr.}} & \rotatebox{0}{\footnotesize\textbf{Amount}} & \rotatebox{0}{\footnotesize\textbf{Start Date}} & \rotatebox{0}{\footnotesize\textbf{End Date}} & \rotatebox{0}{\footnotesize\textbf{Monthly Exp.}} & \rotatebox{0}{\footnotesize\textbf{Sum Prohib.}} & \rotatebox{0}{\footnotesize\textbf{Done}} & \rotatebox{0}{\footnotesize\textbf{Category}}\\ 
+		\begin{minipage}{0.5cm}\footnotesize\bfseries
+			No.
+		\end{minipage} &
+		\begin{minipage}{1.5cm}\footnotesize\bfseries
+			Descr.
+		\end{minipage} &
+		\begin{minipage}[b]{1.0cm}	\footnotesize\bfseries
+			Amount
+		\end{minipage} &
+		\begin{minipage}[b][0.8cm]{1cm}\footnotesize\bfseries
+			Start\\
+			Date
+		\end{minipage} &
+		\begin{minipage}[b]{1.2cm}\footnotesize\bfseries
+			End\\
+			Date
+		\end{minipage} &
+		\begin{minipage}[b]{1.1cm}\footnotesize\bfseries
+			Monthly\\
+			Expense
+		\end{minipage} &
+		\begin{minipage}[b]{1.0cm}\footnotesize\bfseries
+			Sum\\
+			Prohib.
+		\end{minipage} &
+		\begin{minipage}[b]{1.0cm}\footnotesize\bfseries
+			Done
+		\end{minipage} &
+		\begin{minipage}[b]{1.5cm}\footnotesize\bfseries
+			Category
+		\end{minipage}\\ 
 		\hline
 		\hline
-		1 & Winter Coat & 800 & 2019-03 & 2019-10 & 100 & No & No & Clothing/Acc.\\
+		1 & Winter Coat & 800 & 2019-03 & 2019-10 & No & No & No & Clothing/Acc.\\
 		\hline
 	\end{tabular}
 \end{table}
@@ -39,11 +69,25 @@ I split them up to avoid for the sake of readability.}
 	\centering
 	\sffamily
 	\caption[Example for Budgeting a Winter Coat: Gray Columns]{Example for Budgeting a Winter Coat.
-	The values from the bullet list above are displayed in the corresponding columns.}
+	The values from the columns listed in \autoref{tab:example-budgeting-expense-winter-coat-dataentry} yield these entries in the gray columns.}
 	\label{tab:example-budgeting-expense-winter-coat-graycolumns}
 	\begin{tabular}{|c|c|c|c|c|c|}
 		\hline
-		\footnotesize\textbf{Cat.-No.} & \footnotesize\textbf{Months tot.} & \footnotesize\textbf{€/Month} & \footnotesize\textbf{Months in 2019} & \footnotesize\textbf{€ in 2019} & \footnotesize\textbf{Budgeted}\\
+		\footnotesize\textbf{Cat.-No.} &
+		\begin{minipage}[b][0.8cm]{1cm}\footnotesize\bfseries
+		Months\\
+		total
+		\end{minipage} &
+		\footnotesize\bfseries €/Month &
+		\begin{minipage}[b]{1.4cm}\footnotesize\bfseries
+		Months in\\
+		2019
+		\end{minipage} &
+		\begin{minipage}[b]{1cm}\footnotesize\bfseries
+		€ in\\
+		2019
+		\end{minipage}&
+		\footnotesize\bfseries Budgeted\\
 		\hline
 		\hline
 		\rowcolor{lightgray}
@@ -54,7 +98,7 @@ I split them up to avoid for the sake of readability.}
 
 Now with \autoref{tab:example-budgeting-expense-winter-coat-graycolumns} in mind, let us circle back to \autoref{subsubsec:budgeting-item-column-sum-prohibition} and talk about its consequences for budgeting the winter coat.
 As we have just read, we put 100\,€ into the virtual envelope\footnote{See \autoref{subsubsec:budgeting-the-envelope-method}.} per month.
-This whole concept is displayed in \autoref{tab:bic-sum-prohibition-clarification}.\todo{ausarbeiten und mal sum prohibition aufzeigen?}
+This whole concept of the cash flow is displayed in \autoref{tab:bic-sum-prohibition-clarification}.\todo{ausarbeiten und mal sum prohibition aufzeigen?}
 
 \begin{table}[htp]
 	\centering

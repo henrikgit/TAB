@@ -35,3 +35,16 @@ Forecasting is the process of making predictions about future developments based
 
 I am not opposed to integrate more sheets and calculations into \tfn, but so far I have not used trends and honestly, was able to deduce the good-enough optimizations of budgeted amounts by myself.
 And as stated multiple times throughout this guide, the file spans over 12 months (only), which obviously makes it impossible to form average values which account for values spanning over a longer time period than 12 months.
+
+\subsection{Budgeted Items Which Are Due}
+\label{subsec:budgeted-items-which-are-due}
+
+The sheet \sheetname{BudgetShoppingList} serves as a shopping list.
+You will find the following items listed:
+\begin{itemize}
+	\item Those which are budgeted and can be bought in the current month.
+	\item Those which are to be fully budgeted in the next month and in the month after that.
+	\item All the budgeted items which you bought in the past months.
+\end{itemize}
+
+Note: the formulas in this sheet utilize the \ac{bic} that shows if a budget item has been bought or its monthly expense has finished (\autoref{subsubsec:budgeting-item-column-done}).

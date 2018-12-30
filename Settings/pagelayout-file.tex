@@ -2,7 +2,7 @@
 left=4.2cm,
 right=4.2cm,
 top=2.5cm,
-bottom=1.5cm,
+bottom=1.75cm,
 %showframe,
 ]{geometry}
 
@@ -21,19 +21,21 @@ bottom=1.5cm,
 
 \usepackage[
 automark,
-headsepline
+%headsepline
 ]{scrlayer-scrpage}
-%\setlength{\footheight}{2cm}
 \pagestyle{scrheadings}
 %\automark[section]{subsection}
 \setkomafont{pagefoot}{\normalfont\small}
-\setkomafont{pagenumber}{\normalfont}
-\setkomafont{pagehead}{\normalfont}
+\setkomafont{pagenumber}{\normalfont\small}
+\setkomafont{pagehead}{\normalfont\scshape\small}
 \clearscrheadfoot
-\ihead{\leftmark}
-\ohead{\pagemark}
+%\ihead{\leftmark}
+%\chead{\leftmark}
+%\ohead{\pagemark}
 %\cfoot{\textcolor{mygray}{---\,\pagemark\,/\,\pageref{LastPage}\,---}}
 %\cfoot{\textcolor{mygray}{---\,\pagemark\,---}}
+%\cfoot{\pagemark}
+\ohead{\mbox{\hfil{\leftmark}\rlap{\small\kern2em\pagemark}}}
 
 %%Variante 2 - doppelseitig (=Duplexdruck)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -58,17 +60,3 @@ headsepline
 %    \AtTextCenter{%
 %    \makebox(0,0)[c]{\resizebox{150mm}{!}{
 %    \rotatebox{60}{\textcolor{gray}{Draft}}}}}}
-
-\usepackage[
-labelfont=sf,
-%%%%labelfont=sc, %Kapitälchen, passt nicht wg. nicht-osf Ziffern
-%%%%labelfont=it, %italics, nicht so gutaussehend
-%%%labelfont=sl, %slanted, nicht so gutaussehend
-font=small,
-hypcap=false,
-format=hang,
-%margin={2cm,2cm},
-calcwidth=0.8\columnwidth,
-%width=0.75\linewidth,
-%width=10cm,
-]{caption}

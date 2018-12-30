@@ -39,8 +39,6 @@ textsize=footnotesize,
 short-format = {\scshape},
 }
 
-
-
 %============================
 %SI Einheiten Paket siunitx
 %============================
@@ -78,9 +76,23 @@ retain-explicit-plus,
 %\setlist[itemize,2]{label=\textopenbullet,leftmargin=1.2em}
 %\setlist[itemize,1]{label=$ \bullet $,leftmargin=1.2em}
 %\setlist[itemize,2]{label=$ \circ $,leftmargin=1.2em}
-%\setlist[itemize,1]{label=$ \bullet $}
-%\setlist[itemize,2]{label=$ \circ $}
+\setlist[itemize,1]{label=$ \bullet $}
+\setlist[itemize,2]{label=$ \circ $}
 
 %Aufzählen 1. Ebene mit Klammer - AUSGESCHALTET
 %\renewcommand{\theenumi}{\arabic{enumi}}
 %\renewcommand{\labelenumi}{\theenumi{)}}
+
+\usepackage[
+%labelfont=sf,
+%%%%labelfont=sc, %Kapitälchen, passt nicht wg. nicht-osf Ziffern
+%%%%labelfont=it, %italics, nicht so gutaussehend
+%%%labelfont=sl, %slanted, nicht so gutaussehend
+font=small,
+hypcap=false,
+format=hang,
+%margin={2cm,2cm},
+calcwidth=0.8\columnwidth,
+%width=0.75\linewidth,
+%width=10cm,
+]{caption}

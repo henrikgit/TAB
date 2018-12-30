@@ -52,7 +52,7 @@ The date you enter must have the format \programmcode{YYYY-MM}, like the dates i
 \label{subsubsec:budgeting-item-column-end-date}
 
 Enter the end date in which you plan to purchase the item or the monthly expense stops.
-The date you enter must have the format \programmcode{YYYY-MM}, \eg \programmcode{2019-09} which stands for September 2019.
+The rules from \autoref{subsubsec:budgeting-item-column-start-date} apply here as well.
 
 \subsubsection{BIC: Monthly Expense}
 \label{subsubsec:budgeting-item-column-monthly-expense}
@@ -79,34 +79,40 @@ First of, please take note of this:
 	If the time period does not encompass at least 2 months, there is no division and thus no summation, as already mentioned in \autoref{subsubsec:budgeting-the-envelope-method}.
 \end{specialnote}
 
+Before a deeper explanation is provided, I will answer the question why there is such a column in the first place.
+Well, this column mostly exists because of the limitations that I ran into with using spreadsheet software and frankly speaking, the way I conceptualized budgeting over multiple months.
+I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with the proverbial ``taking the money out of the envelope'' which is the inherent characteristic to the envelope method.
+
 So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?
 \begin{itemize}
 	\item Put \programmcode{Yes} if you want to prevent the summation.
 	\item Put \programmcode{No} if you want the amount to summed up in the last month.
 \end{itemize}
 
-Before a deeper explanation is provided, I will answer the question why there is such a column which serves to prohibit summation of the budgeted amount in the first place.
-Well, this column mostly exists because of the limitations that I ran into with using spreadsheet software and, frankly speaking, the way I conceptualized budgeting over multiple months.
-I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with 'taking the money out of the envelope' which is the inherent characteristic to the envelope method.
-
-Because, as described in \autoref{subsubsec:budgeting-item-column-monthly-expense}, there are also monthly expenses, which are not to be budgeted via the typical means of the envelope method.
+Why?
+As described in \autoref{subsubsec:budgeting-item-column-monthly-expense}, there are also monthly expenses.
+These are not to be budgeted via the typical means of the envelope method.
 In this case, one would \emph{not} take all the money out of that envelope at the end.
 As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
-If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all makes up the 500\,€.
+If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all makes up the 500\,€ after 5 months.
 At this point in time, the expense item is \begriff{budgeted} and can be purchased/billed.
+If you intend to buy something with these 500\,€, take them out.
+If you intended to use 100\,€ each month for paying some kind of rate on something, then summing the single 100\,€ was actually useless.
 
-So, putting \programmcode{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-% sense if the item's time period is \emph{longer} than 1 month, which typically happens if it is a monthly expense.
+To sum up:
+\begin{itemize}
+	\item Putting \programmcode{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+	\item Putting \programmcode{No} makes sense if the expense is a one-time purchase.
+	In that case, the envelope method kicks in and the amount is taken out of the virtual envelope at the end of the time period.
+\end{itemize}
 
-Putting \programmcode{No} makes sense if the expense is a one-time purchase.
-In that case, the envelope method kicks in and the amount is taken out of the virtual envelope at the end of the time period.
+If the notes above do not give satisfactory explanation, there is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify some budgeting ideas and concepts by showcasing examples.
 
-There is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify some budgeting ideas and concepts with examples.
-
-\subsubsection{BIC: Done}
-\label{subsubsec:budgeting-item-column-budgeted}
+\subsubsection{BIC: Done/Bought}
+\label{subsubsec:budgeting-item-column-done}
 
 This column serves to enter if the budget item has been bought or not.
+In the case of a monthly expense, perhaps understand this as if the monthly expense has been \begriff{done}.
 Regard this column as a to-do list.
 \begin{itemize}
 	\item Put \programmcode{Yes} if the purchase/expense has been made.

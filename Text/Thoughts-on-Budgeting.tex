@@ -3,27 +3,27 @@
 % !TeX spellcheck = en_US
 
 What about reality, when things go up, down, sideways or in circles?
-Life can be a mess and if you really want to use \tfn for tracking and budgeting your cash, I would like to support that by providing some help in the form of thoughts.
+Life can be a mess and if you really want to use \tfn for tracking and budgeting your cash, I would like to support that by providing some help.
 
 \subsubsection{Thoughts on Non-Monthly Expenses}
 \label{subsubsec:thoughts-non-monthly-expenses}
 
-This part is in regards to \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses that are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
+This part builds upon \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses that are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
 There are further elaborations to be made on the possibilities of non-monthly expenses.
 \begin{itemize}
 	\item You can set their start and end date to span over the whole year (or 12 months): the expense item would occur after 12 months and it would be the total of all single payments.
-	There would be a deviation in all months, but the yearly total deviation equals 0.
-	Obviously, as it is a reoccurring expense, the switch for \begriff{sum prohibition} would have to be set to \programmcode{Yes}.
-	\item For each payment, \ie the expense is regarded as a single purchase and needs the \begriff{sum prohibition} switch set to \programmcode{No}.
+	There would be a deviation in all months, but the deviation's total over the whole year equals 0.
+	As it is a reoccurring expense, the cell entry for the \ac{bic} sum prohibition would have to be set to \programmcode{Yes}.
+	\item For each payment, \ie the expense is regarded as a single purchase and needs the sum prohibition-switch set to \programmcode{No}.
 	Hence one would have to create multiple entries for the whole group of quarterly payments.
 	There are 2 possibilities one could choose:
 	\begin{enumerate}
 		\item One could set the start date for all payments to the month of today or whenever one would want to start budget for it.
 		Note: this would lead to an increased budgeting load in the ensuing months right after the start date.
 		So this would lead to 4 quarterly budget items, all of which start in \programmcode{2019-01}, but end in \programmcode{2019-03}, \programmcode{2019-06}, \programmcode{2019-09} and \programmcode{2019-12}.
-		\item One could set the start date to the month after a payment happened.
-		Explanation: let us assume the first payment would be due in march, thus the time period would be \programmcode{2018-01} to \programmcode{2018-03}.
-		Accordingly, the next budget item could start in \programmcode{2018-04} and end it \programmcode{2019-06}.
+		\item One could set the time periods for each quarterly payment to span exactly over each quarter.
+		The first payment would be due in march, thus the time period would be \programmcode{2018-01} to \programmcode{2018-03}.
+		Accordingly, the next budget item would start in \programmcode{2018-04} and end in \programmcode{2019-06} and so forth.
 	\end{enumerate}
 \end{itemize}
 
@@ -31,40 +31,41 @@ There are further elaborations to be made on the possibilities of non-monthly ex
 \label{subsubsec:thoughts-different-dates}
 
 Dates in regards to planned expenses can differ from how events unfold in reality.
-Firstly, what if when you just want to buy an item \emph{earlier} than the planned month?
-Then the following process happens:
+Let us talk about the following questions:
+\begin{itemize}
+	\item What if when you just want to buy an item \emph{earlier} than the planned month?
+	\item What if you somehow end up buying something later than planned?
+	\item What if the money transfer goes through too late?
+\end{itemize}
+
+To start with the first question, let us look at what happens if you buy something earlier than planned:
 \begin{enumerate}
 	\item You track the purchase as described in \autoref{sec:tracking}.
 	\item You will observe a deviation in the month you purchase the item, as it does not equal the planned month.
+	\item The month which you planned the purchase for will generate a surplus.
 \end{enumerate}
-I suggest that you backdate its end date.
 
-First of, the envelope method is used for single purchases only.
-Otherwise the budget will penalize you in the month it was dated for purchase and that dilutes the structure of your planned expenses unnecessarily.
+Well, I suggest that you change its end date to the date you spent the amount.
+Why?
+First of, the envelope method is used for single purchases only in \tfn.
 As this action, \ie purchasing a single item, is a not a monthly expense, the deviation for the month is the one that matters.
-Therefor, the timing of the purchase matters and if you do not backdate the end, you will have created an unnecessary deviation in the month you actually purchase it.
+Therefor, the timing of the purchase matters.
+If you do not change the end date, you would create a deviation in the month you actually purchased it.
+Also the positive deviation will reward you in the month it was dated for purchase and that dilutes the structure of your planned expenses unnecessarily.
+Therefor I suggest that you change its end date.
 
-But this will increase the monthly values for past months, and if your budget overall is arguably tight, it will possibly add strain to the months that already went by.
-Also, you would be adding an amount of money to the already budgeted amount in the past months, which would be kind of fake as all kinds of expenses have been spent, all kinds of budget items were planned more or less carefully so that it all made sense from a financial perspective.
-So that the past months might not be diluted by the fake 
+But to make sure you are aware of the consequences: as this shortens the time period, the whole amount will be split up over fewer months, therefor this will increase the monthly values for past months.
+If your budget overall is arguably tightly calculated, it will possibly add strain to the months that already went by and you could retroactively make them have a budgeted deficit.
+Although there is a chance that the opposite might be true as well, that you would not add a critical amount because the deviations in the months prior were in your favor.
 
-Secondly, what if you somehow end up buying something later than planned?
-Well, if you end up not purchasing something in the right month, that is on you.
-This leads to the same \todo{weiter}
+About the second question, what if you somehow end up buying something later than planned?
+This leads to the same process as above, but simply flipped from the perspective of time.
+Overall, if you end up not purchasing something in the planned month, that is on you.
+You could move the end date to a later month, however at that point you could ask yourself if the purchase is an expense you actually want to spend.
 
-But that is ok and you could be happy about the positive effect on the deviation.
-
-As mentioned \autoref{subsec:tracking-column-date}, there are 2 ways (at least the ones I listed) that dates can be used:
-\begin{enumerate}
-	\item A date for the day something was bought/ordered.
-	Regardless of any kind of money transfer, this is the date the purchase was planned for.
-	\item With regards to any kind of money transfer, there is also date--in case one uses some form of electronic payment (\eg a card)--on which the amount is actually transferred from your account.
-\end{enumerate}
-
-Finally, regardless of your actions or lack thereof, there is the time factor in the money transfer.
+Also, regardless of your actions or lack thereof, there is the time factor in the money transfer.
 The debit could be withdrawn too late or too early from your account and by being the thorough tracker you certainly strive to be, you treat the dates as they occur in real life and ultimately have a unnecessary deviation, but it still happened: you could possibly have overdrawn your checking account or withdrawn an amount too late.
 Well, that is life.
-Regardless, you update your list to reflect your view. (because who does not like a well-maintained list, right?). \todo{punkt checken wegen einmal plan-datum und real datum}
 
 All that may be discussed further and deeper, but ultimately you need to decide on the following choices:
 \begin{itemize}
@@ -72,8 +73,11 @@ All that may be discussed further and deeper, but ultimately you need to decide 
 	\item Should you wait with the purchase or set a calendar reminder of some sort next time?
 \end{itemize}
 \begin{specialnote}
-	But however you decide, never change dates for tracking.
+	However you decide, never change dates for tracking.
+	Perhaps revisit \autopageref{subsec:tracking-column-date}.
 \end{specialnote}
+
+Finally, a note on the bigger picture which I had planned to make earlier in this document:
 
 \subsubsection{Thoughts on Delayed Budgeting}
 \label{subsubsec:thoughts-delayed-budgeting}
