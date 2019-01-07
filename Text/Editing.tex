@@ -5,23 +5,51 @@
 While I would like to say that the file is pretty solid and works alright, its value is clearly dependent on the content it serves.
 If you find that some tracking categories are missing or its structure overall should be changed, it is on you to adjust some sheets.
 \begin{itemize}
-	\item For editing 
+	\item For adding or removing tracking categories to your liking, consult \autoref{subsec:editing-tracking-categories}.
+	\item For changing the order/structure of said categories, go to \autoref{subsec:editing-order-of-tracking-categories}.
 \end{itemize}
 
+\subsection{Editing Sheets in General}
+\label{subsec:editing-sheet-in-general}
+
+You can simply go ahead and do one of the following things:
+\begin{itemize}
+	\item Rename a sheet.
+	\loc will ``see'' that new name and use it automatically in a formula, if you have already referenced a cell in that sheet in a formula.
+	Meaning you will not have to update any existing formulas which used the old sheet name.
+	\item Change the order of the sheets.
+\end{itemize}
 
 \subsection{Editing Tracking Categories}
 \label{subsec:editing-tracking-categories}
 
-When you want to edit anything in regards to the overall tracking system, you must start with the tracking categories.
+When you want to edit anything in regards to the categories, you must start with the tracking categories.
 
-For adding a tracking category, work through the following list:
+\subsubsection{Renaming a Tracking Category}
+\label{subsubsec:renaming-a-tracking-category}
+
+Say you want to rename a tracking category after you used it for a while and used it to budget expense items or income items.
+\begin{specialnote}
+	If you rename the tracking category, you must rework the entries in the \ac{bic} Category (see \autoref{subsubsec:bic-category}).
+\end{specialnote}
+
+
+\subsubsection{Adding a Tracking Category}
+\label{subsubsec:adding-a-tracking-category}
+
+For adding tracking category, work through the following list:
 \begin{itemize}
-	\item Add or \todo{weiter}
+	\item Go to the line with the tracking category you either want to remove or Add or \todo{weiter}
 	\begin{itemize}
 		\item bbb
 	\end{itemize}
 \end{itemize}
 As you certainly recall steps 
+
+\subsubsection{Correcting Formula References}
+\label{subsubsec:correct-formula-references}
+
+Once you changed the number of rows in the sheet \sheetname{Tracker}, you must correct the references in all sheets which rely on the system of the categories.
 
 \subsection{Editing The Order of Tracking Categories}
 \label{subsec:editing-order-of-tracking-categories}
@@ -32,7 +60,9 @@ Editing the order of tracking categories builds upon \autoref{subsec:editing-tra
 \subsection{Editing Budgeting Sheets}
 \label{subsec:editing-budgeting-sheets}
 
-\subsection{Editing Categories for Budgeting}
+\subsection{Editing Budgeting Categories}
 \label{subsec:editing-categories-for-budgeting}
 
-As stated in \autoref{subsubsec:budgeting-item-column-category} on \autopageref{subsubsec:budgeting-item-column-category}, writing something in the \ac{bic} \emph{Category}  is rather selecting an entry in a given list.
+As stated in \autoref{subsubsec:bic-category}, \autopageref{subsubsec:bic-category}, writing something in the \ac{bic} Category is actually selecting an entry in a given list.
+For this list to change in terms of budgeting categories, there are no extra steps.
+As stated in \autoref{subsec:tracking-categories}, the budgeting categories are simply mirroring the tracking categories, hence for all things ``editing budgeting categories'' you must work through \autoref{subsec:editing-tracking-categories}.

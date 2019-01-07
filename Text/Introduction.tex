@@ -2,7 +2,7 @@
 \label{sec:introduction}
 % !TeX spellcheck = en_US
 
-\subsection{First Things First - What Does This Do?}
+\subsection{First Things First - What Does This File Do?}
 \label{subsec:first-things-first}
 
 First and foremost, the spreadsheet file \sterm{Finances-2019.ods} is intended to help you to track and budget your finances, or rather, cash for 1 calendar year.
@@ -27,8 +27,11 @@ Should you choose to use the designated sheets for budgeting your expenses and i
 
 \missingfigure{Budgeting sheet screenshot}
 
-Neither does it get automatically updated, nor does it receive or send data from/to any banking service, website or other kind of server.
-It relies on you to update it which is essentially data entry.
+\begin{specialnote}
+	Neither does the file get automatically updated, nor does it receive or send data from/to any banking service, website or other kind of server.
+	There is no connection ``programmed'' into it or so.
+	The file relies on you to update it, which is essentially data entry.	
+\end{specialnote}
 
 \tfn was created in LibreOffice's spreadsheet program named \sterm{Calc}, hence I suggest you use it when working with this file.
 However you may use whatever software you want.\footnote{About Excel: I do not own Excel and therefor am not going to port it to Excel at the moment.
@@ -39,7 +42,7 @@ I have used this file and its countless previous versions for roughly 4--5 years
 I am not saying it is perfect and/or free of bugs, but I think I have maintained, updated and improved it quite a lot over the last few years, so with the best judgment I possible, I think it is ready to be put it online.
 Nevertheless, it is provided to you as-is.
 
-\subsection{What Does This Not Do?}
+\subsection{What Does The File Not Do?}
 \label{subsec:not-included}
 
 \tfn does \emph{not} do any of these things:
@@ -81,8 +84,7 @@ The ``core concepts'', or rather, ``principles'' are as follows:
 	It is a fancy term for the direct consequences of the human error (it most definitely is a human error that causes it, \ie an error within the file, and not a banking error).
 	With time, you will undoubtedly notice a difference between the cash you have based on your file vs. the real-world amount.
 	Accept it because otherwise you are fighting a fight you cannot win.
-	To offset the drift, enter values in the \sterm{drift cells} in the \sheetname{Overview} sheet.
-	Note: the drift does not include the time factor, as it is impossible to update the file the moment an expense has been made.
+	To offset the drift, enter values in the \sterm{drift cells} in the sheet \sheetname{Overview}.
 \end{itemize}
 With the best intention at heart, I can only ask you to accept and follow these principles.
 
@@ -103,12 +105,13 @@ With \autoref{subsubsec:core-concepts} in mind, let us talk about what it actual
 	\item You do not expect the file to somehow conjure up graphs and diagrams with insights on its own.
 	Although the file does in fact possess a slim amount of ``intelligence'' through its formulas, it is all based on data \emph{you} entered.
 	\item In case you would like to some formulas in the file, you would obviously have to learn editing spreadsheet files with Calc and understand how exactly the calculations work.
-	\item Given that \tfn is an actual \programmcode{.ods}-file, this means that one does work on/in it while sitting in front of a computer/laptop.
+	\item Given that \tfn is an actual \codestuff{.ods}-file, this means that one does work on/in it while sitting in front of a computer/laptop.
 	So this would not happen while being out and about.
 	\item You are ok with facing numbers about your spending head-on.
 	\item You have the discipline that is required to manage \tfn.
 	\item In case you intend to use \tfn for managing finances of more than one person, I suppose all persons involved have to understand the points outlined above.
 \end{itemize}
+
 All the aforementioned bullet points entail important aspects which describe the use of the file.
 If multiple points in the list represent something negative for you, I strongly suggest that you might find it more pleasant to use another program or app for managing your cash/finances overall.\footnote{You could then perhaps take a look at the tools page of the Personal Finance-subreddit:\\
 \href{https://www.reddit.com/r/personalfinance/wiki/tools}{https://www.reddit.com/r/personalfinance/wiki/tools}.}
@@ -121,7 +124,7 @@ That is a good question and I will try to answer it in the following subsection.
 
 Originally, I only used \tfn to track my cash spending, \ie what I spent on groceries, how much money I spent on eating out, clothing and so forth.
 Over time, I started to add sections for tracking more and other kinds of categories.
-I now track: my cash spending\footnote{I should note that I lump my cash spending and payments via some kinds of electronic method together.}, all other liabilities that represent cash outflows, my savings, my interests from these savings and other kinds of assets.
+I now track: my cash spending\footnote{I should note that I lump my cash spending and all other kinds of payments, \eg electronic, together.}, all other liabilities that represent cash outflows, my savings, my interests from these savings and other kinds of assets.
 It grew into something that is possibly invaluable in my day-to-day life nowadays, yet perhaps there are still some errors I have not found so far or features that are missing or I have not thought of.
 
 I created the file because I checked the landscape of budgeting software several years ago and found that I do not want to pay for managing my own finances.
@@ -148,6 +151,5 @@ There are several gray cells in the file.
 You must not touch gray cells in the file.
 Their interior color stands for \emph{do not edit}!
 
-As stated on \autopageref{foreword}, the gray boxes indicate hyperlinks and can be clicked or touched.
+As stated on \autopageref{foreword}, the colored boxes indicate links to either URLs or targets within this document and can be clicked.
 They do \emph{not} get printed out and are just an overlay in your PDF viewer.
-

@@ -7,7 +7,7 @@ DIV=15,
 parskip=false, %is actually default: no vspace between paragraphs, but identation after 1st
 english,
 %twoside,
-fontsize=11pt,
+fontsize=10pt,
 footlines=8,
 %footheight=10pt,
 ]
@@ -20,6 +20,7 @@ footlines=8,
 \begin{document}
 \listoftodos
 \begin{comment}
+\pagenumbering{roman}
 \pagestyle{plain}
 \input{Text/Beginning}
 \clearpage
@@ -30,6 +31,7 @@ footlines=8,
 \clearpage
 \listoftables
 \clearpage
+\pagenumbering{arabic}
 \end{comment}
 \pagestyle{scrheadings}
 \input{Text/00-text-file}

@@ -1,0 +1,56 @@
+\section{Miscellaneous Help}
+\label{sec:miscellaneous-help}
+% !TeX spellcheck = en_US
+
+\subsection{Income and Spending over a Certain Time Period}
+\label{subsec:income-and-spending-certain-time-period}
+
+The sheet \sheetname{TimePeriod} is for showing you the sums of daily cash outflows and inflows for the given time period.
+
+For that, you need to type out all the names of your tracking sheets in the table below.
+Then you can enter the start date and end date for an arbitrary time period and it will show produce the values.
+
+The only requirement is that you did do well on your tracking duties, other than there is not really a whole lot of magic involved.
+
+\subsection{Prepare the next year}
+\label{subsec:prepare-the-next-year}
+
+\begin{itemize}
+	\item Come December 31, the very last TODO-point on your list should be to write down the last pieces of information in regards to the last day of the year.
+	So literally write down \codestuff{2019-12-31} into any cell that prints today's date, \eg in the \sheetname{Budget} sheet.
+	\item Otherwise the next time you open that file later than December 31 of that year, the cell that prints today's date will obviously the date of that day.
+	Hence January of the next year or the years to come perhaps.
+	\item Proceed in an analogical fashion for every cell that prints dates through formulas.
+	\item Otherwise all the budget-sheets which feature formulas based on the current month and/or date are faulty.
+	Or rather, they do not show values which make sense.
+	\item 
+\end{itemize}
+
+\subsection{Budgeted Items Which Are Due}
+\label{subsec:budgeted-items-which-are-due}
+
+The sheet \sheetname{BudgetShoppingList} serves as a shopping list.
+You will find the following items listed:
+\begin{itemize}
+	\item Those which are budgeted and can be bought in the current month.
+	\item Those which are to be fully budgeted in the next month and in the month after that.
+	\item All the budgeted items which you bought in the past months.
+\end{itemize}
+
+Note: the formulas in this sheet utilize the \ac{bic} that shows if a budget item has been bought or its monthly expense has finished (\autoref{subsubsec:bic-done}).
+
+\subsection{Efficient Budgeting or Putting Every Euro to Work}
+\label{subsec:efficient-budgeting}
+
+Falls etwas überschuss da ist, kann man diesen theoretisch im nächsten monat extra verplanen! natürlich. nur wie möchte man den überblick halten, wenn man monatlich nach und nach stärker budgetiert, da man mehr mittel zu verfügung hat und dementsprechend verplanen kann?
+
+Nun, ich habe dafür ein blatt eingefügt, in dem ich gewisse ausgaben und die bisher bereitgestellten mittel dafür extra tracke.\todo{übersetzen}
+
+\subsection{Forecasting}
+\label{subsec:forecasting}
+
+There is one other feature that I had originally planned to integrate: \emph{forecasting}.
+Forecasting is the process of making predictions about future developments based on past and present data and most commonly by analysis of trends.\footnote{Cp. \href{https://en.wikipedia.org/wiki/Forecasting}{https://en.wikipedia.org/wiki/Forecasting}.}
+
+I am not opposed to integrate more sheets and calculations into \tfn, but so far I have not used trends and honestly, was able to deduce the good-enough optimizations of budgeted amounts by myself.
+And as stated multiple times throughout this guide, the file spans over 12 months (only), which obviously makes it impossible to form average values which account for values spanning over a longer time period than 12 months.

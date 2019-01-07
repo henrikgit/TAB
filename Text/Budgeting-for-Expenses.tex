@@ -15,24 +15,24 @@ Furthermore, an important note for this sheet:
 
 For creating a new entry for an expense, you need to gather some details which are to be filled into columns.
 These columns have the magical name \ac{bic} and can be interpreted as steps you need to take to create a budget.
-For that, you should read through \autoref{subsubsec:budgeting-item-column-number} to \autoref{subsubsec:budgeting-item-column-category}.
+For that, you should read through \autoref{subsubsec:bic-number} to \autoref{subsubsec:bic-category}.
 It is important that you fill out \emph{all} columns!
 Well, except the first one, actually.
 
 \subsubsection{BIC: Number}
-\label{subsubsec:budgeting-item-column-number}
+\label{subsubsec:bic-number}
 
 This the optional step: enumerate the item you are about to add.
 I suggest that you do as you may want to rearrange the items later on.
 Also, who doesn't like a well-sorted list?? :)
 
 \subsubsection{BIC: Description}
-\label{subsubsec:budgeting-item-column-description}
+\label{subsubsec:bic-description}
 
 Just name the item, perhaps give a few details.
 
 \subsubsection{BIC: Amount}
-\label{subsubsec:budgeting-item-column-amount}
+\label{subsubsec:bic-amount}
 
 In short: enter the amount you plan to allocate to the item.
 If you are about to enter data for an expense item with multiple payments for a time period longer than 1 month, you have 2 possibilities:
@@ -43,25 +43,34 @@ If you are about to enter data for an expense item with multiple payments for a 
 \end{enumerate}
 
 \subsubsection{BIC: Start Date}
-\label{subsubsec:budgeting-item-column-start-date}
+\label{subsubsec:bic-start-date}
 
 Enter the start date you want to begin budgeting for that item.
-The date you enter must have the format \programmcode{YYYY-MM}, like the dates in the tracking sheets (see \autoref{subsec:tracking-column-date}, \autopageref{subsec:tracking-column-date}).
+The date you enter must have the format \codestuff{YYYY-MM}, like the dates in the tracking sheets (see \autoref{subsec:tracking-column-date}, \autopageref{subsec:tracking-column-date}).
+
+\begin{specialnote}
+	The start date must not lie in the past.
+	It can be the current month or a month in the future.
+\end{specialnote}
 
 \subsubsection{BIC: End Date}
-\label{subsubsec:budgeting-item-column-end-date}
+\label{subsubsec:bic-end-date}
 
 Enter the end date in which you plan to purchase the item or the monthly expense stops.
-The rules from \autoref{subsubsec:budgeting-item-column-start-date} apply here as well.
+The rules from \autoref{subsubsec:bic-start-date} apply here as well.
+
+\begin{specialnote}
+	The end must be equal to the start date or must be later than the start date.
+\end{specialnote}
 
 \subsubsection{BIC: Monthly Expense}
-\label{subsubsec:budgeting-item-column-monthly-expense}
+\label{subsubsec:bic-monthly-expense}
 
 The \ac{bic} titled \sterm{monthly expense} is for the following distinction:
 \begin{itemize}
-	\item If the expense item consist of a single purchase/item/money transfer, you need to set the value to \programmcode{No}.
+	\item If the expense item consist of a single purchase/item/money transfer, you need to set the value to \codestuff{No}.
 	An example would be the purchase of a winter coat or a car.
-	\item If the item is an expense that you actually spend money on in multiple months throughout the year, you need to set the value to \programmcode{Yes}.
+	\item If the item is an expense that you actually spend money on in multiple months throughout the year, you need to set the value to \codestuff{Yes}.
 	An example would be paying for \eg utilities, such as water, electricity etc., on multiple occasions throughout the year.
 \end{itemize}
 
@@ -69,7 +78,7 @@ There is also a clarification to be made about reoccurring expenses which are at
 This will be elaborated on in \autoref{subsubsec:thoughts-non-monthly-expenses}, \autopageref{subsubsec:thoughts-non-monthly-expenses}.
 
 \subsubsection{BIC: Sum Prohibition}
-\label{subsubsec:budgeting-item-column-sum-prohibition}
+\label{subsubsec:bic-sum-prohibition}
 
 This \ac{bic} is for prohibiting if the amount for an expense item is to be summed up or not.
 
@@ -83,46 +92,89 @@ Before a deeper explanation is provided, I will answer the question why there is
 Well, this column mostly exists because of the limitations that I ran into with using spreadsheet software and frankly speaking, the way I conceptualized budgeting over multiple months.
 I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with the proverbial ``taking the money out of the envelope'' which is the inherent characteristic to the envelope method.
 
-So\ldots should you fill in \programmcode{Yes} or \programmcode{No}?
+So\ldots should you fill in \codestuff{Yes} or \codestuff{No}?
 \begin{itemize}
-	\item Put \programmcode{Yes} if you want to prevent the summation.
-	\item Put \programmcode{No} if you want the amount to summed up in the last month.
+	\item Put \codestuff{Yes} if you want to prevent the summation.
+	\item Put \codestuff{No} if you want the amount to summed up in the last month.
 \end{itemize}
 
 Why?
-As described in \autoref{subsubsec:budgeting-item-column-monthly-expense}, there are also monthly expenses.
+As described in \autoref{subsubsec:bic-monthly-expense}, there are also monthly expenses.
 These are not to be budgeted via the typical means of the envelope method.
 In this case, one would \emph{not} take all the money out of that envelope at the end.
 As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
 If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all makes up the 500\,€ after 5 months.
-At this point in time, the expense item is \sterm{budgeted} and can be purchased/billed.
-If you intend to buy something with these 500\,€, take them out.
-If you intended to use 100\,€ each month for paying some kind of rate on something, then summing the single 100\,€ was actually useless.
+At this point in time, the expense item is \sterm{fully budgeted} and can be purchased/billed.
+If you intend to buy something with these 500\,€, take them out of the envelope.
+If you intended to use the 100\,€ in each month for paying for a monthly expense, then summing up the single 100\,€ to make up 500\,€ is rather useless.
 
 To sum up:
 \begin{itemize}
-	\item Putting \programmcode{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-	\item Putting \programmcode{No} makes sense if the expense is a one-time purchase.
+	\item Putting \codestuff{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
+	\item Putting \codestuff{No} makes sense if the expense is a one-time purchase.
 	In that case, the envelope method kicks in and the amount is taken out of the virtual envelope at the end of the time period.
 \end{itemize}
 
-If the notes above do not give satisfactory explanation, there is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify some budgeting ideas and concepts by showcasing examples.
+Now that the main explanations in regards to monthly expenses and sum prohibition were given, \autoref{tab:possible-settings-monthly-expense-sum-prohibition} on \autopageref{tab:possible-settings-monthly-expense-sum-prohibition} will list the possible combinations and use cases for both settings.
+
+\begin{table}[hbtp]
+	\centering
+%	\renewcommand{\arraystretch}{1.2}
+	\libertineTabular
+	\caption[Possible settings for budgeting expense items in \sheetname{BudgetEXPitems}]{Possible settings for budgeting expense items in the sheet \sheetname{BudgetEXPitems}.
+	You must not use any other setting than listed here.}
+	\label{tab:possible-settings-monthly-expense-sum-prohibition}
+	\begin{tabular}{cccl}
+		\toprule
+		No. &
+		\begin{minipage}[b]{1.1cm}
+			Monthly\\
+			Expense
+		\end{minipage} &
+		\begin{minipage}[b]{1.0cm}
+			Sum\\
+			Prohib.
+		\end{minipage} &
+		Use Case\\
+		\midrule
+		1 & \codestuff{Yes} & \codestuff{Yes} & 
+		\begin{minipage}[t]{5cm}
+			An expense with multiple payments in multiple months, \eg payments for a utility like electricity.
+		\end{minipage}\\
+		2 & \codestuff{No} & \codestuff{No} &
+		\begin{minipage}[t]{5cm}
+			For an one-time expense, \eg a winter coat.
+		\end{minipage} \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+If the notes above do not give satisfactory explanation, there is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify ideas and concepts by showcasing examples.
 
 \subsubsection{BIC: Done/Bought}
-\label{subsubsec:budgeting-item-column-done}
+\label{subsubsec:bic-done}
 
 This column serves to enter if the budget item has been bought or not.
 In the case of a monthly expense, perhaps understand this as if the monthly expense has been \sterm{done}.
 Regard this column as a to-do list.
 \begin{itemize}
-	\item Put \programmcode{Yes} if the purchase/expense has been made.
-	\item Put \programmcode{No} if not.
+	\item Put \codestuff{Yes} if the purchase/expense has been made.
+	\item Put \codestuff{No} if not.
 \end{itemize}
 
 \subsubsection{BIC: Category}
-\label{subsubsec:budgeting-item-column-category}
+\label{subsubsec:bic-category}
 
 The column \sterm{Category} is pretty straight forward.
 You have to fill in the category the expense is to be attributed to.
 You can only select a category that is provided by the drop-down list that is programmed to this cell.
-To see the valid entries, press \keystroke{Alt}+\keystroke{\( \downarrow \)} or right-click on the cell and then click on \programmcode{Selection List}.
+To see the valid entries, press \keystroke{Alt}+\keystroke{\( \downarrow \)} or right-click on the cell and then click on \codestuff{Selection List}.
+
+Note: the building categories equal the tracking categories 1:1.
+When they all get put into that dropdown menu, they actually get sorted alphabetically, which is why I added ``ZZZ'' as a prefix.
+You must not select a category that has that ZZZ-prefix.
+To change the list in that drop down menu, you need to change the data validity.
+To do that, you must first select the whole column or one cell in the \ac{bic} category. 
+Then follow this path in \loc's user interface: \codestuff{Data}\structurenext\codestuff{Validity}.
+A dialog window will appear.
+Go to the tab \codestuff{Critera} and for the 'Allow:' section, click on the dropdown menu and select \codestuff{Cell Range}.

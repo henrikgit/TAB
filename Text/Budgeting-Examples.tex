@@ -6,26 +6,29 @@ This subsection includes examples for showcasing how to use the budgeting sheets
 If you read through \autoref{subsec:budgeting-in-finances.ods} to \autoref{subsec:thoughts-on-budgeting}, lots of things and bits should be familiar and hopefully get cleared up if they are still a bit nebulous.
 
 \subsubsection{Winter Coat}
-\label{subsubsec:example-budgeting-expense-winter-coat}
+\label{subsubsec:example-budgeting-winter-coat}
 
 For the example of budgeting a winter coat, let us take these facts \& figures into accounts:
 \begin{itemize}
-	\item We want to budget for the purchase of a super awesome winter coat which could cost (up to) 800\,€.
+	\item We want to budget for the purchase of a super awesome winter coat which could cost (up to) 540\,€.
 	\item It is March and it is out plan to buy the coat in October.
 	Then the stores definitely have the new merchandise on the shelves.
 \end{itemize}
-The first columns in the row for that budget item should look like as they are displayed in \autoref{tab:example-budgeting-expense-winter-coat-dataentry}.
-These entries yield the values shown in the gray columns in \autoref{tab:example-budgeting-expense-winter-coat-graycolumns}.\footnote{Of course the second table is directly to the right of the first one in the spreadsheet file.
-I split them up to avoid for the sake of readability.}
 
-\begin{table}[htbp]
+The information given in the bullet list would lead to the columns for data entry in \autoref{tab:example-budgeting-winter-coat}, which displays how one should budget for a winter coat in \tfn.
+
+\begin{table}[hbtp]
 	\centering
-	\addtolength{\leftskip} {-1.25cm}
+	\addtolength{\leftskip}{-3.5cm}
+	\setlength{\tabcolsep}{3pt}
 	\sffamily
-	\caption[An Example for Budgeting a Winter Coat: Data Entry]{An Example for Budgeting a Winter Coat.
-	The values from the bullet list above are displayed in the corresponding columns.}
-	\label{tab:example-budgeting-expense-winter-coat-dataentry}
-	\begin{tabular}{|c|l|l|l|l|r|c|c|l|}
+	\caption[An Example for Budgeting a Winter Coat]{An Example for Budgeting a Winter Coat.
+	The cells on the left, with white background, represent the part that is for data entry.
+	The values from the bullet list above are displayed in the corresponding columns.
+	As stated numerous times, the last column can look different in your case, if you wish to name your tracking categories differently.
+	The columns for data entry yield entries in the gray columns.}
+	\label{tab:example-budgeting-winter-coat}
+	\begin{tabular}{|c|l|l|l|l|c|c|c|r|c|r|c|r|r|c|}
 		\hline
 		\begin{minipage}{0.5cm}\footnotesize\bfseries
 			No.
@@ -52,7 +55,144 @@ I split them up to avoid for the sake of readability.}
 			Sum\\
 			Prohib.
 		\end{minipage} &
+		\begin{minipage}[b]{0.8cm}\footnotesize\bfseries
+			Done
+		\end{minipage} &
+		\begin{minipage}[b]{1.5cm}\footnotesize\bfseries
+			Category
+		\end{minipage} & %%%hier gehts los
+		\footnotesize\textbf{Cat.-No.} &
+		\begin{minipage}[b][0.8cm]{1cm}\footnotesize\bfseries
+			Months\\
+			total
+		\end{minipage} &
+		\footnotesize\bfseries €/Month &
+		\begin{minipage}[b]{1.2cm}\footnotesize\bfseries
+			Months in\\
+			2019
+		\end{minipage} &
+		\begin{minipage}[b]{0.6cm}\footnotesize\bfseries
+			€ in\\
+			2019
+		\end{minipage} &
+		\footnotesize\bfseries Budgeted\\ 
+		\hline
+		\hline
+		1 & Winter Coat & 540 & 2019-03 & 2019-10 & No & No & No & Clothing/Acc. & \cellcolor{lightgray}001 & \cellcolor{lightgray}8 & \cellcolor{lightgray}67.5 & \cellcolor{lightgray}8 & \cellcolor{lightgray}540.00 & \cellcolor{lightgray}No\\
+		\hline
+	\end{tabular}
+\end{table}
+
+The entries in \autoref{tab:example-budgeting-winter-coat} yield the values shown in the gray columns in \autoref{tab:example-budgeting-winter-coat}.
+As the formulas do their work, the amount is then divided by the time period's length.
+The \ac{bic} \sterm{Months in 2019} shows how many months are affected by the time period in the calendar year of the file, and in an analogical way does \sterm{€ in 2019} show the same.
+
+%\begin{table}[hbtp]
+%	\centering
+%	\sffamily
+%	\caption[Example for Budgeting a Winter Coat: Gray Columns]{Example for Budgeting a Winter Coat.
+%		The values from the columns listed in \autoref{tab:example-budgeting-winter-coat} yield these entries in the gray columns.}
+%	\label{tab:example-budgeting-winter-coat-graycolumns}
+%	\begin{tabular}{|c|r|r|r|r|c|}
+%		\hline
+%		\footnotesize\textbf{Cat.-No.} &
+%		\begin{minipage}[b][0.8cm]{1cm}\footnotesize\bfseries
+%			Months\\
+%			total
+%		\end{minipage} &
+%		\footnotesize\bfseries €/Month &
+%		\begin{minipage}[b]{1.3cm}\footnotesize\bfseries
+%			Months in\\
+%			2019
+%		\end{minipage} &
+%		\begin{minipage}[b]{0.6cm}\footnotesize\bfseries
+%			€ in\\
+%			2019
+%		\end{minipage}&
+%		\footnotesize\bfseries Budgeted\\
+%		\hline
+%		\hline
+%		\rowcolor{lightgray}
+%		001 & 8 & 67.5 & 8 & 540.00 & No\\
+%		\hline
+%	\end{tabular}
+%\end{table}
+
+Now with \autoref{tab:example-budgeting-winter-coat} in mind, the process shown in \autoref{fig:example-budgeting-winter-coat-cashflows}, \autopageref{fig:example-budgeting-winter-coat-cashflows}, happens.
+In theory, each month, 67.5\,€ get taken from the wallet and put into the virtual envelope each month.
+
+\begin{figure}[hbtp]
+	\centering
+	\caption[The Cash Flows for the Winter Coat]{The cash flows for the winter coat.
+	With each month, 67.5\,€ get put into the envelope.
+	In theory, 
+	In October 2019, its worth finally amounts to 540\,€ and the winter coat is fully budgeted.}
+	\label{fig:example-budgeting-winter-coat-cashflows}
+	\includegraphics{Gfx/Budgeting-Example-Winter-Coat-Cashflows.pdf}
+\end{figure}
+
+\subsubsection{Utility: Water}
+\label{subsubsec:example-budgeting-utility-water}
+
+A typical occurrence in a household's budget is the monthly expense for utilities such as water and electricity.
+For budgeting the monthly expense for the water supply, let us take these facts \& figures into accounts:
+\begin{itemize}
+	\item The rate that is to be paid is 60\,€ per month.
+	\item It is to be paid throughout the entire year.
+\end{itemize}
+
+As stated, this is a budget item with payments in each of the 12 months throughout 2019.
+There is nothing to accumulate or to sum up.
+Hence, a showcase like \autoref{fig:example-budgeting-winter-coat-cashflows} will not be presented here.
+The relevant perspective is the evolution of the monthly payments and the sum prohibition, the latter being the crucial one.
+For this, take a look at how the data is entered in \autoref{tab:example-budgeting-water-dataentry}.
+For the sake of brevity, the table with the gray columns will be omitted.
+
+Now to demonstrate the effect of sum prohibition, \autoref{tab:example-budgeting-utility-water-good} is provided.
+This is the correct way to budget monthly expenses.
+With monthly expense set to \codestuff{Yes} and sum prohibition set to \codestuff{No}, 60\,€ are budgeted and paid \emph{each} month.
+At the end of time period, \ie December 2019, the amounts for all months in that time period do \emph{not} get summed up.
+
+To demonstrate the effect of setting sum prohibition to the wrong value and therefor would could derail the budgeting of a expense with multiple payments, \autoref{tab:example-budgeting-utility-water-bad} is provided.
+This is the false way to budget monthly expenses.
+With monthly expense set to \codestuff{Yes} and sum prohibition set to \codestuff{No}, 60\,€ are budgeted and paid \emph{each} month.
+At the end of time period, \ie December 2019, the amounts for all months in that time period do \emph{not} get summed up.
+
+\begin{table}[hbtp]
+	\centering
+	\addtolength{\leftskip}{-1.0cm}
+	\sffamily
+	\caption[An Example for Budgeting a Winter Coat: Data Entry]{An Example for Budgeting a Winter Coat.
+	The values from the bullet list at the beginning of  \autoref{subsubsec:example-budgeting-utility-water} are displayed in the corresponding columns.
+	Note that the \ac{bic} monthly expense is set to \codestuff{Yes} and the \ac{bic} sum prohibition is set so \codestuff{No}.}
+	\label{tab:example-budgeting-water-dataentry}
+	\begin{tabular}{|c|l|l|l|l|c|c|c|l|}
+		\hline
+		\begin{minipage}{0.5cm}\footnotesize\bfseries
+			No.
+		\end{minipage} &
+		\begin{minipage}{1.5cm}\footnotesize\bfseries
+			Descr.
+		\end{minipage} &
+		\begin{minipage}[b]{1.0cm}	\footnotesize\bfseries	Amount
+		\end{minipage} &
+		\begin{minipage}[b][0.8cm]{0.8cm}\footnotesize\bfseries
+			Start\\
+			Date
+		\end{minipage} &
+		\begin{minipage}[b]{0.8cm}\footnotesize\bfseries
+			End\\
+			Date
+		\end{minipage} &
+		\begin{minipage}[b]{1.1cm}\footnotesize\bfseries
+			Monthly\\
+			Expense
+		\end{minipage} &
 		\begin{minipage}[b]{1.0cm}\footnotesize\bfseries
+			Sum\\
+			Prohib.
+		\end{minipage} &
+		\begin{minipage}[b]{0.8cm}\footnotesize\bfseries
 			Done
 		\end{minipage} &
 		\begin{minipage}[b]{1.5cm}\footnotesize\bfseries
@@ -60,89 +200,60 @@ I split them up to avoid for the sake of readability.}
 		\end{minipage}\\ 
 		\hline
 		\hline
-		1 & Winter Coat & 800 & 2019-03 & 2019-10 & No & No & No & Clothing/Acc.\\
+		2 & Utility: Water & 720 & 2019-01 & 2019-12 & Yes & Yes & No & Utilities\\
 		\hline
 	\end{tabular}
 \end{table}
 
-\begin{table}[htbp]
+\begin{table}[hbtp]
 	\centering
+%	\addtolength{\leftskip} {-2.25cm}
 	\sffamily
-	\caption[Example for Budgeting a Winter Coat: Gray Columns]{Example for Budgeting a Winter Coat.
-	The values from the columns listed in \autoref{tab:example-budgeting-expense-winter-coat-dataentry} yield these entries in the gray columns.}
-	\label{tab:example-budgeting-expense-winter-coat-graycolumns}
-	\begin{tabular}{|c|c|c|r|r|c|}
+	\caption[The Tables of Monthly Expenses for Water]{The table of monthly expenses for water.
+	Each month, 60\,€ have to be paid to the utility provider.
+	With sum prohibition set to \codestuff{Yes} (as it should be), the budgeted amounts will look like in the tables.}
+	\label{tab:example-budgeting-utility-water-good}
+	\begin{tabular}{|r|r|r|r|r|r|r|}
+		\multicolumn{7}{l}{\footnotesize \emph{A look at the budgeted payments in January\ldots}}\\
 		\hline
-		\footnotesize\textbf{Cat.-No.} &
-		\begin{minipage}[b][0.8cm]{1cm}\footnotesize\bfseries
-		Months\\
-		total
-		\end{minipage} &
-		\footnotesize\bfseries €/Month &
-		\begin{minipage}[b]{1.3cm}\footnotesize\bfseries
-		Months in\\
-		2019
-		\end{minipage} &
-		\begin{minipage}[b]{0.6cm}\footnotesize\bfseries
-		€ in\\
-		2019
-		\end{minipage}&
-		\footnotesize\bfseries Budgeted\\
+		\small 2019-01 & \small 2019-02 & \small 2019-03 & \ldots & \small 2019-10 & \small 2019-11 & \small 2019-12\\
+		\hline
+		Jan & Feb & March & \ldots & Oct & Nov & Dec\\
 		\hline
 		\hline
-		\rowcolor{lightgray}
-		001 & 8 & 100 & 8 & 800 & No\\
+		60.00 & 0.00 & 0.00 & \ldots & 0.00 & 0.00 & 0.00\\
+		\hline
+		\multicolumn{7}{l}{~}\\
+		\multicolumn{7}{l}{\footnotesize \emph{A look at the budgeted payments in March\ldots}}\\
+		\hline
+		60.00 & 60.00 & 60.00 & \ldots & 0.00 & 0.00 & 0.00\\
+		\hline
+		\multicolumn{7}{l}{~}\\
+		\multicolumn{7}{l}{\footnotesize \emph{A look at the budgeted payments in December\ldots}}\\
+		\hline
+		60.00 & 60.00 & 60.00 & \ldots & 60.00 & 60.00 & 60.00\\
 		\hline
 	\end{tabular}
 \end{table}
 
-Now with \autoref{tab:example-budgeting-expense-winter-coat-graycolumns} in mind, let us circle back to \autoref{subsubsec:budgeting-item-column-sum-prohibition} and talk about its consequences for budgeting the winter coat.
-As we have just read, we put 100\,€ into the virtual envelope\footnote{See \autoref{subsubsec:budgeting-the-envelope-method}.} per month.
-This whole concept of the cash flow is displayed in \autoref{tab:bic-sum-prohibition-clarification}.\todo{ausarbeiten und mal sum prohibition aufzeigen?}
-
-\begin{table}[htp]
+\begin{table}[hbtp]
 	\centering
-	\libertineTabular
-	\caption[Example for Sum Prohibition]{An Example for Sum Prohibition.
-	With each month, 100\,€ get put into the envelope and its worth finally amounts to 800\,€ in 2019-10.}
-	\label{tab:bic-sum-prohibition-clarification}
-	\begin{tabular}{cccc}
-		\toprule
-		\begin{minipage}{1.0cm}
-		Nr. of\\
-		Month	
-		\end{minipage}
-		& \begin{minipage}{1.4cm}
-			Calendar\\
-		 	Month	
-		 \end{minipage}
-		&
-		\begin{minipage}{2.25cm}
-			Amount going\\
-			to envelope	
-		\end{minipage}
-		 & 
-		\begin{minipage}{2.0cm}
-			Total worth\\
-			in envelope	
-		\end{minipage}\\
-%		\cmidrule(l{5.5pt}r{5pt}){2-2}
-%		\cmidrule(r){1-1}
-%		\cmidrule(lr){2-2}
-%		\cmidrule(lr){3-3}		
-%		\cmidrule(lr){4-4}
-		\midrule
-		1 & 2019-03 & 100 & 100\\
-		2 & 2019-04 & 100 & 200\\
-		3 & 2019-05 & 100 & 300\\
-		4 & 2019-06 & 100 & 400\\
-		5 & 2019-07 & 100 & 500\\
-		6 & 2019-08 & 100 & 600\\
-		7 & 2019-09 & 100 & 700\\
-		8 & 2019-10 & 100 & 800\\
-		\bottomrule
+	%	\addtolength{\leftskip} {-2.25cm}
+	\sffamily
+	\caption[Budgeting Example: The Tables of Budgeted Monthly Expenses for the Item Utility: Water]{The table of monthly expenses for water.
+	Each month, 60\,€ have to be paid to the utility provider.
+	With sum prohibition set to \codestuff{No}, the budgeted amounts will look like as follows.
+	For the sake of brevity, only the month with the wrong sum is presented.}
+	\label{tab:example-budgeting-utility-water-bad}
+	\begin{tabular}{|r|r|r|r|r|r|r|}
+		\multicolumn{7}{l}{\footnotesize \emph{A look at the budgeted payments in December\ldots}}\\
+		\hline
+		\small 2019-01 & \small 2019-02 & \small 2019-03 & \ldots & \small 2019-10 & \small 2019-11 & \small 2019-12\\
+		\hline
+		Jan & Feb & March & \ldots & Oct & Nov & Dec\\
+		\hline
+		\hline
+		0.00 & 0.00 & 0.00 & \ldots & 0.00 & 0.00 & \textbf{720.00}\color{black!60!red}\ding{53}\\
+		\hline
 	\end{tabular}
 \end{table}
-
-\subsubsection{Utility: Water}
-\label{subsubsec:example-budgeting-utility-water}

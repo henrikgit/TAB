@@ -3,7 +3,7 @@
 % !TeX spellcheck = en_US
 
 \emph{Roadmap} might be a bit of an overstatement.
-At this stage, something like \sterm{loose thoughts for future features and enhancements} is be a more appropriate phrase.
+At this stage, something like \sterm{loose thoughts for future features and enhancements} is a more appropriate phrase.
 You can find the 3 most prominent roadmap items in \autoref{subsec:translations} to \autoref{subsec:excel}.
 Obviously, everything that is mentioned contingent on the demand and support for them.
 
@@ -27,7 +27,7 @@ This would be great and--as outlined in \autoref{subsec:motivation-history}--is 
 First of, the short explanation which can be summed up with 2 bullet points:
 \begin{itemize}
 	\item I personally do not own Excel (in its current version).
-	\item Hence I am arguably pessimistic about simply saving \tfn as a \programmcode{.xlsx}-file and then distributing it.
+	\item Hence I am arguably pessimistic about simply saving \tfn as a \codestuff{.xlsx}-file and then distributing it.
 \end{itemize}
 
 The longer explanation:
@@ -40,7 +40,7 @@ I see no reason why I should buy Excel.
 Ever since I created \tfn, I of course had doubts if it was the right thing to do it all in \loc.
 Well, yes, it was.
 The catch is: personally, I prefer using free software, especially when I manage to reach the same goal with zero or negligible differences in effort.
-Therefor, at this time, I do not think it is feasible for me to somehow port the file to Excel as it might be more complex than just saving the file as \programmcode{.xlsx}.\footnote{I would not be able to proof-check it and perform the necessary (style) edits in Excel afterwards.
+Therefor, at this time, I do not think it is feasible for me to somehow port the file to Excel as it might be more complex than just saving the file as \codestuff{.xlsx}.\footnote{I would not be able to proof-check it and perform the necessary (style) edits in Excel afterwards.
 But if you want to, go ahead and I would greatly appreciate any feedback! :)}
 
 If I were to own a current Excel version at some point, one of the first porting steps would definitely be to use macros to automate lots of tasks and then publish \tfn as an Excel file as well.
@@ -55,9 +55,11 @@ At this point, some other items on the agenda are:
 	\item Currently the budgeting amount of an item is divided up evenly (\ie linear) over the budgeting period.
 	The amount could be spread out in a non-linear fashion, \eg progressively or degressively.
 	\item While the file encompasses 1 calendar year, users might wish to have a longer time period.
-	Lots and lots of formulas would have to be changed, as well as sheets like \sheetname{Budget}.
+	Hell, even I do at times.
+	But some sheets would basically have to be wiped and re-built to be useful again, if at all.
+	Yeah, lots and lots of formulas would have to be changed, as well as sheets like \sheetname{Budget}.
 	\item Notes on how to create a backup\ldots and then to re-import the old tracking sheets?
-	\item Structuring the whole \programmcode{.ods}-file in a way that all the sheetnames are replicated in \sheetname{Tracker} and then work like hyperlinks to link to the relevant sheet.
+	\item Structuring the whole \codestuff{.ods}-file in a way that all the sheetnames are replicated in \sheetname{Tracker} and then work like hyperlinks to link to the relevant sheet.
 	The same could be done for the sheet \sheetname{Budget}.
 	\item Create a hyperlink in the tracking sheets which links back to the sheets \sheetname{Tracker} and \sheetname{Budget}.
 	\item Create a website for this thing.

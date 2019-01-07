@@ -20,7 +20,7 @@ A good structure of categories for tracking is the key to a good overlook and an
 As stated before, do what works best \emph{for you}!
 
 I suggest to split up your spending into as many categories as possible.
-For the day-to-day stuff I created the overarching class/field\footnote{To this day, I am not 100\,\% sure if either \emph{class} or \emph{field} is the better term for this structure item in the hierarchy.} named \sterm{Daily}.
+For the day-to-day stuff I created the overarching class/field/group\footnote{To this day, I am not 100\,\% sure if either \emph{class}, \emph{field} or group is the better term for this structure item in the hierarchy.} named \sterm{Daily}.
 This class contains multiple categories, such as expenses in regards to groceries, bath \& household, food, clothing and miscellaneous items.
 Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{DailyBathHousehold} attributed to it, as shown in \autoref{fig:tracking-categories}, \autopageref{fig:tracking-categories}.
 
@@ -28,8 +28,8 @@ Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{Daily
 	\centering
 	\includegraphics{Gfx/Introduction-Tracking-Categories.pdf}
 	\caption[Tracking Categories]{These are some of the classes and their categories in Finances.ods.
-		They are typical in certain fields of life, ordered by priority and frequency.
-		You may create and name your own collection of classes and categories in any way you wish.
+	They are typical in certain fields of life, ordered by priority and frequency.
+	You may create and name your own collection of classes and categories in any way you wish.%
 	}
 	\label{fig:tracking-categories}
 \end{figure}
@@ -91,15 +91,15 @@ And:
 	Do not lie about the date.
 \end{specialnote}
 
-For writing the date into a cell, you may use any format, but I suggest using \programmcode{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
-An example for July 4th, 2019: \programmcode{2019-07-04}.
+For writing the date into a cell, you may use any format, but I suggest using \codestuff{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
+An example for July 4th, 2019: \codestuff{2019-07-04}.
 
 It will help with the visual effect on quickly grasping which month and/or month you are looking at.
 It is also incredibly easy to write if you have a numpad on your keyboard.
 Also, who does not like a well-sorted list which looks equally properly formatted?? :)
 
 But if you want to change the date format, simply edit the corresponding cell style template to produce the output you wish.
-Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style template.
+Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style-template.
 
 \subsubsection{Tracking Column: Description}
 \label{subsec:tracking-column-description}
@@ -115,7 +115,7 @@ How and why these sheets have these names, all that was explained in \autoref{su
 If you want to, you can totally change up the pattern after which you name the tracking sheets!
 
 If you want to change the format of the figures and have the symbol for your currency displayed, simply edit the corresponding cell style template to produce the output you wish.
-Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style template.
+Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style-template.
 
 \subsection{Receipts and Documentation}
 \label{subsec:tracking-receipts}

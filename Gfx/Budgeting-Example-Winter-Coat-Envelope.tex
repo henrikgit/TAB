@@ -1,0 +1,53 @@
+\documentclass[
+english,
+class=scrartcl,
+]
+{standalone}
+
+\input{../Settings/packages-file}
+\input{../Settings/tikz-file}
+\input{../Settings/font-file}
+\input{../Settings/hyperref-file}
+
+\KOMAoptions{fontsize=10pt}
+%\renewcommand{\familydefault}{\sfdefault}
+
+\newcommand{\lineconnection}[2]{\draw[thick] ([xshift=0.0cm]{#1}.south) -- ($({#1}|-{#2}.west)$) -- ({#2}.west);}
+
+\newcommand{\mystartingx}{1.2}
+\newcommand{\myendingx}{5.8}
+
+\listfiles
+
+\begin{document}
+\begin{tikzpicture}[
+every node/.style={
+	font=\sffamily,
+	node font=\sffamily,
+},
+]
+\draw
+(0,0) coordinate (a)
+(7,3.7) coordinate (b)
+%(6.0,1.7) coordinate (c)
+;
+% Contour
+\draw[fill=black!10] (a) rectangle (b);
+% Upper pane
+\draw[fill=white,rounded corners] (b) -- ++(120:1.2cm) -- ($(a|-b)+(60:1.2cm)$) -- (a|-b) ;
+% lower pane
+\filldraw [fill=white!100] (b) -- ++(220:1.0cm) -- ($(a|-b)+(320:1.0cm)$) -- (a|-b); % Amount
+%\draw
+%($(111.north east)+(0.4,0)$) coordinate (fffffffff)
+%($(2222)+(0,-1)$) coordinate (aaaaaa)
+%($(333)+(0,-1.6)$) coordinate (waaa)
+%;
+% White lines
+\draw [black]
+(\mystartingx,0.7) -- (5.8,0.7)
+(\mystartingx,1.2) -- (\myendingx,1.2)
+(\mystartingx,1.7) -- (\myendingx,1.7)
+(\mystartingx,2.2) -- (\myendingx,2.2)
+;
+\end{tikzpicture}
+\end{document}

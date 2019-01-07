@@ -1,0 +1,109 @@
+\documentclass[
+english,
+class=scrartcl,
+]
+{standalone}
+
+\input{../Settings/packages-file}
+\input{../Settings/tikz-file}
+\input{../Settings/font-file}
+\input{../Settings/hyperref-file}
+
+\KOMAoptions{fontsize=10pt}
+
+\newcommand{\nodevertoffset}{1.1cm}
+\newcommand{\nodehoroffset}{1.0cm}
+
+\usepackage{pifont}
+\listfiles
+
+\begin{document}
+\begin{tikzpicture}[
+every node/.style={
+	node font=\sffamily,
+},
+month/.style={
+	font=\bfseries\small,
+	rectangle,
+	minimum width=3.0cm,
+	minimum height=0.7cm,
+	draw=black,
+	very thick,
+	fill=black!40,
+},
+normal/.style={
+%	rectangle,
+%	minimum width=1cm,
+	minimum height=0.5cm,
+	align=left,
+	fill=white,
+	inner sep=0pt,
+},
+]
+%% % % % % % % %
+%% % coordinates
+%% % % % % % % %
+%\draw
+%($(111.north east)+(0.4,0)$) coordinate (fffffffff)
+%($(2222)+(0,-1)$) coordinate (aaaaaa)
+%($(333)+(0,-1.6)$) coordinate (waaa)
+%;
+%% % % % %
+%% % nodes
+%% % % % %
+\node [month, anchor=west] (March) at (0,0) {March 2019};
+\node [normal, anchor=west] (MarchWallet) at ($(March.east)+(0.5cm,0)$) {Wallet/Account};
+%\node [normal, anchor=west] (MarchEnvelope) at ($(MarchWallet.east)+(2cm,0)$) {Envelope holds 67.5\,€};
+\node[anchor=west, inner sep=0, rotate=0] (ENVimage) at ($(MarchWallet.east)+(2cm,0)$) {\includegraphics[width=1.8cm]{Budgeting-Example-Winter-Coat-Envelope.pdf}};
+\begin{scope}[shift={(ENVimage.south west)},x={(ENVimage.south east)},y={(ENVimage.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\draw[help lines,] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\node[normal] at (0.5,0.4) {67.5\,€};
+\end{scope}
+\draw[->] (MarchWallet.east) node[right=0.25cm, font=\small, draw, fill=white] {+67.5\,€} -- (ENVimage.west) ;
+%
+\node [month, anchor=west] (April) at ($(March.west)+(0,-\nodevertoffset)$) {April 1st, 2019};
+\node [normal, anchor=west] (AprilWallet) at ($(April.east)+(0.5cm,0)$) {Wallet/Account};
+\node[anchor=west, inner sep=0] (ENVimage) at ($(AprilWallet.east)+(2cm+\nodehoroffset,0cm)$) {\includegraphics[width=1.8cm]{Budgeting-Example-Winter-Coat-Envelope.pdf}};
+\begin{scope}[shift={(ENVimage.south west)},x={(ENVimage.south east)},y={(ENVimage.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\draw[help lines,] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\node[normal] at (0.5,0.4) {135.0\,€};
+\end{scope}
+\draw[->] (AprilWallet.east) node[right=0.25cm, font=\small, draw, fill=white] {+67.5\,€} -- (ENVimage.west);
+%
+\node [month, anchor=west] (May) at ($(April.west)+(0,-\nodevertoffset)$) {May 1st, 2019};
+\node [normal, anchor=west] (MayWallet) at ($(May.east)+(0.5cm,0)$) {Wallet/Account};
+\node[anchor=west, inner sep=0] (ENVimage) at ($(MayWallet.east)+(2cm,0cm)$) {\includegraphics[width=1.8cm]{Budgeting-Example-Winter-Coat-Envelope.pdf}};
+\begin{scope}[shift={(ENVimage.south west)},x={(ENVimage.south east)},y={(ENVimage.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\draw[help lines,] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\node[normal] at (0.5,0.4) {202.5\,€};
+\end{scope}
+\draw[->] (MayWallet.east) node[right=0.25cm, draw, fill=white, font=\small] {+67.5\,€} -- (ENVimage.west);
+%
+\node [month, anchor=west] (MonthPlaceholder) at ($(May.west)+(0,-\nodevertoffset)$) {\( \vdots \)};
+\node [, anchor=west] (PlaceholderWallet) at ($(MonthPlaceholder.east)+(2cm,0)$) {\ldots};
+\node [ anchor=west] (PlaceholderEnvelope) at ($(ENVimage.west|-MonthPlaceholder.east)+(0cm,0)$) {\ldots};
+%\draw[->] (PlaceholderWallet.east) -- (PlaceholderEnvelope.west) node[midway, anchor=center, draw, fill=white] {+67.5\,€};
+%
+\node [month, anchor=west] (October) at ($(MonthPlaceholder.west)+(0,-\nodevertoffset)$) {October 1st, 2019};
+\node [normal, anchor=west] (OctoberWallet) at ($(October.east)+(0.5cm,0)$) {Wallet/Account};
+\node[anchor=west, inner sep=0] (ENVimage) at ($(OctoberWallet.east)+(2cm+\nodehoroffset,0cm)$) {\includegraphics[width=1.8cm]{Budgeting-Example-Winter-Coat-Envelope.pdf}};
+\begin{scope}[shift={(ENVimage.south west)},x={(ENVimage.south east)},y={(ENVimage.north west)}]
+%\draw[help lines,xstep=.1,ystep=.1] (0,0) grid (1,1);
+%\draw[help lines,] (0,0) grid (1,1);
+%\foreach \x in {0,1,...,9} { \node [anchor=north] at (\x/10,0) {0.\x}; }
+%\foreach \y in {0,1,...,9} { \node [anchor=east] at (0,\y/10) {0.\y}; }
+\node[normal] (540) at (0.5,0.4) {540.0\,€};
+\node[font=\small, color=black!40!green, anchor=west] at (540.east) {\ding{51}};
+\end{scope}
+\draw[->] (OctoberWallet.east) node[right=0.25cm, draw, fill=white, font=\small] {+67.5\,€} -- (ENVimage.west);
+\end{tikzpicture}
+\end{document}

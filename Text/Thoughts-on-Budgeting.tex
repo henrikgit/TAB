@@ -8,22 +8,22 @@ Life can be a mess and if you really want to use \tfn for tracking and budgeting
 \subsubsection{Thoughts on Non-Monthly Expenses}
 \label{subsubsec:thoughts-non-monthly-expenses}
 
-This part builds upon \autoref{subsubsec:budgeting-item-column-monthly-expense}, where reoccurring expenses that are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
+This part builds upon \autoref{subsubsec:bic-monthly-expense}, which was about monthly expenses, but reoccurring expenses that are to be paid at non-monthly intervals (\eg quarterly) were mentioned.
 There are further elaborations to be made on the possibilities of non-monthly expenses.
 \begin{itemize}
 	\item You can set their start and end date to span over the whole year (or 12 months): the expense item would occur after 12 months and it would be the total of all single payments.
 	There would be a deviation in all months, but the deviation's total over the whole year equals 0.
-	As it is a reoccurring expense, the cell entry for the \ac{bic} sum prohibition would have to be set to \programmcode{Yes}.
-	\item For each payment, \ie the expense is regarded as a single purchase and needs the sum prohibition-switch set to \programmcode{No}.
+	As it is a reoccurring expense, the cell entry for the \ac{bic} sum prohibition would have to be set to \codestuff{Yes}.
+	\item For each payment, \ie the expense is regarded as a single purchase and needs the sum prohibition-switch set to \codestuff{No}.
 	Hence one would have to create multiple entries for the whole group of quarterly payments.
 	There are 2 possibilities one could choose:
 	\begin{enumerate}
 		\item One could set the start date for all payments to the month of today or whenever one would want to start budget for it.
 		Note: this would lead to an increased budgeting load in the ensuing months right after the start date.
-		So this would lead to 4 quarterly budget items, all of which start in \programmcode{2019-01}, but end in \programmcode{2019-03}, \programmcode{2019-06}, \programmcode{2019-09} and \programmcode{2019-12}.
+		So this would lead to 4 quarterly budget items, all of which start in \codestuff{2019-01}, but end in \codestuff{2019-03}, \codestuff{2019-06}, \codestuff{2019-09} and \codestuff{2019-12}.
 		\item One could set the time periods for each quarterly payment to span exactly over each quarter.
-		The first payment would be due in march, thus the time period would be \programmcode{2018-01} to \programmcode{2018-03}.
-		Accordingly, the next budget item would start in \programmcode{2018-04} and end in \programmcode{2019-06} and so forth.
+		The first payment would be due in march, thus the time period would be \codestuff{2018-01} to \codestuff{2018-03}.
+		Accordingly, the next budget item would start in \codestuff{2018-04} and end in \codestuff{2019-06} and so forth.
 	\end{enumerate}
 \end{itemize}
 
@@ -95,7 +95,7 @@ You should enter the tracking data it occurred and deal with the deviation.
 
 This topic deals with both terms, deviations and categories.
 
-Deviation is a core element of budgeting.\footnote{See \autoref{subsubsec:budgeting-deviation}, \autopageref{subsubsec:budgeting-deviation}.}
+Deviation is a core element of budgeting.\footnote{See \autoref{subsubsec:deviation}, \autopageref{subsubsec:deviation}.}
 In general, \emph{all} budget categories get summed and lumped together each month.
 The argument could be made that the deviation of a budget category or budget class should be calculated just for itself, but that would be dismissive in regards to the bigger picture as your cash is the main asset which gets managed, not some budget category.
 Also, the next month could very well not have any amount budgeted, hence the surplus or deficit would just linger around and/or could be carried over until a month in which a new budgeted expense occurs, which would be arguably nonsensical.
