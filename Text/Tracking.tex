@@ -11,13 +11,14 @@ This insanely complex topic can be summed up with: \emph{do the damn tracking}.
 And this it is!
 You are done.
 You now have the broadest understanding about tracking and can get on with it in \tfn.
-But perhaps you feel like continue reading\ldots
+But perhaps you feel like continuing reading\ldots
 
 \subsection{Categories}
 \label{subsec:tracking-categories}
 
 A good structure of categories for tracking is the key to a good overlook and analysis of your finances.
 As stated before, do what works best \emph{for you}!
+If you want to, you can totally change up the way/pattern by which you name the tracking sheets.
 
 I suggest to split up your spending into as many categories as possible.
 For the day-to-day stuff I created the overarching class/field/group\footnote{To this day, I am not 100\,\% sure if either \emph{class}, \emph{field} or group is the better term for this structure item in the hierarchy.} named \sterm{Daily}.
@@ -37,7 +38,7 @@ Hence I have the tracking sheets \sheetname{DailyGroceries} and \sheetname{Daily
 There are further elaborations to be given:
 the classes and their categories are just an excerpt from my own version of \tfn, which is also somewhat incorporated into the file you downloaded.
 I have a day-to-day life that the class \sterm{Daily} is for and I am sure its categories are self-explanatory.
-The sheet \sheetname{MiscDaily} is a sheet that welcomes all stranger expenses that somehow do not fit elsewhere.
+The sheet \sheetname{MiscDaily} is a sheet that welcomes all stranger things that do not fit elsewhere.
 And it is in fact the sheet that contains all \sterm{miscellaneous} things that do not fit in other classes/categories.
 And at work, I need to buy food and drinks as well, so you will find that and other relevant categories in the \sterm{Work} class.
 
@@ -64,7 +65,7 @@ For the technicalities of adding, removing or editing categories, go to \autoref
 You may find yourself wondering on what exactly it is you should and/or could track with \tfn.
 Well, as stated, I originally thought to manage my cash.
 And this is what the file primarily does.
-But besides that, you can of course edit the file to include other kinds of wealth as well.
+But besides that, you can of course edit the file to include other kinds of wealth assets as well.
 
 \subsection{How To Enter Tracking Data}
 \label{subsec:enter-tracking-data}
@@ -82,7 +83,7 @@ You can do this in two ways:
 	\item Or--in case you pay with electronic cash, \eg via card--you might put the date the expense's value is actually transferred from your account.
 	This might happen in the case of weekends, bank holidays or due to other kinds of service delays for money transfers.
 \end{enumerate}
-I \emph{strongly} suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on in \autoref{subsubsec:thoughts-different-dates}, \autopageref{subsubsec:thoughts-different-dates}.}
+I \emph{strongly} suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on in \autoref{subsubsec:different-dates-in-real-life}, \autopageref{subsubsec:different-dates-in-real-life}.}
 Regardless, you should stay consistent in the method you choose.
 The date does get checked for month and day, but not for the year, as I thought to use \tfn for 1 calendar year and have done so ever since.
 So be careful that you enter the correct date as that timestamp is used to assign the amount to the right month.
@@ -93,7 +94,6 @@ And:
 
 For writing the date into a cell, you may use any format, but I suggest using \codestuff{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
 An example for July 4th, 2019: \codestuff{2019-07-04}.
-
 It will help with the visual effect on quickly grasping which month and/or month you are looking at.
 It is also incredibly easy to write if you have a numpad on your keyboard.
 Also, who does not like a well-sorted list which looks equally properly formatted?? :)
@@ -104,7 +104,7 @@ Note: as intended by the mechanism for style templates, this change would affect
 \subsubsection{Tracking Column: Description}
 \label{subsec:tracking-column-description}
 
-Put down anything sensible that is coherent enough to make you remember, \eg ``John's Supermarket, Smith Street'', ``Coupon for Something, John's 45th birthday, Macy's, Smith Street'' and so forth.
+Put down anything sensible that is coherent enough to make you remember, \eg ``Supermarket, Smith Street'', ``Gift coupon for John's 45th birthday, Macy's, Smith Street'' and so forth.
 
 \subsubsection{Tracking Column: Amount}
 \label{subsec:tracking-column-amount}
@@ -112,7 +112,6 @@ Put down anything sensible that is coherent enough to make you remember, \eg ``J
 Put the amount that is to be attributed to this tracking sheet (and subsequently its category).
 In relation to the bits mentioned in \autoref{subsec:tracking-column-description}, these could go into \sheetname{DailyGroceries} and \sheetname{DailyGifts}.
 How and why these sheets have these names, all that was explained in \autoref{subsec:tracking-categories}, \autopageref{subsec:tracking-categories}.
-If you want to, you can totally change up the pattern after which you name the tracking sheets!
 
 If you want to change the format of the figures and have the symbol for your currency displayed, simply edit the corresponding cell style template to produce the output you wish.
 Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style-template.
@@ -131,7 +130,7 @@ This most likely leads to delayed entries in the tracking sheets but it ensures 
 \label{subsec:tracking-workload}
 
 In a way, entering all the data could be interpreted as work.
-In my experience, I am content with updating \tfn once a week.
+In my experience, I am content with updating \tfn at least every second week.
 Of course it would still work fine to update it every second, third or fourth week as well.
 
 
