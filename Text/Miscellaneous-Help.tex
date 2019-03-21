@@ -40,14 +40,13 @@ Based on the data contained in this sheet, one could perhaps create or add a das
 
 Before you can move on to preparing \tfn for the next year, you should finalize the current/old file:
 \begin{enumerate}
-	\item Come December 31, the very last TODO-point on your list should be toclose the file, copy it and rename it accordingly, \eg to \emph{Finances-2020.ods}.\todo{verbessern}
-	\item  write down the last pieces of information in regards to the last day of the year.
+	\item Come December 31, the first ToDo-point on your list should be to save and close your current file.
+	Then make a copy of it and rename it in regards to the new year, \eg to \emph{Finances-2020.ods}.
+	\item Open your (still current) file and write down the last pieces of information in regards to the last day of the year.
 	So literally write down \codestuff{2019-12-31} into any cell that prints today's date, \eg in the \sheetname{Budget} sheet.
-	Also look for cells that print the current month or day.
-	Otherwise the next time you open that file later than December 31 of that year, the cell that prints the date of that day which will probably somewhere in January.
+	Also look for cells that print the current month or day and fill in \codestuff{2019-12} or \codestuff{31}.
 	\item Proceed in an analogical fashion for every cell that prints dates through formulas.
-	Otherwise all the budget-sheets which feature formulas based on the current month and/or date are faulty.
-	Or rather, they do not show values which make sense.
+	Otherwise the next time you open that file will be later than December 31 of that ``old'' year and the formulas which rely rather, they do not show values which make sense., the cell that prints the date of that day which will probably somewhere in January.
 \end{enumerate}
 
 \begin{itemize}
