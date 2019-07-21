@@ -10,13 +10,13 @@ If you find that some tracking categories are missing or its structure overall s
 \end{itemize}
 
 \subsection{Editing Sheets in General}
-\label{subsec:editing-sheet-in-general}
+\label{subsec:editing-general-sheet-editing}
 
 You can simply go ahead and do one of the following things:
 \begin{itemize}
 	\item Rename a sheet.
 	\loc will ``see'' that new name and use it automatically in a formula, if you have already referenced a cell in that sheet in a formula.
-	Meaning you will not have to update any existing formulas which used the old sheet name.
+	This means you will not have to update any existing formulas which were using the just-changed sheet name.
 	\item Change the order of the sheets.
 \end{itemize}
 
@@ -28,27 +28,47 @@ When you want to edit anything in regards to the categories, you must start with
 \subsubsection{Renaming a Tracking Category}
 \label{subsubsec:renaming-a-tracking-category}
 
-Say you want to rename a tracking category after you used it for a while and used it to budget expense items or income items.
-\begin{specialnote}
-	If you rename the tracking category, you must rework the entries in the \ac{bic} Category (see \autoref{subsubsec:bic-category}).
-\end{specialnote}
-
-\subsubsection{Adding a Tracking Category}
-\label{subsubsec:adding-a-tracking-category}
-
-For adding tracking category, work through the following list:
+If you want to rename a tracking category, you must work through the following bullet points:
 \begin{itemize}
-	\item Go to the line with the tracking category you either want to remove or Add or \todo{weiter}
-	\begin{itemize}
-		\item bbb
-	\end{itemize}
+	\item If you rename the tracking category, you must rework the entries you made in the the  \ac{bic} \sterm{Category}!
+	Obviously the whole tracking and budgeting aspect only makes sense if these category names in both sheets match.
+	For more, go back to \autoref{subsubsec:bic-category} on \autopageref{subsubsec:bic-category}.
+	\item Other than that, there is no need to change Calc's formulas, as described in \autoref{subsec:editing-general-sheet-editing}.
 \end{itemize}
-As you certainly recall steps 
+
+\subsubsection{Adding a Tracking Category Or Tracking Section}
+\label{subsubsec:adding-a-tracking-category-section}
+
+With \tfn being open and accessible, you can easily add a category or whole section for tracking purposes.
+For this, work through the following list:
+\begin{itemize}
+	\item Go to the relevant row in the sheet \sheetname{Tracker}.
+	\item In case you are not aware, there are 2 ways to insert a row:
+	\begin{enumerate}
+		\item Left-click on any content and then use the keyboard shortcut \keystroke{CTRL}+\keystroke{+} (the plus sign).
+		Then click on the 3rd entry from the top, which says \codestuff{Entire Row}.
+		The row gets then inserted \sterm{above} the highlighted row.
+		\item Right-click on the row number (by that I mean the actual number from \loc's GUI which is highlighted) and then on \codestuff{Insert Rows Above} or \codestuff{Insert Row Below}.
+	\end{enumerate}
+	\item You can enter the new name.
+	\item If you just created a new tracking category, you most likely still have to create a new sheet.
+	For naming that sheet, please consider the advice from \autoref{subsec:tracking-categories}, \autopageref{subsec:tracking-categories}.
+\end{itemize}
+
+\subsubsection{Removing a Tracking Catergory or Tracking Section}
+\label{subsubsec:removing-a-tracking-category-section}
+
+For removing a tracking category or a whole section, I believe there is no extra section necessary and I hope it is sufficient to point you \autoref{subsubsec:adding-a-tracking-category-section}.
+Simply apply the steps from there in analogical fashion.
 
 \subsubsection{Correcting Formula References}
 \label{subsubsec:correct-formula-references}
 
 Once you changed the number of rows in the sheet \sheetname{Tracker}, you must correct the references in all sheets which rely on the system of the categories.
+These include:
+\begin{itemize}
+	\item Hier\todo{weiter}
+\end{itemize}
 
 \subsection{Editing The Order of Tracking Categories}
 \label{subsec:editing-order-of-tracking-categories}
