@@ -20,19 +20,36 @@ You can simply go ahead and do one of the following things:
 	\item Change the order of the sheets.
 \end{itemize}
 
-\subsection{Editing Tracking Categories}
-\label{subsec:editing-tracking-categories}
+\subsection{Editing Content in Regards to Tracking}
+\label{subsec:editing-content-in-regards-to-tracking}
+
+There are several aspects relevant to editing content which has an influence on the tracking mechanism in \tfn:
+\begin{itemize}
+	\item A sheet which contains expenses or income can be edited.
+	\item A tracking category and/or class can be changed.
+	\item The order of tracking categories and/or classes is possible to edit.
+\end{itemize}
+
+\subsubsection{Editing Tracking Sheets}
+\label{subsubsec:editing-tracking-sheets}
+
+I structured their layout so the relevant cells for data entry are relatively fast to reach.
+But if you like to edit the tracking sheets to change their (incredibly complex) design, you can do so.
+Re-design them as you wish and please make sure to read \autoref{subsubsec:checking-correcting-formula-references}.
+
+\subsubsection{Editing Tracking Categories}
+\label{subsubsec:editing-tracking-categories}
 
 When you want to edit anything in regards to the categories, you must start with the tracking categories.
 
 \subsubsection{Renaming a Tracking Category}
 \label{subsubsec:renaming-a-tracking-category}
 
-If you want to rename a tracking category, you must work through the following bullet points:
+If you want to rename a tracking category, you must work through the following list:
 \begin{itemize}
-	\item If you rename the tracking category, you must rework the entries you made in the the  \ac{bic} \sterm{Category}!
+	\item If you rename the tracking category, you must check all entries you made in the the \ac{bic} \codestuff{Category}.
 	Obviously the whole tracking and budgeting aspect only makes sense if these category names in both sheets match.
-	For more, go back to \autoref{subsubsec:bic-category} on \autopageref{subsubsec:bic-category}.
+	For more information, please go back to \autoref{subsubsec:bic-category}, \autopageref{subsubsec:bic-category}.
 	\item Other than that, there is no need to change Calc's formulas, as described in \autoref{subsec:editing-general-sheet-editing}.
 \end{itemize}
 
@@ -50,9 +67,10 @@ For this, work through the following list:
 		The row gets then inserted \sterm{above} the highlighted row.
 		\item Right-click on the row number (by that I mean the actual number from \loc's GUI which is highlighted) and then on \codestuff{Insert Rows Above} or \codestuff{Insert Row Below}.
 	\end{enumerate}
-	\item You can enter the new name.
-	\item If you just created a new tracking category, you most likely still have to create a new sheet.
+	\item You should enter the new name for the category you just created.
+	\item You also have to create a new sheet if you added a new tracking category.
 	For naming that sheet, please consider the advice from \autoref{subsec:tracking-categories}, \autopageref{subsec:tracking-categories}.
+	\item Finally, read through \autoref{subsubsec:checking-correcting-formula-references}, \autopageref{subsubsec:checking-correcting-formula-references}.
 \end{itemize}
 
 \subsubsection{Removing a Tracking Catergory or Tracking Section}
@@ -61,26 +79,38 @@ For this, work through the following list:
 For removing a tracking category or a whole section, I believe there is no extra section necessary and I hope it is sufficient to point you \autoref{subsubsec:adding-a-tracking-category-section}.
 Simply apply the steps from there in analogical fashion.
 
-\subsubsection{Correcting Formula References}
-\label{subsubsec:correct-formula-references}
-
-Once you changed the number of rows in the sheet \sheetname{Tracker}, you must correct the references in all sheets which rely on the system of the categories.
-These include:
-\begin{itemize}
-	\item Hier\todo{weiter}
-\end{itemize}
-
-\subsection{Editing The Order of Tracking Categories}
+\subsubsection{Editing The Order of Tracking Categories}
 \label{subsec:editing-order-of-tracking-categories}
 
-If you would like to have a different order of the tracking categories in the sheets \sheetname{Tracker} and \sheetname{Budget}, you 
-Editing the order of tracking categories builds upon \autoref{subsec:editing-tracking-categories} and is basically the same.
+If you would like to have a different order of the tracking categories in the sheets \sheetname{Tracker} and \sheetname{Budget}, you can of course do so.
+Editing the order of tracking categories builds upon \autoref{subsec:editing-tracking-categories} and is basically the same in terms of filling out content in the sheet \sheetname{Tracker}.
+If you changed 
 
-\subsection{Editing Budgeting Sheets}
-\label{subsec:editing-budgeting-sheets}
+\subsubsection{Checking and Correcting Formula References After Changing the Tracker Sheet}
+\label{subsubsec:checking-correcting-formula-references}
 
-\subsection{Editing Budgeting Categories}
-\label{subsec:editing-categories-for-budgeting}
+Once you changed content in the sheet \sheetname{Tracker}, you must check and possibly correct the formula references to the sheets (which rely on the system of the tracking categories).
+These include:
+\begin{itemize}
+	\item \sheetname{Budget}
+	\item \sheetname{BudgetEXPItems}
+	\item \sheetname{BudgetINCItems}
+	\item \sheetname{Budget{\_}real}
+	\item \sheetname{Budget{\_}upco}
+	\item \sheetname{Budget{\_}EXPCat}
+	\item \sheetname{Budget{\_}INCCat}
+\end{itemize}
+
+\subsection{Editing Budgeting Content}
+\label{subsec:editing-budgeting-content}
+
+\subsubsection{Editing Budgeting Sheets}
+\label{subsubsec:editing-budgeting-sheets}
+
+I strongly suggest you do not edit any budgeting sheets.\todo{weiter}
+
+\subsubsection{Editing Budgeting Categories}
+\label{subsubsec:editing-categories-for-budgeting}
 
 As stated in \autoref{subsubsec:bic-category}, \autopageref{subsubsec:bic-category}, writing something in the \ac{bic} ``Category'' is rather selecting an entry in a given list than literally writing something.
 For this list to change in terms of budgeting categories, there are no extra steps.
