@@ -28,9 +28,8 @@ The values which are then used can be In rough terms, they are split into 2 cate
 		\item today's month
 		\item the start date of the item
 		\item the end date of the item
-	\end{itemize}
-	
-	\item They
+	\end{itemize}	
+	\item They\todo{weiter}
 \end{enumerate}
 
 \subsubsection{BIC: Number}
@@ -53,7 +52,7 @@ If you are about to enter data for an expense item with multiple payments for a 
 \begin{enumerate}
 	\item You enter the total amount for the year and let \tfn do the work to have it spread out evenly from start to end.
 	\item Or you enter multiple time periods with different kinds of lengths and amounts to ultimately have the right total for all the payments over the desired time period.
-	There are so many ways you can choose to do this
+	There are so many ways you can choose to do this.
 \end{enumerate}
 
 But what amount exactly should you write down?
@@ -64,8 +63,9 @@ You should not include expenses which are a rare occurrence.
 \label{subsubsec:bic-start-date}
 
 Enter the start date you want to begin budgeting for that item.
-The date you enter must have the format \codestuff{YYYY-MM}, like the dates in the tracking sheets (see \autoref{subsec:tracking-column-date}, \autopageref{subsec:tracking-column-date}).
+The date you enter must have the format \codestuff{YYYY-MM}, which are a shorter version of the dates in the tracking sheets (for more see \autoref{subsec:tracking-column-date}, \autopageref{subsec:tracking-column-date}).
 
+The rule for the start date is:
 \begin{specialnote}
 	The start date must not be in the past.
 	It can be the current month or a month in the future.
@@ -75,8 +75,7 @@ The date you enter must have the format \codestuff{YYYY-MM}, like the dates in t
 \label{subsubsec:bic-end-date}
 
 Enter the end date in which you plan to purchase the item or the monthly expense stops.
-The rules from \autoref{subsubsec:bic-start-date} apply here as well.
-
+Rules apply here as well:
 \begin{specialnote}
 	The end must be equal to the start date or must be later than the start date.
 \end{specialnote}
@@ -95,52 +94,51 @@ The \ac{bic} titled \sterm{monthly expense} is for the following distinction:
 There is also a clarification to be made about reoccurring expenses which are at intervals that do not equal a month's length.
 This will be elaborated on in \autoref{subsubsec:multiple-non-monthly-expenses}, \autopageref{subsubsec:multiple-non-monthly-expenses}.
 
-\subsubsection{BIC: Sum Prohibition}
-\label{subsubsec:bic-sum-prohibition}
+\subsubsection{BIC: Single Expense}
+\label{subsubsec:bic-single-expense}
 
-This \ac{bic} is for prohibiting if the amount for an expense item is to be summed up or not.
-
-First of, please take note of this:
-\begin{specialnote}
-	The column/switch \sterm{sum prohibition} only has an effect if the time period is longer than 1 month.
-	If the time period does not encompass at least 2 months, there is no division and thus no summation, as already mentioned in \autoref{subsubsec:budgeting-the-envelope-method}.
-\end{specialnote}
-
-Before a deeper explanation is provided, I will answer the question why there is such a column in the first place.
-Well, this column mostly exists because of the limitations that I ran into with using spreadsheet software and frankly speaking, the way I conceptualized budgeting over multiple months.
-I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with the proverbial ``taking the money out of the envelope'' which is the inherent characteristic to the envelope method.
-
-So\ldots should you fill in \codestuff{Yes} or \codestuff{No}?
+This column is for clarifying if the expense happens once or not.
+It obviously must be set to the opposite value of the previous column, as \autoref{tab:possible-settings-monthly-expense-sum-prohibition} on \autopageref{tab:possible-settings-monthly-expense-sum-prohibition} 
+shows.
 \begin{itemize}
-	\item Put \codestuff{Yes} if you want to prevent the summation.
-	\item Put \codestuff{No} if you want the amount to summed up in the last month.
+	\item Put \codestuff{Yes} if you want to budget for a single expense.
+	\item Put \codestuff{No} if you want the budget for multiple expenses.
 \end{itemize}
+
+%First of, please take note of this:
+%\begin{specialnote}
+%	The column/switch \sterm{sum prohibition} only has an effect if the time period is longer than 1 month.
+%	If the time period does not encompass at least 2 months, there is no division and thus no summation, as already mentioned in \autoref{subsubsec:budgeting-the-envelope-method}.
+%\end{specialnote}
+
+These columns mostly exist because of the limitations that I ran into with using spreadsheet software and frankly speaking, the way I thought of the whole concept of budgeting over multiple months.
+I do not know whether I solved the problem in the best way possible, but it certainly works for dealing with the proverbial ``taking the money out of the envelope'' which is the inherent characteristic to the envelope method.
 
 Why?
 As described in \autoref{subsubsec:bic-monthly-expense}, there are also monthly expenses.
 These are not to be budgeted via the typical means of the envelope method.
 In this case, one would \emph{not} take all the money out of that envelope at the end.
 As you will observe, if you budget an entry for a time period longer than 1 month, the amount gets divided evenly by the number of months, \ie the length of the time period.
-If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all makes up the 500\,€ after 5 months.
-At this point in time, the expense item is \sterm{fully budgeted} and can be purchased/billed.
+If you budget 500\,€ for 5 months, the formulas in \tfn automatically put 100\,€ into the virtual envelope in each month of the 5 months, which all in all sums up to 500\,€ after 5 months.
+At this point in time, the expense item is \sterm{fully budgeted} or \sterm{fully saved up} and can be purchased/billed.
 If you intend to buy something with these 500\,€, take them out of the envelope.
 If you intended to use the 100\,€ in each month for paying for a monthly expense, then summing up the single 100\,€ to make up 500\,€ is rather useless.
 
-To sum up:
+To conclude:
 \begin{itemize}
-	\item Putting \codestuff{Yes} is a must if you have a monthly expense, otherwise all the amounts per month get summed up to their total in the last month, which would lead to strong deviations in each of the relevant months.
-	\item Putting \codestuff{No} makes sense if the expense is a one-time purchase.
-	In that case, the envelope method kicks in and the amount is taken out of the virtual envelope at the end of the time period.
+	\item Putting \codestuff{No} is a must if you have a monthly expense.
+	The full amount is not summed up and thus not taken out of the virtual envelope month in the last month, hence there would no 0-columns in the earlier months.
+	\item Putting \codestuff{Yes} makes sense if the expense is a one-time purchase.
+	In that case, the envelope method kicks in and the full amount is taken out of the virtual envelope at the end of the time period.
 \end{itemize}
 
-Now that the main explanations in regards to monthly expenses and sum prohibition were given, \autoref{tab:possible-settings-monthly-expense-sum-prohibition} on \autopageref{tab:possible-settings-monthly-expense-sum-prohibition} will list the possible combinations and use cases for both settings.
-
+Now that the main explanations in regards to monthly expenses and sum prohibition were given, will list the possible combinations and use cases for both settings.
 \begin{table}[hbtp]
 	\centering
-%	\renewcommand{\arraystretch}{1.2}
+	%	\renewcommand{\arraystretch}{1.2}
 	\libertineTabular
 	\caption[Possible settings for budgeting expense items in \sheetname{BudgetEXPitems}]{Possible settings for budgeting expense items in the sheet \sheetname{BudgetEXPitems}.
-	You must not use any other setting than listed here.}
+		You must not use any other setting than listed here.}
 	\label{tab:possible-settings-monthly-expense-sum-prohibition}
 	\begin{tabular}{cccl}
 		\toprule
@@ -150,35 +148,35 @@ Now that the main explanations in regards to monthly expenses and sum prohibitio
 			Expense
 		\end{minipage} &
 		\begin{minipage}[b]{1.0cm}
-			Sum\\
-			Prohib.
+			Single\\
+			Expense
 		\end{minipage} &
 		Use Case\\
 		\midrule
-		1 & \codestuff{Yes} & \codestuff{Yes} & 
+		1 & \codestuff{Yes} & \codestuff{No} & 
 		\begin{minipage}[t]{5cm}
 			An expense with multiple payments in multiple months, \eg payments for a utility like electricity.
-		\end{minipage}\\
-		2 & \codestuff{No} & \codestuff{No} &
+		\end{minipage}\\\addlinespace[2pt]
+		2 & \codestuff{No} & \codestuff{Yes} &
 		\begin{minipage}[t]{5cm}
-			For an one-time expense, \eg a winter coat.
+			For an one-time expense, \eg a winter coat or gaming console.
 		\end{minipage} \\
 		\bottomrule
 	\end{tabular}
 \end{table}
-
 If the notes above do not give satisfactory explanation, there is also \autoref{subsec:examples-budgeting-expenses} starting on \autopageref{subsec:examples-budgeting-expenses}, which serves to clarify ideas and concepts by showcasing examples.
 
 \subsubsection{BIC: Done/Bought}
 \label{subsubsec:bic-done}
 
-This column serves to enter if the budget item has been bought or not.
-In the case of a monthly expense, perhaps understand this as if the monthly expense has been \sterm{done}.
 Regard this column as a to-do list.
+This column serves to indicate if the budget item has been bought or not.
+In the case of a monthly expense, perhaps understand this as if the monthly expense has been \sterm{done}.
 \begin{itemize}
 	\item Put \codestuff{Yes} if the purchase/expense has been made.
 	\item Put \codestuff{No} if not.
 \end{itemize}
+The entry must be either \codestuff{Yes} or \codestuff{No}, or the formula will a value of 0.
 
 \subsubsection{BIC: Category}
 \label{subsubsec:bic-category}
