@@ -17,16 +17,19 @@ But perhaps you feel like reading on\ldots
 
 The sheet named \sheetname{Tracker} is the main hub for the whole file.
 Every piece of information in regards to tracking and budgeting is connected to a cell in this sheet.
-
 As mentioned in \autoref{subsec:first-things-first}, the file is for 1 year, \ie 12 months.
 You find the months spanning along the columns, while the rows list income and expense classes.
+
+\begin{specialnote}
+	
+\end{specialnote}
 
 \subsection{Categories}
 \label{subsec:tracking-categories}
 
 A good structure of categories of income and spending is the key to a good overlook and analysis of your finances.
 As stated before, do what works best \emph{for you}!
-If you want to, you can totally change up the way/pattern by which you name the tracking sheets.
+If you want to, you can change up the way/pattern by which you name the tracking sheets.
 
 I suggest to split up your spending into as many categories as possible.
 For the day-to-day stuff I created the overarching class/group named \sterm{Daily}.
@@ -57,13 +60,15 @@ As stated a few times already, the content in the file is editable.
 Hence the fields and their categories shown in \autoref{fig:tracking-categories} are to be understood as examples.
 If you wish to do so, you can change it up to make it fit your needs.
 
-For alternative structures of these categories in ``classes'', one could maybe start by putting all monthly bills into the same field \sterm{Bills}, \ie you would end up with sheets like \sheetname{CableTV}, \sheetname{Internet} and \sheetname{InsuranceCar}, etc., regardless of the area in life this particular bill stems from.
+Perhaps create a truly broad category structure, \ie make a class named something like \sterm{Living Expenses} with categories such as Rent, Electricity, Water, Groceries, etc..
+Another class could \sterm{Recreational} for all kinds of expenses which occur because of activities and spending in/for leisure time.\footnote{This system is used by the reddit user \href{https://www.reddit.com/r/personalfinance/comments/aayvms/oc_i_tracked_every_dollar_i_spent_over_the_last_8/}{WhiskeySauer}.}
+
+Or, one could maybe start by putting all monthly bills into the same field \sterm{Bills}, \ie you would end up with sheets like \sheetname{CableTV}, \sheetname{Internet} and \sheetname{InsuranceCar}, etc., regardless of the underlying reason how that bill came to be.
 And expenses for different kinds of clothing could be grouped up into a class \emph{Clothing}, and thus have sheet names like \sheetname{WorkClothes}, \sheetname{ChildrenClothes} and so forth.
 And the same could be done for different kinds of food, as you obviously need to eat, whether you are at home, work or at school.
 
-Or create a structure based on your priorities, ordered by frequency only if you leave out the grouping of ``typicals area in life''.
-
-Granted, some of these are quite silly and not really practical and I am quite sure you already have a good idea of what you want.
+Granted, some possibilities can be a bit silly and prove to be not so practical.
+I am sure you already have a good idea of what you want.
 It ultimately is up to you.
 For the technicalities of adding, removing or editing categories, go to \autoref{subsec:editing-tracking-categories}.
 
@@ -71,7 +76,7 @@ For the technicalities of adding, removing or editing categories, go to \autoref
 \label{subsec:what-to-track}
 
 You may find yourself wondering on what exactly it is you should and/or could track with \tfn.
-Well, as stated, I originally thought to manage my cash.
+Well, as stated before, I originally thought to track my cash.
 And this is what the file primarily does.
 But besides that, you can of course edit the file to include other kinds of wealth assets as well.
 
@@ -100,14 +105,15 @@ And:
 	Do not lie about the date.
 \end{specialnote}
 
-For writing the date into a cell, you may use any format, but I suggest using \codestuff{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
-An example for July 4th, 2019: \codestuff{2019-07-04}.
+For writing the date into a cell, use the format \codestuff{YYYY-MM-DD} based on the international standard \href{https://en.wikipedia.org/wiki/ISO_8601}{ISO 8601}.
+An example for July 4th, 2020: \codestuff{2020-07-04}.
 It will help with the visual effect on quickly grasping which month and/or month you are looking at.
 It is also incredibly easy to write if you have a numpad on your keyboard.
 Also, who does not like a well-sorted list which looks equally properly formatted?? :)
 
 But if you want to change the date format, simply edit the corresponding cell style template to produce the output you wish.
 Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style-template.
+And if you change the formatting, all formulas which work with dates have to be changed as well.
 
 \subsubsection{Tracking Column: Description}
 \label{subsec:tracking-column-description}
