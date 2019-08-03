@@ -28,12 +28,47 @@ The only requirement is that you did do well on your tracking duties, other than
 \subsection{Tracking Special Budget Items or Special Expenses}
 \label{subsec:tracking-special-expenses}
 
-Circling back to the surplus amounts, I would like to introduce another utilization of them: the sheet for tracking of expenses which are special, relatively speaking.
+Circling back to the surplus amounts, I would like to introduce another utilization of them: the sheet for tracking of expenses which are special, relatively speaking.\todo{ausfüllen}
 If you want to, you can track your payments or saved amounts for certain goals or expenses in this sheet, \ie saving up 3000\,€.
 
 Based on the data contained in this sheet, one could perhaps create or add a dashboard-like visualization in the sheet \sheetname{Overview}.
 
 %Falls etwas überschuss da ist, kann man diesen theoretisch im nächsten monat extra verplanen! natürlich. nur wie möchte man den überblick halten, wenn man monatlich nach und nach stärker budgetiert, da man mehr mittel zu verfügung hat und dementsprechend verplanen kann?
+
+
+\subsection{Navigation by Hyperlinking Sheets}
+\label{subsec:navigation-hyperlinking-sheets}
+
+One semi-related piece of advice is to use hyperlinks.
+I originally thought to include this bit earlier in the document but I am sure the inherent characteristic is so familiar, this section is here for the sake of completeness.
+
+Hyperlinks work just as you would expect from your browsing on the internet, so you should be familiar with their behavior.
+You can insert one by using the shortcut \keystroke{Ctrl}+\keystroke{K}.
+Then, \ldots
+\begin{itemize}
+	\item if you had already selected and copied some text, \loc should automatically use that text as the descriptor text and give you the opportunity to paste a link into the target field or
+	\item if you had nothing in cache, you will have to enter both URL and the descriptor text.
+\end{itemize}
+If you intend to click on a link in \loc, \emph{first} hold \keystroke{Ctrl} and then click on it with your mouse.
+You can change this setting in the options, by clicking on ``Tools'' in the task bar and then: Options \structurenext LibreOffice \structurenext Security.
+Then, click on ``Buttons'' and remove the check mark next to ``Ctrl-click required to follow hyperlinks''.
+
+There are a few more things to note:
+\begin{itemize}
+	\item There can be more than 1 hyperlink in a cell.
+	\item Hyperlinks can target a site on the internet, a file on your machine or a specific cell in this or another sheet in this or another \loc-file.
+\end{itemize}
+
+\subsection{Forecasting}
+\label{subsec:forecasting}
+
+There is one other feature that I had originally planned to integrate: \emph{forecasting}.
+Forecasting is the process of making predictions about future developments based on past and present data and most commonly by analysis of trends.\footnote{Cp. \href{https://en.wikipedia.org/wiki/Forecasting}{https://en.wikipedia.org/wiki/Forecasting}.}
+
+So far I have not used trends and honestly, I think I was able to deduce the good-enough optimizations of budgeted amounts by myself.
+And as stated multiple times throughout this guide, the file spans over 12 months (only), which obviously makes it impossible to form average values which account for values spanning over a longer time period than 12 months.
+
+I am not opposed to integrate more sheets and calculations into \tfn, so if someone were to create some sheets for forecasting, they could perhaps be integrated in the future.
 
 \subsection{Prepare The Next Year and Analysis of Your Data}
 \label{subsec:prepare-the-next-year-analysis}
@@ -69,35 +104,3 @@ Open that new file and
 	\item Datums-Formeln neu machen
 	\item in den budget-blättern die monatsangaben ändern
 \end{itemize}
-
-\subsection{Navigation by Hyperlinking Sheets}
-\label{subsec:navigation-hyperlinking-sheets}
-
-One semi-related piece of advice is to use hyperlinks.
-I originally thought to include this bit earlier in the document but I am sure the inherent characteristic is so familiar, this section is here for the sake of completeness.
-
-Hyperlinks work just as you would expect from your browsing on the internet, so you should be familiar with their behavior.
-You can insert one by using the shortcut \keystroke{Ctrl}+\keystroke{K}.
-Then, \ldots
-\begin{itemize}
-	\item if you had already selected and copied some text, \loc should automatically use that text as the descriptor text and give you the opportunity to paste a link into the target field or
-	\item if you had nothing in cache, you will have to enter both URL and the descriptor text.
-\end{itemize}
-If you intend to click on a link in \loc, \emph{first} hold \keystroke{Ctrl} and then click on it with your mouse.
-You can change this setting in the options, by clicking on ``Tools'' in the task bar and then: Options \structurenext LibreOffice \structurenext Security.
-Then, click on ``Buttons'' and remove the check mark next to ``Ctrl-click required to follow hyperlinks''.
-
-There are a few more things to note:
-\begin{itemize}
-	\item There can be more than 1 hyperlink in a cell.
-	\item Hyperlinks can target a site on the internet, a file on your machine or a specific cell in this or another sheet in this or another \loc-file.
-\end{itemize}
-
-\subsection{Forecasting}
-\label{subsec:forecasting}
-
-There is one other feature that I had originally planned to integrate: \emph{forecasting}.
-Forecasting is the process of making predictions about future developments based on past and present data and most commonly by analysis of trends.\footnote{Cp. \href{https://en.wikipedia.org/wiki/Forecasting}{https://en.wikipedia.org/wiki/Forecasting}.}
-
-I am not opposed to integrate more sheets and calculations into \tfn, but so far I have not used trends and honestly, I think I was able to deduce the good-enough optimizations of budgeted amounts by myself.
-And as stated multiple times throughout this guide, the file spans over 12 months (only), which obviously makes it impossible to form average values which account for values spanning over a longer time period than 12 months.
