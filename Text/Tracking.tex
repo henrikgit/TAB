@@ -3,7 +3,7 @@
 % !TeX spellcheck = en_US
 
 Tracking is the most riveting part of the guide.
-Haha!
+Haha.
 No, not really.
 It is probably the most mundane part of this whole thing, but twice as important as it is dry.
 This insanely complex topic can be summed up with: \emph{do the damn tracking}.
@@ -15,14 +15,10 @@ But perhaps you feel like reading on\ldots
 \subsection{Main View: Tracker Sheet}
 \label{subsec:main-tracker-sheet}
 
-The sheet named \sheetname{Tracker} is the main hub for the whole file.
+The sheet named \sheetname{Tracker} is the main data hub for the whole file.
 Every piece of information in regards to tracking and budgeting is connected to a cell in this sheet.
 As mentioned in \autoref{subsec:first-things-first}, the file is for 1 year, \ie 12 months.
-You find the months spanning along the columns, while the rows list income and expense classes.
-
-\begin{specialnote}
-	
-\end{specialnote}
+You find the months spanning along the columns while the rows list income and expense classes.
 
 \subsection{Categories}
 \label{subsec:tracking-categories}
@@ -85,6 +81,14 @@ But besides that, you can of course edit the file to include other kinds of weal
 
 There are \sterm{tracking sheets} for entering data on your expenses and income.
 These sheets simply contain data which is to be put into 3 columns: date, description and amount.
+Their layout and basic usage is shown in \fullref{fig:expenses-data-entry-in-sheet-moblity-car-gas}.
+
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Gfx/EXP-in-one-sheet-moblity-car-gas}
+	\caption{Tracking Sheet for One Special Expense Category}
+	\label{fig:expenses-data-entry-in-sheet-moblity-car-gas}
+\end{figure}
 
 \subsubsection{Tracking Column: Date}
 \label{subsec:tracking-column-date}
@@ -92,10 +96,11 @@ These sheets simply contain data which is to be put into 3 columns: date, descri
 Date: Enter the date for the day the expense occurred.
 You can do this in two ways:
 \begin{enumerate}
-	\item Put the date for the day you bought it or ordered it online.
+	\item Put the date for the day you made the expense or ordered it (online).
 	\item Or--in case you pay with electronic cash, \eg via card--you might put the date the expense's value is actually transferred from your account.
 	This might happen in the case of weekends, bank holidays or due to other kinds of service delays for money transfers.
 \end{enumerate}
+
 I \emph{strongly} suggest you use the first kind of date, as the date represents the better point in time, \ie the one you planned for.\footnote{This topic will be referenced and elaborated on in \autoref{subsubsec:different-dates-in-real-life}, \autopageref{subsubsec:different-dates-in-real-life}.}
 Regardless, you should stay consistent in the method you choose.
 The date does get checked for month and day, but not for the year, as I thought to use \tfn for 1 calendar year and have done so ever since.
@@ -113,7 +118,7 @@ Also, who does not like a well-sorted list which looks equally properly formatte
 
 But if you want to change the date format, simply edit the corresponding cell style template to produce the output you wish.
 Note: as intended by the mechanism for style templates, this change would affect \emph{all} cells in the entire file which are formatted with this cell style-template.
-And if you change the formatting, all formulas which work with dates have to be changed as well.
+And if you change the formatting, all formulas which work with dates have to be proof-checked (and possibly updated) as well.
 
 \subsubsection{Tracking Column: Description}
 \label{subsec:tracking-column-description}
@@ -147,11 +152,10 @@ In a way, entering all the data could be interpreted as work.
 In my experience, I am content with updating \tfn at least every second week.
 Of course it would still work fine to update it every second, third or fourth week as well.
 
-
 \subsection{Splitting Receipts}
 \label{subsec:splitting-receipts}
 
-After I shopped at a store where I bought multiple kinds of various items, I pick the amounts spent in different categories and write them into the respective tracking sheets for these categories and name the entries accordingly.
+If you shopped at a store where you bought multiple kinds of various items, you take the amounts spent in different categories and write them into the respective tracking sheets for these categories and name the entries accordingly.
 
 \subsection{Examples for Entering Tracking Data}
 \label{subsec:examples-for-entering-tracking-data}
@@ -182,6 +186,36 @@ So again you go the relevant sheet and enter the data accordingly:
 		\hline
 	\end{tabular}
 \end{center}
+
+\subsection{An Alternative Way of Grouping Tracking Data}
+\label{subsec:alternative-way-of-grouping-tracking-data}
+
+There is at least one other way of enter tracking data, which is to gather all the expense/income data in one sheet only.
+To showcase an example that alternative way of grouping tracking data, take a look at \fullref{fig:expenses-data-entry-in-one-sheet-only}.
+I originally considered using this system but it proved to be too burdensome in the long run.
+\begin{figure}[htp]
+	\centering
+	\includegraphics[width=0.8\linewidth]{Gfx/EXP-all-in-one-sheet}
+	\caption{Tracking Sheet for All Expenses}
+	\label{fig:expenses-data-entry-in-one-sheet-only}
+\end{figure}
+
+I am not using that system for the following reasons:
+\begin{enumerate}
+	\item If you want to take a look at spending data, it is beneficial to need as little time and effort as possible to get to it.
+	Doing that in the alternative way, you would have to scroll and filter more, relatively speaking.
+	\item If you intend to change something about my expenses categories, you need to rename the category in \sheetname{Tracker} and the actual sheetname.
+	In case of grouping all expenses, you would have to change the category name first, then look for all entries in the tracking sheet and refill the category entry.
+	To be fair, also renaming the budget categories for budgeted items is a given in both cases.
+	\item In case of an accident with deleting or overwriting data, only the tracking data in one sheet could be damaged.
+\end{enumerate}
+All systems certainly have their advantages and drawback.
+In any case, that should not stop you from entering and structuring the data in some other way.
+If you like to, please be aware that \tfn and this document might not be the best fit for your needs then, if at all.
+
+If you want to use an alternative way, there are other possibilities available.
+As far as I can tell, grouping of all expenses/income in one sheet is used/provided by the reddit user \href{https://www.reddit.com/user/getToTheChopin/}{getToTheChopin}.
+Their content is available on \url{https://themeasureofaplan.com}.
 
 \subsection{Different Values in Finances.ods vs. Real-World Data}
 \label{subsec:different-values-finances.ods-vs-real-world}
